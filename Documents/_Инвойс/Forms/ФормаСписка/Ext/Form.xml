@@ -9,6 +9,12 @@
 				<CommandName>Document._Инвойс.Command.ДвижениеИнвойсов</CommandName>
 				<ExtendedTooltip name="ФормаДокумент_ИнвойсДвижениеИнвойсовРасширеннаяПодсказка" id="77"/>
 			</Button>
+			<Button name="ФормаОтчетОплатыПоИнвойсамОплатыПоИнвойсам" id="109">
+				<Type>CommandBarButton</Type>
+				<CommandName>Report.ОплатыПоИнвойсам.Command.ОплатыПоИнвойсам</CommandName>
+				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+				<ExtendedTooltip name="ФормаОтчетОплатыПоИнвойсамОплатыПоИнвойсамРасширеннаяПодсказка" id="110"/>
+			</Button>
 			<Button name="ФормаОбновить" id="57">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Refresh</CommandName>
@@ -119,6 +125,7 @@
 			<Events>
 				<Event name="Selection">СписокВыбор</Event>
 				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
 			</Events>
 			<ChildItems>
 				<LabelField name="Дата" id="16">
@@ -410,21 +417,6 @@
 					<ContextMenu name="ПсевдонимКонтекстноеМеню" id="98"/>
 					<ExtendedTooltip name="ПсевдонимРасширеннаяПодсказка" id="99"/>
 				</LabelField>
-				<LabelField name="Валюта" id="25">
-					<DataPath>Список.Валюта</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Валюта</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Currency</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ВалютаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="27"/>
-				</LabelField>
 				<LabelField name="ВКД_Количество" id="43">
 					<DataPath>Список.Количество</DataPath>
 					<Visible>false</Visible>
@@ -446,6 +438,16 @@
 							<v8:content>Sum</v8:content>
 						</v8:item>
 					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="СуммаКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
@@ -476,8 +478,53 @@
 							<v8:content>Sum</v8:content>
 						</v8:item>
 					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="СуммаКорКонтекстноеМеню" id="68"/>
 					<ExtendedTooltip name="СуммаКорРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="Валюта" id="25">
+					<DataPath>Список.Валюта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Currency</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Долг" id="100">
+					<DataPath>Список.Долг</DataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДолгКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ДолгРасширеннаяПодсказка" id="102"/>
+				</LabelField>
+				<LabelField name="Состояние" id="106">
+					<DataPath>Список.Состояние</DataPath>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="108"/>
 				</LabelField>
 				<LabelField name="Менеджер" id="80">
 					<DataPath>Список.Менеджер</DataPath>
@@ -525,12 +572,13 @@
 			<UseAlways>
 				<Field>Список.Контрагент</Field>
 				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.Проведен</Field>
 				<Field>Список.Ссылка</Field>
 				<Field>Список.ТолькоУслуги</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
+				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Документ_Инвойс.Дата КАК Дата,
 	Документ_Инвойс.Номер КАК Номер,
@@ -543,7 +591,7 @@
 	Документ_Инвойс.ВКД_Количество КАК Количество,
 	Документ_Инвойс.Сумма КАК Сумма,
 	Документ_Инвойс.ТолькоУслуги КАК ТолькоУслуги,
-	Документ_Инвойс.ДокументОснование.Менеджер КАК Менеджер,     
+	Документ_Инвойс.ДокументОснование.Менеджер КАК Менеджер,
 	Документ_Инвойс.ЕстьЗатраты КАК ЕстьЗатраты,
 	ВЫБОР
 		КОГДА Документ_Инвойс.ТолькоУслуги
@@ -574,16 +622,8 @@
 			ТОГДА 0
 		ИНАЧЕ 1
 	КОНЕЦ КАК КоличествоСообщений,
-	ВЫБОР
-		КОГДА Документ_Инвойс.Проведен
-			ТОГДА ЕСТЬNULL(СкорИнвойсы.Количество, 0)
-		ИНАЧЕ Документ_Инвойс.ВКД_Количество
-	КОНЕЦ КАК КоличествоКор,
-	ВЫБОР
-		КОГДА Документ_Инвойс.Проведен
-			ТОГДА ЕСТЬNULL(СкорИнвойсы.Сумма, 0)
-		ИНАЧЕ Документ_Инвойс.Сумма
-	КОНЕЦ КАК СуммаКор,
+	0 КАК КоличествоКор,
+	0 КАК СуммаКор,
 	ВЫБОР
 		КОГДА Документ_Инвойс.ТолькоУслуги
 			ТОГДА 15
@@ -649,7 +689,9 @@
 					ИНАЧЕ 0
 				КОНЕЦ
 		ИНАЧЕ 11
-	КОНЕЦ КАК ЗначокПоставки
+	КОНЕЦ КАК ЗначокПоставки,
+	СостоянияИнвойсов.СтатусОплатыАвто КАК Состояние,
+	Привязки.Долг КАК Долг
 ИЗ
 	Документ._Инвойс КАК Документ_Инвойс
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
@@ -704,6 +746,15 @@
 			ИМЕЮЩИЕ
 				СУММА(ОтправкаИнвойсов.ОжидаемыеПоставки) &lt; 0) КАК ОшибкиПоставки) КАК ИнвойсыСОшибкамиПоставок
 		ПО Документ_Инвойс.Ссылка = ИнвойсыСОшибкамиПоставок.Инвойс
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			РасчетыПоИнвойсамОстатки.Инвойс КАК Инвойс,
+			СУММА(РасчетыПоИнвойсамОстатки.СуммаОстаток) КАК Долг
+		ИЗ
+			РегистрНакопления.РасчетыПоИнвойсам.Остатки(, ) КАК РасчетыПоИнвойсамОстатки
+		
+		СГРУППИРОВАТЬ ПО
+			РасчетыПоИнвойсамОстатки.Инвойс) КАК Привязки
+		ПО Документ_Инвойс.Ссылка = Привязки.Инвойс
 ГДЕ
 	ВЫБОР
 			КОГДА &amp;Граница = НЕОПРЕДЕЛЕНО
@@ -721,16 +772,6 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ВКД_Распределить</dcssch:dataPath>
 					<dcssch:field>ВКД_Распределить</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>КоличествоКор</dcssch:dataPath>
-					<dcssch:field>КоличествоКор</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество кор</v8:content>
-						</v8:item>
-					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>КемСохранен</dcssch:dataPath>
@@ -939,16 +980,6 @@
 					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>СуммаКор</dcssch:dataPath>
-					<dcssch:field>СуммаКор</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма кор</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ЗначокПоставки</dcssch:dataPath>
 					<dcssch:field>ЗначокПоставки</dcssch:field>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -1040,6 +1071,46 @@
 						</v8:item>
 					</dcssch:title>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоКор</dcssch:dataPath>
+					<dcssch:field>КоличествоКор</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаКор</dcssch:dataPath>
+					<dcssch:field>СуммаКор</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Долг</dcssch:dataPath>
+					<dcssch:field>Долг</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долг</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -1090,6 +1161,23 @@
 					</dcssch:valueType>
 					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Период</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
 				</Parameter>
 				<MainTable>Document._Инвойс</MainTable>
 				<ListSettings>
@@ -1216,34 +1304,6 @@
 			<Save>
 				<Field>ПоследнийДокумент</Field>
 			</Save>
-		</Attribute>
-		<Attribute name="СохКонДата" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кон. дата</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:dateTime</v8:Type>
-				<v8:DateQualifiers>
-					<v8:DateFractions>Date</v8:DateFractions>
-				</v8:DateQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="СохНачДата" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Нач. дата</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:dateTime</v8:Type>
-				<v8:DateQualifiers>
-					<v8:DateFractions>Date</v8:DateFractions>
-				</v8:DateQualifiers>
-			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

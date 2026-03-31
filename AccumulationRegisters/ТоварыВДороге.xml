@@ -89,18 +89,18 @@
 					<FullTextSearch>Use</FullTextSearch>
 				</Properties>
 			</Resource>
-			<Dimension uuid="96b7fdce-5b2a-4557-bb16-f465491e5f48">
+			<Dimension uuid="08c4a14d-3c12-4e40-be0f-9d0ff4ca856a">
 				<Properties>
-					<Name>ВидДороги</Name>
+					<Name>Номенклатура</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Вид дороги</v8:content>
+							<v8:content>Номенклатура</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВидДороги</v8:Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -165,18 +165,18 @@
 					<UseInTotals>true</UseInTotals>
 				</Properties>
 			</Dimension>
-			<Dimension uuid="08c4a14d-3c12-4e40-be0f-9d0ff4ca856a">
+			<Dimension uuid="96b7fdce-5b2a-4557-bb16-f465491e5f48">
 				<Properties>
-					<Name>Номенклатура</Name>
+					<Name>ВидДороги</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Номенклатура</v8:content>
+							<v8:content>Вид дороги</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+						<v8:Type>cfg:EnumRef.ВидДороги</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

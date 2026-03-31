@@ -189,6 +189,9 @@
 													</EditFormat>
 													<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 													<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+													<Events>
+														<Event name="OnChange">ДатаПриИзменении</Event>
+													</Events>
 												</InputField>
 												<InputField name="Номер" id="1">
 													<DataPath>Объект.Number</DataPath>
@@ -240,6 +243,11 @@
 														<Event name="OnChange">ВалютаПриИзменении</Event>
 													</Events>
 												</InputField>
+												<LabelField name="СредневзвешКурс" id="405">
+													<DataPath>СредневзвешКурс</DataPath>
+													<ContextMenu name="СредневзвешКурсКонтекстноеМеню" id="406"/>
+													<ExtendedTooltip name="СредневзвешКурсРасширеннаяПодсказка" id="407"/>
+												</LabelField>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -345,6 +353,7 @@
 										</LabelDecoration>
 										<InputField name="КурсПартии" id="316">
 											<DataPath>Объект.КурсПартии</DataPath>
+											<Visible>false</Visible>
 											<ContextMenu name="КурсПартииКонтекстноеМеню" id="317"/>
 											<ExtendedTooltip name="КурсПартииРасширеннаяПодсказка" id="318"/>
 										</InputField>
@@ -924,19 +933,14 @@
 												<CommandName>Form.Command.ОчиститьПривязкиИнвойсов</CommandName>
 												<ExtendedTooltip name="ИнвойсыОчиститьПривязкиИнвойсовРасширеннаяПодсказка" id="378"/>
 											</Button>
+											<Button name="ИнвойсыОтчетОплатыПоИнвойсамОплатыПоИнвойсам" id="403">
+												<Type>CommandBarButton</Type>
+												<CommandName>Report.ОплатыПоИнвойсам.Command.ОплатыПоИнвойсам</CommandName>
+												<DataPath>Items.Инвойсы.CurrentData.Инвойс</DataPath>
+												<ExtendedTooltip name="ИнвойсыОтчетОплатыПоИнвойсамОплатыПоИнвойсамРасширеннаяПодсказка" id="404"/>
+											</Button>
 										</ChildItems>
 									</ButtonGroup>
-									<Button name="ИнвойсыРегистрНакопленияРасчетыПоИнвойсамОткрытьПоРегистратору" id="398">
-										<Type>CommandBarButton</Type>
-										<Representation>Picture</Representation>
-										<CommandName>AccumulationRegister.РасчетыПоИнвойсам.StandardCommand.OpenByRecorder</CommandName>
-										<DataPath>Items.Инвойсы.CurrentData.Инвойс</DataPath>
-										<Picture>
-											<xr:Ref>StdPicture.Report</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
-										<ExtendedTooltip name="ИнвойсыРегистрНакопленияРасчетыПоИнвойсамОткрытьПоРегистраторуРасширеннаяПодсказка" id="399"/>
-									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ИнвойсыРасширеннаяПодсказка" id="325"/>
@@ -1046,12 +1050,12 @@
 									<ContextMenu name="ИнвойсыДолгКонтекстноеМеню" id="367"/>
 									<ExtendedTooltip name="ИнвойсыДолгРасширеннаяПодсказка" id="368"/>
 								</InputField>
-								<InputField name="ИнвойсыПримечание" id="344">
-									<DataPath>Объект.Инвойсы.Примечание_</DataPath>
+								<LabelField name="ИнвойсыИнвойсПримечание" id="400">
+									<DataPath>Объект.Инвойсы.Инвойс.Примечание</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ИнвойсыПримечаниеКонтекстноеМеню" id="345"/>
-									<ExtendedTooltip name="ИнвойсыПримечаниеРасширеннаяПодсказка" id="346"/>
-								</InputField>
+									<ContextMenu name="ИнвойсыИнвойсПримечаниеКонтекстноеМеню" id="401"/>
+									<ExtendedTooltip name="ИнвойсыИнвойсПримечаниеРасширеннаяПодсказка" id="402"/>
+								</LabelField>
 								<InputField name="ИнвойсыСостояние" id="369">
 									<DataPath>Объект.Инвойсы.Состояние</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -1443,6 +1447,21 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СредневзвешКурс" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средневзвеш.курс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>

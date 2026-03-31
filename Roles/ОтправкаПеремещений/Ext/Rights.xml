@@ -99,6 +99,13 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.РасчетыПоИнвойсам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.Затраты</name>
 		<right>
 			<name>Read</name>

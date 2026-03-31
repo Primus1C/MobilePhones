@@ -872,7 +872,7 @@
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Количество кор</v8:content>
+							<v8:content>Количество</v8:content>
 						</v8:item>
 					</dcssch:title>
 				</Field>
@@ -1089,6 +1089,14 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>НомерСтрокиИнвойса</dcssch:dataPath>
 					<dcssch:field>НомерСтрокиИнвойса</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаЗатрат</dcssch:dataPath>
+					<dcssch:field>СуммаЗатрат</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьЗатраты</dcssch:dataPath>
+					<dcssch:field>ЕстьЗатраты</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>

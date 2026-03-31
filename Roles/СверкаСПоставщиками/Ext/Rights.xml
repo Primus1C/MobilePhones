@@ -661,6 +661,17 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.РасчетыПоИнвойсам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Офисы</name>
 		<right>
 			<name>Read</name>
@@ -1431,6 +1442,13 @@
 			<name>Use</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ОплатыПоИнвойсам.Command.ОплатыПоИнвойсам</name>
 		<right>
 			<name>View</name>
 			<value>true</value>

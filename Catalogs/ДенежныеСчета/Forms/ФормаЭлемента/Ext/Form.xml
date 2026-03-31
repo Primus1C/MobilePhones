@@ -7,6 +7,11 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<InputField name="Родитель" id="32">
+			<DataPath>Объект.Parent</DataPath>
+			<ContextMenu name="РодительКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="34"/>
+		</InputField>
 		<InputField name="Владелец" id="7">
 			<DataPath>Объект.Owner</DataPath>
 			<ReadOnly>true</ReadOnly>

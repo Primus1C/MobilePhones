@@ -31,20 +31,9 @@
 			</title>
 			<role>
 				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Группа</dcscom:balanceGroupName>
+				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
 				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
-				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
 			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Оборот</dataPath>
-			<field>Оборот</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Оборот</v8:content>
-				</v8:item>
-			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КонечныйОстаток</dataPath>
@@ -57,9 +46,8 @@
 			</title>
 			<role>
 				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Группа</dcscom:balanceGroupName>
+				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
 				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
-				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -73,21 +61,58 @@
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
 			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСекунда</dataPath>
+			<field>ПериодСекунда</field>
+			<role>
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приход</dataPath>
+			<field>Приход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расход</dataPath>
+			<field>Расход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	РасчетыПоИнвойсамОстаткиИОбороты.Инвойс КАК Инвойс,
-	РасчетыПоИнвойсамОстаткиИОбороты.СуммаНачальныйОстаток КАК НачальныйОстаток,
-	РасчетыПоИнвойсамОстаткиИОбороты.СуммаКонечныйОстаток КАК КонечныйОстаток,
-	РасчетыПоИнвойсамОстаткиИОбороты.СуммаОборот КАК Оборот,
-	РасчетыПоИнвойсамОстаткиИОбороты.Контрагент КАК Контрагент,
+	РасчетыПоИнвойсамОстаткиИОбороты.ПериодСекунда КАК ПериодСекунда,
 	РасчетыПоИнвойсамОстаткиИОбороты.Регистратор КАК Регистратор,
-	РасчетыПоИнвойсамОстаткиИОбороты.Валюта КАК Валюта
+	РасчетыПоИнвойсамОстаткиИОбороты.Контрагент КАК Контрагент,
+	РасчетыПоИнвойсамОстаткиИОбороты.Инвойс КАК Инвойс,
+	РасчетыПоИнвойсамОстаткиИОбороты.Валюта КАК Валюта,
+	РасчетыПоИнвойсамОстаткиИОбороты.СуммаНачальныйОстаток КАК НачальныйОстаток,
+	РасчетыПоИнвойсамОстаткиИОбороты.СуммаПриход КАК Приход,
+	РасчетыПоИнвойсамОстаткиИОбороты.СуммаРасход КАК Расход,
+	РасчетыПоИнвойсамОстаткиИОбороты.СуммаКонечныйОстаток КАК КонечныйОстаток
 ИЗ
-	РегистрНакопления.РасчетыПоИнвойсам.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , Инвойс &lt;&gt; ЗНАЧЕНИЕ(Документ._Инвойс.ПустаяСсылка) {(Контрагент = &amp;Контрагент)}{(Инвойс = &amp;Инвойс)}) КАК РасчетыПоИнвойсамОстаткиИОбороты</query>
+	РегистрНакопления.РасчетыПоИнвойсам.ОстаткиИОбороты(
+			{(&amp;НачалоПериода)},
+			{(&amp;КонецПериода)},
+			Авто,
+			Движения,
+			Инвойс &lt;&gt; ЗНАЧЕНИЕ(Документ._Инвойс.ПустаяСсылка)
+	) КАК РасчетыПоИнвойсамОстаткиИОбороты</query>
 	</dataSet>
 	<totalField>
 		<dataPath>КонечныйОстаток</dataPath>
@@ -98,8 +123,12 @@
 		<expression>Сумма(НачальныйОстаток)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>Оборот</dataPath>
-		<expression>Сумма(Оборот)</expression>
+		<dataPath>Приход</dataPath>
+		<expression>Сумма(Приход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Расход</dataPath>
+		<expression>Сумма(Расход)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -158,34 +187,6 @@
 		<useRestriction>false</useRestriction>
 		<use>Always</use>
 	</parameter>
-	<parameter>
-		<name>Контрагент</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Контрагент</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-	</parameter>
-	<parameter>
-		<name>Инвойс</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Инвойс</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef._Инвойс</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -195,7 +196,10 @@
 					<dcsset:field>НачальныйОстаток</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Оборот</dcsset:field>
+					<dcsset:field>Приход</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Расход</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КонечныйОстаток</dcsset:field>
@@ -211,12 +215,6 @@
 						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 					</dcscor:value>
 					<dcsset:userSettingID>8c7416a8-2b61-4400-b3d7-0bdccbdd7cbb</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Контрагент</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>fce3c576-2dfe-4d18-9985-77243c4bef44</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>
