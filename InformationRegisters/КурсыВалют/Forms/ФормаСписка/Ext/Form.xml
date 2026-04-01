@@ -74,7 +74,7 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Период" id="22">
-					<DataPath>Список.Period</DataPath>
+					<DataPath>Список.Период</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<Width>12</Width>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="23"/>
@@ -98,6 +98,11 @@
 					<ContextMenu name="БазоваяВалютаКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="БазоваяВалютаРасширеннаяПодсказка" id="39"/>
 				</LabelField>
+				<LabelField name="КурсСредний" id="40">
+					<DataPath>Список.КурсСредний</DataPath>
+					<ContextMenu name="КурсСреднийКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="КурсСреднийРасширеннаяПодсказка" id="42"/>
+				</LabelField>
 				<LabelField name="Фирма" id="25">
 					<DataPath>Список.Фирма</DataPath>
 					<Visible>false</Visible>
@@ -120,17 +125,52 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	РегистрСведенийКурсыВалют.Период,
-	РегистрСведенийКурсыВалют.Фирма,
-	РегистрСведенийКурсыВалют.Валюта,
-	РегистрСведенийКурсыВалют.Курс,
+	РегистрСведенийКурсыВалют.Период КАК Период,
+	РегистрСведенийКурсыВалют.Фирма КАК Фирма,
+	РегистрСведенийКурсыВалют.Валюта КАК Валюта,
+	РегистрСведенийКурсыВалют.Курс КАК Курс,
 	ВЫБОР
 		КОГДА РегистрСведенийКурсыВалют.Валюта.БазоваяВалюта = ЗНАЧЕНИЕ(Справочник.Валюты.ПустаяСсылка)
 			ТОГДА РегистрСведенийКурсыВалют.Фирма.Валюта
 		ИНАЧЕ РегистрСведенийКурсыВалют.Валюта.БазоваяВалюта
-	КОНЕЦ КАК БазоваяВалюта
+	КОНЕЦ КАК БазоваяВалюта,
+	РегистрСведенийКурсыВалют.КурсСредний КАК КурсСредний
 ИЗ
 	РегистрСведений.КурсыВалют КАК РегистрСведенийКурсыВалют</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КурсОбратный</dcssch:dataPath>
+					<dcssch:field>КурсОбратный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Курс</dcssch:dataPath>
+					<dcssch:field>Курс</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КурсСредний</dcssch:dataPath>
+					<dcssch:field>КурсСредний</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Период</dcssch:dataPath>
+					<dcssch:field>Период</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>БазоваяВалюта</dcssch:dataPath>
+					<dcssch:field>БазоваяВалюта</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Базовая валюта</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Фирма</dcssch:dataPath>
+					<dcssch:field>Фирма</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Валюта</dcssch:dataPath>
+					<dcssch:field>Валюта</dcssch:field>
+				</Field>
 				<MainTable>InformationRegister.КурсыВалют</MainTable>
 				<ListSettings>
 					<dcsset:filter>

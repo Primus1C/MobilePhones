@@ -1039,22 +1039,22 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="d51d25ec-66f8-40a2-9c5d-5968673aa438">
+			<Attribute uuid="580f8db5-4954-4110-8a84-006a08ef8420">
 				<Properties>
-					<Name>ВидУчетаВзаиморасчетов</Name>
+					<Name>ПривязыватьИнвойсы</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Вид учета взаиморасчетов</v8:content>
+							<v8:content>Привязывать инвойсы</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Type of accounting of mutual settlements</v8:content>
+							<v8:content>Bind Invoices</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВидыУчетаВзаиморасчетов</v8:Type>
+						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

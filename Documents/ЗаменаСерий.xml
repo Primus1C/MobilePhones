@@ -28,11 +28,11 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Замена серий</v8:content>
+					<v8:content>Замена серий/номенклатуры</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Replacing series</v8:content>
+					<v8:content>Replacing series/good</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>

@@ -243,11 +243,32 @@
 														<Event name="OnChange">ВалютаПриИзменении</Event>
 													</Events>
 												</InputField>
-												<LabelField name="СредневзвешКурс" id="405">
-													<DataPath>СредневзвешКурс</DataPath>
-													<ContextMenu name="СредневзвешКурсКонтекстноеМеню" id="406"/>
-													<ExtendedTooltip name="СредневзвешКурсРасширеннаяПодсказка" id="407"/>
-												</LabelField>
+												<UsualGroup name="ГруппаСредневзвешКурс" id="411">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа средневзвеш курс</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСредневзвешКурсРасширеннаяПодсказка" id="412"/>
+													<ChildItems>
+														<LabelField name="СредневзвешКурс" id="405">
+															<DataPath>СредневзвешКурс</DataPath>
+															<TextColor>style:FieldSelectionBackColor</TextColor>
+															<ContextMenu name="СредневзвешКурсКонтекстноеМеню" id="406"/>
+															<ExtendedTooltip name="СредневзвешКурсРасширеннаяПодсказка" id="407"/>
+														</LabelField>
+														<LabelDecoration name="ДекорацияСредневзвешКурс" id="408">
+															<Visible>false</Visible>
+															<Title formatted="true"/>
+															<ContextMenu name="ДекорацияСредневзвешКурсКонтекстноеМеню" id="409"/>
+															<ExtendedTooltip name="ДекорацияСредневзвешКурсРасширеннаяПодсказка" id="410"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -933,11 +954,11 @@
 												<CommandName>Form.Command.ОчиститьПривязкиИнвойсов</CommandName>
 												<ExtendedTooltip name="ИнвойсыОчиститьПривязкиИнвойсовРасширеннаяПодсказка" id="378"/>
 											</Button>
-											<Button name="ИнвойсыОтчетОплатыПоИнвойсамОплатыПоИнвойсам" id="403">
+											<Button name="ИнвойсыОтчетОплатыПоИнвойсам" id="403">
 												<Type>CommandBarButton</Type>
 												<CommandName>Report.ОплатыПоИнвойсам.Command.ОплатыПоИнвойсам</CommandName>
 												<DataPath>Items.Инвойсы.CurrentData.Инвойс</DataPath>
-												<ExtendedTooltip name="ИнвойсыОтчетОплатыПоИнвойсамОплатыПоИнвойсамРасширеннаяПодсказка" id="404"/>
+												<ExtendedTooltip name="ИнвойсыОтчетОплатыПоИнвойсамРасширеннаяПодсказка" id="404"/>
 											</Button>
 										</ChildItems>
 									</ButtonGroup>
@@ -1141,7 +1162,7 @@
 							<v8:NumberQualifiers>
 								<v8:Digits>1</v8:Digits>
 								<v8:FractionDigits>0</v8:FractionDigits>
-								<v8:AllowedSign>Any</v8:AllowedSign>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 							</v8:NumberQualifiers>
 						</Type>
 					</Column>

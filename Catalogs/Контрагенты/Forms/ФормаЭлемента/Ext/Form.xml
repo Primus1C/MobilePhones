@@ -260,14 +260,15 @@
 								</v8:item>
 							</Title>
 							<HorizontalStretch>true</HorizontalStretch>
-							<Group>Vertical</Group>
+							<HorizontalSpacing>Double</HorizontalSpacing>
 							<ExtendedTooltip name="ГруппаЗакупкиРасширеннаяПодсказка" id="70"/>
 							<ChildItems>
-								<InputField name="ВидУчетаВзаиморасчетов" id="75">
-									<DataPath>Объект.ВидУчетаВзаиморасчетов</DataPath>
-									<ContextMenu name="ВидУчетаВзаиморасчетовКонтекстноеМеню" id="76"/>
-									<ExtendedTooltip name="ВидУчетаВзаиморасчетовРасширеннаяПодсказка" id="77"/>
-								</InputField>
+								<CheckBoxField name="ПривязыватьИнвойсы" id="78">
+									<DataPath>Объект.ПривязыватьИнвойсы</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПривязыватьИнвойсыКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ПривязыватьИнвойсыРасширеннаяПодсказка" id="80"/>
+								</CheckBoxField>
 								<CheckBoxField name="РазрешитьДублиСерий" id="66">
 									<DataPath>Объект.РазрешитьДублиСерий</DataPath>
 									<CheckBoxType>Auto</CheckBoxType>

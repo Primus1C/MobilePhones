@@ -232,6 +232,12 @@
 							<ContextMenu name="ОстаткиПоСчетуКонтекстноеМеню" id="104"/>
 							<ExtendedTooltip name="ОстаткиПоСчетуРасширеннаяПодсказка" id="105"/>
 						</LabelField>
+						<LabelDecoration name="ДекорацияОстаткиПоСчету" id="148">
+							<Visible>false</Visible>
+							<Title formatted="true"/>
+							<ContextMenu name="ДекорацияОстаткиПоСчетуКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ДекорацияОстаткиПоСчетуРасширеннаяПодсказка" id="150"/>
+						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -445,7 +451,7 @@
 		ИНАЧЕ Докум.Корреспонденция
 	КОНЕЦ КАК Корреспонденция,
 	Докум.Окончательно КАК Окончательно,
-	Докум.МоментВремени КАК МоментВремени,
+	//Докум.МоментВремени КАК МоментВремени,
 	ВЫБОР
 		КОГДА Докум.ВидДвиженияДенег = ЗНАЧЕНИЕ(Перечисление.ВидДвиженияДенег.Покупатели)
 			ТОГДА ЕСТЬNULL(Рег.ПредоплатаПокупателяОстаток, 0)
@@ -659,10 +665,6 @@
 					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ДокументРасчетов_</dcssch:dataPath>
-					<dcssch:field>ДокументРасчетов_</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Курс</dcssch:dataPath>
 					<dcssch:field>Курс</dcssch:field>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -671,6 +673,14 @@
 							<v8:content>Курс</v8:content>
 						</v8:item>
 					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаПривязаноИнвойсов</dcssch:dataPath>
+					<dcssch:field>СуммаПривязаноИнвойсов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументРасчетов</dcssch:dataPath>
+					<dcssch:field>ДокументРасчетов</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>

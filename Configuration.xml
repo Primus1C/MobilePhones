@@ -600,6 +600,7 @@
 			<Document>УстановкаЦен</Document>
 			<Document>Инвентаризация</Document>
 			<Document>ЗаменаСерий</Document>
+			<Sequence>ПартииВалют</Sequence>
 			<DocumentJournal>ЖурналЗакупокИПродаж</DocumentJournal>
 			<DocumentJournal>Банк</DocumentJournal>
 			<Enum>ВидДокумента</Enum>
@@ -636,7 +637,6 @@
 			<Enum>СтилиПрограммы</Enum>
 			<Enum>РегистраторыЗатрат</Enum>
 			<Enum>ТипыНоменклатуры</Enum>
-			<Enum>ВидыУчетаВзаиморасчетов</Enum>
 			<Report>КонсольЗапросов_82</Report>
 			<Report>ДвиженияДокумента</Report>
 			<Report>ОстаткиТовара</Report>
