@@ -223,6 +223,10 @@
 				<v8:lang>ru</v8:lang>
 				<v8:content>На дату (время)</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>On date (time)</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -240,6 +244,10 @@
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Good</v8:content>
 			</v8:item>
 		</title>
 		<valueType>

@@ -2081,6 +2081,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.СреднийКурс</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Фирмы.Attribute.ВыводитьГруппа</name>
 		<right>
 			<name>View</name>
@@ -3676,6 +3687,17 @@
 		</right>
 		<right>
 			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ОплатыПоИнвойсам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

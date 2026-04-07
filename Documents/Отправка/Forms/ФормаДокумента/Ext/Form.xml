@@ -762,6 +762,7 @@
 					<ExtendedTooltip name="ГруппаРаспределениеРасширеннаяПодсказка" id="171"/>
 					<ChildItems>
 						<Table name="РаспределениеЗатрат" id="172">
+							<Visible>false</Visible>
 							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -898,14 +899,23 @@
 						</Table>
 						<Table name="Дерево" id="241">
 							<Representation>Tree</Representation>
-							<CommandBarLocation>None</CommandBarLocation>
+							<CommandBarLocation>Top</CommandBarLocation>
 							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Дерево</DataPath>
 							<ContextMenu name="ДеревоКонтекстноеМеню" id="242"/>
-							<AutoCommandBar name="ДеревоКоманднаяПанель" id="243"/>
+							<AutoCommandBar name="ДеревоКоманднаяПанель" id="243">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ДеревоРаспределитьЗатраты" id="281">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РаспределитьЗатраты</CommandName>
+										<ExtendedTooltip name="ДеревоРаспределитьЗатратыРасширеннаяПодсказка" id="282"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="244"/>
 							<SearchStringAddition name="ДеревоСтрокаПоиска" id="245">
 								<AdditionSource>
@@ -1283,6 +1293,30 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗатратыГруппаНоменклатуры</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Затраты.ТоварнаяГруппа</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;вся номенклатура&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

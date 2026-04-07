@@ -912,6 +912,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ОстаткиТовара</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИнвойсЗакупки.TabularSection.Оплаты</name>
 		<right>
 			<name>View</name>

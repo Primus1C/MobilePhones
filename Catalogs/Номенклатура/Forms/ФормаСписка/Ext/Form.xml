@@ -6,6 +6,7 @@
 		<ChildItems>
 			<Button name="ФормаСлужба" id="74">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.Служба</CommandName>
 				<ExtendedTooltip name="ФормаСлужбаРасширеннаяПодсказка" id="75"/>
 			</Button>

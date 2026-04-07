@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтчетСреднийКурс" id="46">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтчетСреднийКурс</CommandName>
+				<ExtendedTooltip name="ФормаОтчетСреднийКурсРасширеннаяПодсказка" id="47"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -98,17 +106,22 @@
 					<ContextMenu name="БазоваяВалютаКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="БазоваяВалютаРасширеннаяПодсказка" id="39"/>
 				</LabelField>
-				<LabelField name="КурсСредний" id="40">
-					<DataPath>Список.КурсСредний</DataPath>
-					<ContextMenu name="КурсСреднийКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="КурсСреднийРасширеннаяПодсказка" id="42"/>
-				</LabelField>
 				<LabelField name="Фирма" id="25">
 					<DataPath>Список.Фирма</DataPath>
 					<Visible>false</Visible>
 					<ContextMenu name="ФирмаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ФирмаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<LabelField name="КурсЗакупкиСредний" id="40">
+					<DataPath>Список.КурсЗакупкиСредний</DataPath>
+					<ContextMenu name="КурсЗакупкиСреднийКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="КурсЗакупкиСреднийРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<InputField name="КурсПродажиСредний" id="43">
+					<DataPath>Список.КурсПродажиСредний</DataPath>
+					<ContextMenu name="КурсПродажиСреднийКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КурсПродажиСреднийРасширеннаяПодсказка" id="45"/>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -134,7 +147,8 @@
 			ТОГДА РегистрСведенийКурсыВалют.Фирма.Валюта
 		ИНАЧЕ РегистрСведенийКурсыВалют.Валюта.БазоваяВалюта
 	КОНЕЦ КАК БазоваяВалюта,
-	РегистрСведенийКурсыВалют.КурсСредний КАК КурсСредний
+	РегистрСведенийКурсыВалют.КурсЗакупкиСредний КАК КурсЗакупкиСредний,
+	РегистрСведенийКурсыВалют.КурсПродажиСредний КАК КурсПродажиСредний
 ИЗ
 	РегистрСведений.КурсыВалют КАК РегистрСведенийКурсыВалют</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
@@ -144,10 +158,6 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Курс</dcssch:dataPath>
 					<dcssch:field>Курс</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>КурсСредний</dcssch:dataPath>
-					<dcssch:field>КурсСредний</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Период</dcssch:dataPath>
@@ -170,6 +180,14 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Валюта</dcssch:dataPath>
 					<dcssch:field>Валюта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КурсПродажиСредний</dcssch:dataPath>
+					<dcssch:field>КурсПродажиСредний</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КурсЗакупкиСредний</dcssch:dataPath>
+					<dcssch:field>КурсЗакупкиСредний</dcssch:field>
 				</Field>
 				<MainTable>InformationRegister.КурсыВалют</MainTable>
 				<ListSettings>
@@ -202,4 +220,25 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ОтчетСреднийКурс" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет средний курс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет средний курс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтчетСреднийКурс</Action>
+		</Command>
+	</Commands>
 </Form>

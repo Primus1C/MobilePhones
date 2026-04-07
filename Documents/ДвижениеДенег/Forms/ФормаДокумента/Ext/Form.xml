@@ -321,6 +321,7 @@
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
 													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
 													<OpenButton>false</OpenButton>
 													<ContextMenu name="ВалютаКР1КонтекстноеМеню" id="268"/>
 													<ExtendedTooltip name="ВалютаКР1РасширеннаяПодсказка" id="269"/>
@@ -590,6 +591,12 @@
 											<ContextMenu name="СубДСуммаКонтекстноеМеню" id="245"/>
 											<ExtendedTooltip name="СубДСуммаРасширеннаяПодсказка" id="246"/>
 										</InputField>
+										<CheckBoxField name="РассчитыватьСреднийКурс" id="413">
+											<DataPath>Объект.РассчитыватьСреднийКурс</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РассчитыватьСреднийКурсКонтекстноеМеню" id="414"/>
+											<ExtendedTooltip name="РассчитыватьСреднийКурсРасширеннаяПодсказка" id="415"/>
+										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа9" id="247">

@@ -38,6 +38,22 @@
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>
 		<ChildObjects>
+			<EnumValue uuid="fbf9bac5-cf5b-4a96-8777-dfb655be12c3">
+				<Properties>
+					<Name>AirIndia</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Air India</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Air India</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 			<EnumValue uuid="4bff3dba-6aef-4ee4-97d2-afef13a77223">
 				<Properties>
 					<Name>DHL</Name>

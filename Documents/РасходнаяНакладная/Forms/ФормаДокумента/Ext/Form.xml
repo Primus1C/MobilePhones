@@ -97,7 +97,6 @@
 				</UsualGroup>
 				<Button name="ОбновитьЦенуЗакупки" id="290">
 					<Type>UsualButton</Type>
-					<Visible>false</Visible>
 					<UserVisible>
 						<xr:Common>true</xr:Common>
 						<xr:Value name="Role.Администратор">false</xr:Value>

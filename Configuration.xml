@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-03-30</Version>
+			<Version>2026-04-07</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -337,6 +337,7 @@
 			<CommonPicture>singapore_logo</CommonPicture>
 			<CommonPicture>upc_logo</CommonPicture>
 			<CommonPicture>turk_logo</CommonPicture>
+			<CommonPicture>AirIndia_logo</CommonPicture>
 			<CommonPicture>Tlg</CommonPicture>
 			<SessionParameter>Настройка</SessionParameter>
 			<SessionParameter>Пользователь</SessionParameter>
@@ -494,7 +495,6 @@
 			<CommonCommand>ОткрытьНастройкиТекущегоПользователя</CommonCommand>
 			<CommonCommand>СменитьПароль</CommonCommand>
 			<CommonCommand>ГраницаЗапретаРедактирования</CommonCommand>
-			<CommonCommand>ЗаменаСерийногоНомера</CommonCommand>
 			<CommonCommand>СоставЗатрат</CommonCommand>
 			<CommonCommand>ЧтоНового</CommonCommand>
 			<CommonCommand>Оповещение</CommonCommand>
@@ -699,6 +699,7 @@
 			<Report>РеестрЗатрат</Report>
 			<Report>СоставЗатрат</Report>
 			<Report>ПроверкаПриходных</Report>
+			<Report>СреднийКурс</Report>
 			<DataProcessor>Внимание</DataProcessor>
 			<DataProcessor>Предупреждение</DataProcessor>
 			<DataProcessor>Ошибка</DataProcessor>
