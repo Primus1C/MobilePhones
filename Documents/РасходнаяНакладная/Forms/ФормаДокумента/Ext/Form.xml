@@ -97,6 +97,7 @@
 				</UsualGroup>
 				<Button name="ОбновитьЦенуЗакупки" id="290">
 					<Type>UsualButton</Type>
+					<Visible>false</Visible>
 					<UserVisible>
 						<xr:Common>true</xr:Common>
 						<xr:Value name="Role.Администратор">false</xr:Value>
@@ -501,6 +502,7 @@
 					<v8:content>Товары</v8:content>
 				</v8:item>
 			</ToolTip>
+			<SearchStringLocation>CommandBar</SearchStringLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="35">
 				<ChildItems>
@@ -519,7 +521,45 @@
 				</ChildItems>
 			</ContextMenu>
 			<AutoCommandBar name="ТоварыКоманднаяПанель" id="36">
+				<Autofill>false</Autofill>
 				<ChildItems>
+					<ButtonGroup name="ТоварыКомандыСтандартные" id="319">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Товары команды стандартные</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТоварыКомандыСтандартныеРасширеннаяПодсказка" id="320"/>
+						<ChildItems>
+							<Button name="ТоварыДобавить" id="311">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Товары.StandardCommand.Add</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ТоварыДобавитьРасширеннаяПодсказка" id="312"/>
+							</Button>
+							<Button name="ТоварыУдалить" id="317">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Товары.StandardCommand.Delete</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ТоварыУдалитьРасширеннаяПодсказка" id="318"/>
+							</Button>
+							<Button name="ТоварыПереместитьВниз" id="315">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Товары.StandardCommand.MoveDown</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ТоварыПереместитьВнизРасширеннаяПодсказка" id="316"/>
+							</Button>
+							<Button name="ТоварыПереместитьВверх" id="313">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Товары.StandardCommand.MoveUp</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ТоварыПереместитьВверхРасширеннаяПодсказка" id="314"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 					<Button name="ТоварыОбщаяКомандаОстаткиНоменклатуры" id="134">
 						<Type>CommandBarButton</Type>
 						<CommandName>CommonCommand.ОстаткиНоменклатуры</CommandName>
@@ -557,16 +597,10 @@
 						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
 						<ExtendedTooltip name="ТоварыОбщаяКомандаСоставЗатратРасширеннаяПодсказка" id="293"/>
 					</Button>
-					<Button name="ТоварыОтчетЗатратыПартииЗатратыПартии" id="296">
+					<Button name="ТоварыИзБуфераОбмена" id="184">
 						<Type>CommandBarButton</Type>
-						<CommandName>Report.ЗатратыПартии.Command.ЗатратыПартии</CommandName>
-						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
-						<ExtendedTooltip name="ТоварыОтчетЗатратыПартииЗатратыПартииРасширеннаяПодсказка" id="297"/>
-					</Button>
-					<Button name="ТоварыУстановитьЦенуВыделенных" id="278">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.УстановитьЦену</CommandName>
-						<ExtendedTooltip name="ТоварыУстановитьЦенуВыделенныхРасширеннаяПодсказка" id="279"/>
+						<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
+						<ExtendedTooltip name="ТоварыИзБуфераОбменаРасширеннаяПодсказка" id="185"/>
 					</Button>
 					<Button name="ТоварыУдалитьВыделенные" id="266">
 						<Type>CommandBarButton</Type>
@@ -578,11 +612,31 @@
 						<CommandName>Form.Command.УдалитьВсе</CommandName>
 						<ExtendedTooltip name="ТоварыУдалитьВсеРасширеннаяПодсказка" id="131"/>
 					</Button>
-					<Button name="ТоварыИзБуфераОбмена" id="184">
+					<Button name="ТоварыОтчетЗатратыПартииЗатратыПартии" id="296">
 						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
-						<ExtendedTooltip name="ТоварыИзБуфераОбменаРасширеннаяПодсказка" id="185"/>
+						<CommandName>Report.ЗатратыПартии.Command.ЗатратыПартии</CommandName>
+						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+						<ExtendedTooltip name="ТоварыОтчетЗатратыПартииЗатратыПартииРасширеннаяПодсказка" id="297"/>
 					</Button>
+					<Button name="ТоварыУстановитьЦенуВыделенных" id="278">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьЦену</CommandName>
+						<ExtendedTooltip name="ТоварыУстановитьЦенуВыделенныхРасширеннаяПодсказка" id="279"/>
+					</Button>
+					<SearchStringAddition name="СтрокаПоискаТовары" id="321">
+						<AdditionSource>
+							<Item>Товары</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Строка поиска товары</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="СтрокаПоискаТоварыКонтекстноеМеню" id="322"/>
+						<ExtendedTooltip name="СтрокаПоискаТоварыРасширеннаяПодсказка" id="323"/>
+					</SearchStringAddition>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="37"/>

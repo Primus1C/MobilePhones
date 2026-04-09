@@ -821,13 +821,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Администрирование.Subsystem.Настройки</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Report.Поставки</name>
 		<right>
 			<name>Use</name>

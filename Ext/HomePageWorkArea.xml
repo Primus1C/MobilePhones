@@ -113,5 +113,12 @@
 				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
 			</Visibility>
 		</Item>
+		<Item>
+			<Form>Report.ЗадачиПользователя.Form.ФормаОтчета</Form>
+			<Height>10</Height>
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Item>
 	</RightColumn>
 </HomePageWorkArea>

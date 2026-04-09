@@ -112,16 +112,59 @@
 					<ContextMenu name="ФирмаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ФирмаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<LabelField name="КурсЗакупкиСредний" id="40">
-					<DataPath>Список.КурсЗакупкиСредний</DataPath>
-					<ContextMenu name="КурсЗакупкиСреднийКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="КурсЗакупкиСреднийРасширеннаяПодсказка" id="42"/>
-				</LabelField>
-				<InputField name="КурсПродажиСредний" id="43">
-					<DataPath>Список.КурсПродажиСредний</DataPath>
-					<ContextMenu name="КурсПродажиСреднийКонтекстноеМеню" id="44"/>
-					<ExtendedTooltip name="КурсПродажиСреднийРасширеннаяПодсказка" id="45"/>
-				</InputField>
+				<ColumnGroup name="ГруппаСредниеКурсы" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средние курсы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Average rates</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа средние курсы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаСредниеКурсыРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<LabelField name="КурсЗакупкиСредний" id="40">
+							<DataPath>Список.КурсЗакупкиСредний</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>покупка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>purchase</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КурсЗакупкиСреднийКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="КурсЗакупкиСреднийРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<InputField name="КурсПродажиСредний" id="43">
+							<DataPath>Список.КурсПродажиСредний</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>продажа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>sell</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КурсПродажиСреднийКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="КурсПродажиСреднийРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>

@@ -394,6 +394,14 @@
 					<xr:Common>false</xr:Common>
 				</Visible>
 			</Item>
+			<Item>
+				<Command>InformationRegister.ЦеныЗакупки.StandardCommand.OpenByValue.Валюта</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
 		</NavigationPanel>
 	</CommandInterface>
 </Form>

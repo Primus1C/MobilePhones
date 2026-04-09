@@ -30,6 +30,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СменитьПароль</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ЧтоНового</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Оповещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗадачиПользователя</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
