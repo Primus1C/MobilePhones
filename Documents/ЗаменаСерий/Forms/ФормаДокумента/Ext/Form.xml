@@ -110,6 +110,11 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="ВидОперации" id="90">
+							<DataPath>Объект.ВидОперации</DataPath>
+							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="92"/>
+						</InputField>
 						<InputField name="Примечание" id="19">
 							<DataPath>Объект.Примечание</DataPath>
 							<EditMode>EnterOnInput</EditMode>

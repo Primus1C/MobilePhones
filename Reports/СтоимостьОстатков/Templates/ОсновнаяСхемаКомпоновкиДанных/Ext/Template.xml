@@ -109,7 +109,7 @@
 ИЗ
 	РегистрНакопления.ОстаткиТовара.Остатки(, {(Склад В (&amp;Склад))}) КАК ОстаткиТовараОстатки
 ГДЕ
-	НЕ ОстаткиТовараОстатки.Номенклатура.Услуги
+	ОстаткиТовараОстатки.Номенклатура.ТипНоменклатуры = Значение(Перечисление.ТипыНоменклатуры.Товар)
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -331,16 +331,6 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Склад</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВалютаДол</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВалютаРуб</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>

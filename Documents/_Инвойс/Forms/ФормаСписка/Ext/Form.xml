@@ -521,6 +521,17 @@
 					<ContextMenu name="ДолгКонтекстноеМеню" id="101"/>
 					<ExtendedTooltip name="ДолгРасширеннаяПодсказка" id="102"/>
 				</LabelField>
+				<CheckBoxField name="КурсУстановленВручную" id="111">
+					<DataPath>Список.КурсУстановленВручную</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КурсУстановленВручнуюКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="КурсУстановленВручнуюРасширеннаяПодсказка" id="113"/>
+				</CheckBoxField>
 				<LabelField name="Состояние" id="106">
 					<DataPath>Список.Состояние</DataPath>
 					<ContextMenu name="СостояниеКонтекстноеМеню" id="107"/>
@@ -691,7 +702,9 @@
 		ИНАЧЕ 11
 	КОНЕЦ КАК ЗначокПоставки,
 	СостоянияИнвойсов.СтатусОплатыАвто КАК Состояние,
-	Привязки.Долг КАК Долг
+	Привязки.Долг КАК Долг,
+	Документ_Инвойс.КурсУстановленВручную
+		И Документ_Инвойс.ДокументОснование.Валюта &lt;&gt; Документ_Инвойс.Валюта КАК КурсУстановленВручную
 ИЗ
 	Документ._Инвойс КАК Документ_Инвойс
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
@@ -1110,6 +1123,10 @@
 							<v8:content>Состояние</v8:content>
 						</v8:item>
 					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КурсУстановленВручную</dcssch:dataPath>
+					<dcssch:field>КурсУстановленВручную</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>
