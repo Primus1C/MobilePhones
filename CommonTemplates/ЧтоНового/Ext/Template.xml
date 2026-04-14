@@ -41,7 +41,7 @@
 			<formatIndex>4</formatIndex>
 			<c>
 				<c>
-					<f>4</f>
+					<f>5</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -52,7 +52,7 @@
 			</c>
 			<c>
 				<c>
-					<f>4</f>
+					<f>5</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -63,7 +63,7 @@
 			</c>
 			<c>
 				<c>
-					<f>4</f>
+					<f>5</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -74,7 +74,7 @@
 			</c>
 			<c>
 				<c>
-					<f>5</f>
+					<f>6</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -88,10 +88,10 @@
 	<rowsItem>
 		<index>1</index>
 		<row>
-			<formatIndex>6</formatIndex>
+			<formatIndex>7</formatIndex>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -102,7 +102,7 @@
 			</c>
 			<c>
 				<c>
-					<f>8</f>
+					<f>9</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -113,7 +113,7 @@
 			</c>
 			<c>
 				<c>
-					<f>9</f>
+					<f>10</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -124,7 +124,7 @@
 			</c>
 			<c>
 				<c>
-					<f>10</f>
+					<f>11</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -140,7 +140,7 @@
 		<row>
 			<c>
 				<c>
-					<f>11</f>
+					<f>12</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -162,7 +162,7 @@
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -189,7 +189,7 @@
 		<row>
 			<c>
 				<c>
-					<f>11</f>
+					<f>12</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -204,14 +204,16 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>В РС "Курсы валют" добавлены ресурсы: "Средний курс покупки" и "Средний курс продажи". Записываются автоматически при проведении (отмене проведения) док-тов Движение денег" с видом операции "Обмен валюты" и установленной пометкой "Рассчитывать средний курс". Расчет производится по всем таким документом с датой и валютой как в записыаемом документе. Также добавлен отчет, отображающий документы и суммы, участвовавшие в расчете среднего курса.</v8:content>
+							<v8:content>В РС "Курсы валют" добавлены ресурсы: "Средний курс покупки" и "Средний курс продажи". Записываются автоматически при проведении (отмене проведения) док-тов Движение денег" с видом операции "Обмен валюты" и установленной пометкой "Рассчитывать средний курс".
+Расчет производится с учетом всех таким документом с датой и валютой равными дате и валюте записыаемого документа. 
+Также добавлен отчет, отображающий документы и суммы, участвовавшие в расчете среднего курса.</v8:content>
 						</v8:item>
 					</tl>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>14</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -238,7 +240,7 @@
 		<row>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -260,7 +262,7 @@
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>14</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -299,7 +301,7 @@
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -326,7 +328,7 @@
 		<row>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -348,7 +350,7 @@
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>14</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -370,10 +372,126 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>7</index>
+		<row>
+			<c>
+				<c>
+					<f>15</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>13.04.2026</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для док-тов "Движение денег" с валютой, имеющей партионный учет, сделан автоматическая установка времени документа: 23:59:58 - документы покупки валюты, 23:59:59 - документы списания (оплата поставщику)</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>13</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инна</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Движение денег, Валюта, Средний курс</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>8</index>
+		<row>
+			<c>
+				<i>2</i>
+				<c>
+					<f>16</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>9</index>
+		<row>
+			<c>
+				<i>2</i>
+				<c>
+					<f>16</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>10</index>
+		<row>
+			<c>
+				<i>2</i>
+				<c>
+					<f>16</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>11</index>
+		<row>
+			<c>
+				<i>2</i>
+				<c>
+					<f>16</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>1</id>
+		<formatIndex>17</formatIndex>
+		<beginRow>3</beginRow>
+		<beginRowOffset>219</beginRowOffset>
+		<endRow>3</endRow>
+		<endRowOffset>267</endRowOffset>
+		<beginColumn>1</beginColumn>
+		<beginColumnOffset>1428</beginColumnOffset>
+		<endColumn>1</endColumn>
+		<endColumnOffset>1476</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>Stretch</pictureSize>
+		<zOrder>1</zOrder>
+		<pictureIndex>1</pictureIndex>
+	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>15</defaultFormatIndex>
-	<height>7</height>
-	<vgRows>7</vgRows>
+	<defaultFormatIndex>18</defaultFormatIndex>
+	<height>12</height>
+	<vgRows>12</vgRows>
+	<line width="1" gap="false">
+		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+	</line>
+	<line width="1" gap="false">
+		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">None</v8ui:style>
+	</line>
 	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="8" bold="false" italic="true" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
@@ -393,6 +511,11 @@
 	</format>
 	<format>
 		<font>0</font>
+		<bottomBorder>0</bottomBorder>
+	</format>
+	<format>
+		<font>0</font>
+		<bottomBorder>0</bottomBorder>
 		<textPlacement>Wrap</textPlacement>
 	</format>
 	<format>
@@ -408,7 +531,7 @@
 	</format>
 	<format>
 		<font>1</font>
-		<horizontalAlignment>Right</horizontalAlignment>
+		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
@@ -420,12 +543,12 @@
 	<format>
 		<font>1</font>
 		<width>72</width>
-		<horizontalAlignment>Right</horizontalAlignment>
+		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
 		<font>1</font>
-		<horizontalAlignment>Right</horizontalAlignment>
+		<horizontalAlignment>Left</horizontalAlignment>
 	</format>
 	<format>
 		<font>1</font>
@@ -433,7 +556,17 @@
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
+		<horizontalAlignment>Left</horizontalAlignment>
+	</format>
+	<format>
+		<drawingBorder>1</drawingBorder>
+	</format>
+	<format>
 		<width>72</width>
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
+	<picture>
+		<index>0</index>
+		<picture ref="v8ui:Report"/>
+	</picture>
 </document>

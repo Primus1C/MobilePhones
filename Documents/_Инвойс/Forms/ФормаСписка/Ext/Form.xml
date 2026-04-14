@@ -525,7 +525,7 @@
 					<DataPath>Список.КурсУстановленВручную</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<HeaderPicture>
-						<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+						<xr:Ref>CommonPicture.ОбменВалют</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</HeaderPicture>
 					<CheckBoxType>Auto</CheckBoxType>
@@ -589,7 +589,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Документ_Инвойс.Дата КАК Дата,
 	Документ_Инвойс.Номер КАК Номер,
@@ -702,9 +702,10 @@
 		ИНАЧЕ 11
 	КОНЕЦ КАК ЗначокПоставки,
 	СостоянияИнвойсов.СтатусОплатыАвто КАК Состояние,
-	Привязки.Долг КАК Долг,
+	Привязки.Долг КАК Долг, 
 	Документ_Инвойс.КурсУстановленВручную
-		И Документ_Инвойс.ДокументОснование.Валюта &lt;&gt; Документ_Инвойс.Валюта КАК КурсУстановленВручную
+	//	И Документ_Инвойс.ДокументОснование.Валюта &lt;&gt; Документ_Инвойс.Валюта 
+		КАК КурсУстановленВручную
 ИЗ
 	Документ._Инвойс КАК Документ_Инвойс
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
@@ -768,12 +769,8 @@
 		СГРУППИРОВАТЬ ПО
 			РасчетыПоИнвойсамОстатки.Инвойс) КАК Привязки
 		ПО Документ_Инвойс.Ссылка = Привязки.Инвойс
-ГДЕ
-	ВЫБОР
-			КОГДА &amp;Граница = НЕОПРЕДЕЛЕНО
-				ТОГДА ИСТИНА
-			ИНАЧЕ Документ_Инвойс.Дата &gt; &amp;Граница
-		КОНЕЦ</QueryText>
+{ГДЕ
+	(Документ_Инвойс.Дата &gt; &amp;Граница)}</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ВКД_Количество</dcssch:dataPath>
 					<dcssch:field>ВКД_Количество</dcssch:field>
@@ -1121,6 +1118,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>State</v8:content>
 						</v8:item>
 					</dcssch:title>
 				</Field>

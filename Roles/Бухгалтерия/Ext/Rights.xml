@@ -3062,13 +3062,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.Ссылки</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ОтправкаИнвойсов.Dimension.Инвойс</name>
 		<right>
 			<name>Edit</name>

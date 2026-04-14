@@ -1390,13 +1390,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.Ссылки</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ВКД_СкидкаПоставщика</name>
 		<right>
 			<name>Read</name>

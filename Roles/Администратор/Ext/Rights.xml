@@ -431,6 +431,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonCommand.Ссылки</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document._СписаниеДолга</name>
 		<right>
 			<name>InteractiveDelete</name>

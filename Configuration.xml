@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-04-10</Version>
+			<Version>2026-04-12</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -340,6 +340,7 @@
 			<CommonPicture>AirIndia_logo</CommonPicture>
 			<CommonPicture>EtihadAirways_logo</CommonPicture>
 			<CommonPicture>Tlg</CommonPicture>
+			<CommonPicture>ОбменВалют</CommonPicture>
 			<SessionParameter>Настройка</SessionParameter>
 			<SessionParameter>Пользователь</SessionParameter>
 			<SessionParameter>Администратор</SessionParameter>
@@ -420,6 +421,7 @@
 			<Role>РасходныеНакладные</Role>
 			<Role>ПриходныеНакладные</Role>
 			<Role>ЗаменаСерий</Role>
+			<Role>ОтчетЗадачиПользователя</Role>
 			<CommonTemplate>ОсновнойМакетСКД</CommonTemplate>
 			<CommonTemplate>МакетПоменьшеСКД</CommonTemplate>
 			<CommonTemplate>component_body</CommonTemplate>

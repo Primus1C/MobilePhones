@@ -562,7 +562,6 @@
 													</Events>
 												</InputField>
 												<LabelDecoration name="ДекорацияКурс" id="599">
-													<Visible>false</Visible>
 													<ContextMenu name="ДекорацияКурсКонтекстноеМеню" id="600"/>
 													<ExtendedTooltip name="ДекорацияКурсРасширеннаяПодсказка" id="601"/>
 												</LabelDecoration>

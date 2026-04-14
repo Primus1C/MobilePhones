@@ -1329,13 +1329,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.Ссылки</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Номенклатура.Attribute.Услуги</name>
 		<right>
 			<name>Edit</name>

@@ -1016,13 +1016,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.Ссылки</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>SessionParameter.ДоступныНаименованияКонтрагентов</name>
 		<right>
 			<name>Get</name>
