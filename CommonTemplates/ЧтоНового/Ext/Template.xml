@@ -205,7 +205,8 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>В РС "Курсы валют" добавлены ресурсы: "Средний курс покупки" и "Средний курс продажи". Записываются автоматически при проведении (отмене проведения) док-тов Движение денег" с видом операции "Обмен валюты" и установленной пометкой "Рассчитывать средний курс".
-Расчет производится с учетом всех таким документом с датой и валютой равными дате и валюте записыаемого документа. 
+Расчет производится с учетом всех таким документов с датой и валютой равными дате и валюте записыаемого документа. 
+По сути это средние курсы по итогам покупки и продажи валюты за день. 
 Также добавлен отчет, отображающий документы и суммы, участвовавшие в расчете среднего курса.</v8:content>
 						</v8:item>
 					</tl>
@@ -470,13 +471,13 @@
 		<id>1</id>
 		<formatIndex>17</formatIndex>
 		<beginRow>3</beginRow>
-		<beginRowOffset>219</beginRowOffset>
+		<beginRowOffset>261</beginRowOffset>
 		<endRow>3</endRow>
-		<endRowOffset>267</endRowOffset>
+		<endRowOffset>309</endRowOffset>
 		<beginColumn>1</beginColumn>
-		<beginColumnOffset>1428</beginColumnOffset>
+		<beginColumnOffset>1431</beginColumnOffset>
 		<endColumn>1</endColumn>
-		<endColumnOffset>1476</endColumnOffset>
+		<endColumnOffset>1479</endColumnOffset>
 		<autoSize>false</autoSize>
 		<pictureSize>Stretch</pictureSize>
 		<zOrder>1</zOrder>

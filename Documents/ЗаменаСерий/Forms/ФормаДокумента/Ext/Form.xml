@@ -114,6 +114,9 @@
 							<DataPath>Объект.ВидОперации</DataPath>
 							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="91"/>
 							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="92"/>
+							<Events>
+								<Event name="OnChange">ВидОперацииПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Примечание" id="19">
 							<DataPath>Объект.Примечание</DataPath>
@@ -128,6 +131,7 @@
 									<v8:content>Группа скан</v8:content>
 								</v8:item>
 							</Title>
+							<VerticalAlign>Center</VerticalAlign>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаСканРасширеннаяПодсказка" id="80"/>
@@ -232,94 +236,153 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<Table name="Товары" id="22">
-			<Representation>List</Representation>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Товары</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ТоварыКонтекстноеМеню" id="23"/>
-			<AutoCommandBar name="ТоварыКоманднаяПанель" id="24">
-				<ChildItems>
-					<Button name="ОбщаяКомандаОстаткиНоменклатуры" id="70">
-						<Type>CommandBarButton</Type>
-						<CommandName>CommonCommand.ОстаткиНоменклатуры</CommandName>
-						<DataPath>Items.Товары.CurrentData.Номенклатура</DataPath>
-						<ExtendedTooltip name="ОбщаяКомандаОстаткиНоменклатурыРасширеннаяПодсказка" id="71"/>
-					</Button>
-					<Button name="ОтчетОборотыОднойСерииОборотыСерии" id="74">
-						<Type>CommandBarButton</Type>
-						<CommandName>Report.ОборотыОднойСерии.Command.ОборотыСерии</CommandName>
-						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
-						<ExtendedTooltip name="ОтчетОборотыОднойСерииОборотыСерииРасширеннаяПодсказка" id="75"/>
-					</Button>
-					<Button name="ОтчетОборотыОднойПартииОборотыПартии" id="72">
-						<Type>CommandBarButton</Type>
-						<CommandName>Report.ОборотыОднойПартии.Command.ОборотыПартии</CommandName>
-						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
-						<ExtendedTooltip name="ОтчетОборотыОднойПартииОборотыПартииРасширеннаяПодсказка" id="73"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="25"/>
-			<SearchStringAddition name="ТоварыСтрокаПоиска" id="26">
-				<AdditionSource>
-					<Item>Товары</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ТоварыСтрокаПоискаКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="ТоварыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ТоварыСостояниеПросмотра" id="29">
-				<AdditionSource>
-					<Item>Товары</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ТоварыСостояниеПросмотраКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="ТоварыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ТоварыУправлениеПоиском" id="32">
-				<AdditionSource>
-					<Item>Товары</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="33"/>
-				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
-			</SearchControlAddition>
+		<Pages name="ГруппаТабличныеЧасти" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа табличные части</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаТабличныеЧастиРасширеннаяПодсказка" id="97"/>
 			<ChildItems>
-				<LabelField name="ТоварыНомерСтроки" id="35">
-					<DataPath>Объект.Товары.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="ТоварыНомерСтрокиРасширеннаяПодсказка" id="37"/>
-				</LabelField>
-				<InputField name="ТоварыНоменклатура" id="38">
-					<DataPath>Объект.Товары.Номенклатура</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="40"/>
-				</InputField>
-				<InputField name="ТоварыПартия" id="41">
-					<DataPath>Объект.Товары.Партия</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыПартияКонтекстноеМеню" id="42"/>
-					<ExtendedTooltip name="ТоварыПартияРасширеннаяПодсказка" id="43"/>
-				</InputField>
-				<InputField name="ТоварыСерия" id="44">
-					<DataPath>Объект.Товары.Серия</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="45"/>
-					<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="46"/>
-				</InputField>
-				<InputField name="ТоварыСерияНовая" id="47">
-					<DataPath>Объект.Товары.СерияНовая</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыСерияНоваяКонтекстноеМеню" id="48"/>
-					<ExtendedTooltip name="ТоварыСерияНоваяРасширеннаяПодсказка" id="49"/>
-				</InputField>
+				<Page name="ГруппаЗамены" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замены</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа замены</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗаменыРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<Table name="Товары" id="22">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Товары</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТоварыКонтекстноеМеню" id="23"/>
+							<AutoCommandBar name="ТоварыКоманднаяПанель" id="24">
+								<ChildItems>
+									<Button name="ОбщаяКомандаОстаткиНоменклатуры" id="70">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.ОстаткиНоменклатуры</CommandName>
+										<DataPath>Items.Товары.CurrentData.Номенклатура</DataPath>
+										<ExtendedTooltip name="ОбщаяКомандаОстаткиНоменклатурыРасширеннаяПодсказка" id="71"/>
+									</Button>
+									<Button name="ОтчетОборотыОднойСерииОборотыСерии" id="74">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ОборотыОднойСерии.Command.ОборотыСерии</CommandName>
+										<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+										<ExtendedTooltip name="ОтчетОборотыОднойСерииОборотыСерииРасширеннаяПодсказка" id="75"/>
+									</Button>
+									<Button name="ОтчетОборотыОднойПартииОборотыПартии" id="72">
+										<Type>CommandBarButton</Type>
+										<CommandName>Report.ОборотыОднойПартии.Command.ОборотыПартии</CommandName>
+										<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+										<ExtendedTooltip name="ОтчетОборотыОднойПартииОборотыПартииРасширеннаяПодсказка" id="73"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="25"/>
+							<SearchStringAddition name="ТоварыСтрокаПоиска" id="26">
+								<AdditionSource>
+									<Item>Товары</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварыСтрокаПоискаКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ТоварыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТоварыСостояниеПросмотра" id="29">
+								<AdditionSource>
+									<Item>Товары</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="ТоварыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТоварыУправлениеПоиском" id="32">
+								<AdditionSource>
+									<Item>Товары</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТоварыНомерСтроки" id="35">
+									<DataPath>Объект.Товары.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ТоварыНомерСтрокиРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+								<InputField name="ТоварыНоменклатура" id="38">
+									<DataPath>Объект.Товары.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ТоварыНоменклатураНовая" id="93">
+									<DataPath>Объект.Товары.НоменклатураНовая</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыНоменклатураНоваяКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ТоварыНоменклатураНоваяРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<InputField name="ТоварыПартия" id="41">
+									<DataPath>Объект.Товары.Партия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыПартияКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ТоварыПартияРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<InputField name="ТоварыСерия" id="44">
+									<DataPath>Объект.Товары.Серия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<InputField name="ТоварыСерияНовая" id="47">
+									<DataPath>Объект.Товары.СерияНовая</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТоварыСерияНоваяКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТоварыСерияНоваяРасширеннаяПодсказка" id="49"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКомментарий" id="100">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="102">
+							<DataPath>Объект.Комментарий</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="104"/>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
