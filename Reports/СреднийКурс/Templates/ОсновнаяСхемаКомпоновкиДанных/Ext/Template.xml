@@ -17,31 +17,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Сумма</dataPath>
-			<field>Сумма</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма USD</v8:content>
-				</v8:item>
-			</title>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Формат</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЧДЦ=2</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>ЧДЦ=2</v8:content>
-						</v8:item>
-					</dcscor:value>
-				</dcscor:item>
-			</appearance>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СубДСумма</dataPath>
 			<field>СубДСумма</field>
 			<title xsi:type="v8:LocalStringType">
@@ -136,6 +111,24 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубДВалюта</dataPath>
+			<field>СубДВалюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма USD</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ДвижениеДенег.Ссылка КАК Ссылка,
@@ -144,12 +137,26 @@
 			ТОГДА "Продажа"
 		ИНАЧЕ "Покупка"
 	КОНЕЦ КАК Операция,
+	ДвижениеДенег.Валюта КАК Валюта,
+	ДвижениеДенег.СубДВалюта КАК СубДВалюта,
 	ВЫБОР
+		КОГДА ДвижениеДенег.Валюта = &amp;Рубль
+				И ДвижениеДенег.СубДВалюта = &amp;Доллар
+			ТОГДА ДвижениеДенег.СубДСумма
+		КОГДА ДвижениеДенег.Валюта = &amp;Доллар
+				И ДвижениеДенег.СубДВалюта = &amp;Рубль
+			ТОГДА ДвижениеДенег.Сумма
 		КОГДА ДвижениеДенег.Валюта = &amp;Валюта
 			ТОГДА ДвижениеДенег.СубДСумма
 		ИНАЧЕ ДвижениеДенег.Сумма
 	КОНЕЦ КАК Сумма,
 	ВЫБОР
+		КОГДА ДвижениеДенег.Валюта = &amp;Рубль
+				И ДвижениеДенег.СубДВалюта = &amp;Доллар
+			ТОГДА ДвижениеДенег.Сумма
+		КОГДА ДвижениеДенег.Валюта = &amp;Доллар
+				И ДвижениеДенег.СубДВалюта = &amp;Рубль
+			ТОГДА ДвижениеДенег.СубДСумма
 		КОГДА ДвижениеДенег.Валюта = &amp;Валюта
 			ТОГДА ДвижениеДенег.Сумма
 		ИНАЧЕ ДвижениеДенег.СубДСумма
@@ -171,19 +178,20 @@
 	Документ.ДвижениеДенег КАК ДвижениеДенег
 ГДЕ
 	ДвижениеДенег.Проведен
-	И ДвижениеДенег.РассчитыватьСреднийКурс
 	И ДвижениеДенег.ВидДвиженияДенег = ЗНАЧЕНИЕ(Перечисление.ВидДвиженияДенег.ОбменВалюты)
+	И ДвижениеДенег.РассчитыватьСреднийКурс
 	И ДвижениеДенег.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Дата, ДЕНЬ) И КОНЕЦПЕРИОДА(&amp;Дата, ДЕНЬ)
-	И (ДвижениеДенег.Валюта = &amp;Валюта
-			ИЛИ ДвижениеДенег.СубДВалюта = &amp;Валюта)</query>
+	И ВЫБОР
+			КОГДА &amp;Валюта = &amp;Доллар
+				ТОГДА ДвижениеДенег.Валюта = &amp;Рубль
+						ИЛИ ДвижениеДенег.СубДВалюта = &amp;Рубль
+			ИНАЧЕ ДвижениеДенег.Валюта = &amp;Валюта
+					ИЛИ ДвижениеДенег.СубДВалюта = &amp;Валюта
+		КОНЕЦ</query>
 	</dataSet>
 	<totalField>
 		<dataPath>СубДСумма</dataPath>
 		<expression>Сумма(СубДСумма)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>Сумма</dataPath>
-		<expression>Сумма(Сумма)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>КурсПокупки</dataPath>
@@ -204,6 +212,10 @@
 		<expression>Среднее(Курс)</expression>
 		<group>Операция</group>
 		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
 	</totalField>
 	<parameter>
 		<name>Валюта</name>
@@ -235,6 +247,38 @@
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Рубль</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Рубль</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Валюты.НайтиПоКоду("РУБ")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Доллар</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Доллар</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Валюты.НайтиПоКоду("USD")</expression>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -270,6 +314,16 @@
 					<dcscor:parameter>Дата</dcscor:parameter>
 					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:userSettingID>dc18c21e-c6fe-431b-8eb7-99b851a61c85</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Рубль</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Доллар</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:conditionalAppearance>
