@@ -705,6 +705,7 @@
 			<Report>ПроверкаПриходных</Report>
 			<Report>СреднийКурс</Report>
 			<Report>ЗадачиПользователя</Report>
+			<Report>АнализПродаж</Report>
 			<DataProcessor>Внимание</DataProcessor>
 			<DataProcessor>Предупреждение</DataProcessor>
 			<DataProcessor>Ошибка</DataProcessor>

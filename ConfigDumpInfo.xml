@@ -916,7 +916,7 @@
 		<Metadata name="CommonTemplate.ОсновнойМакетСКД.Template" id="070e8091-73fa-4a93-a520-04f7d6df9dd5.0" configVersion="a2cd7397bdabf74fa83958771649ccc600000000"/>
 		<Metadata name="CommonTemplate.ЧтоНового" id="dd190b7e-5cf9-48ed-b9fd-e5dd06eee8c7" configVersion="84835f718e964f418c8cd66531abdeb600000000"/>
 		<Metadata name="CommonTemplate.ЧтоНового.Template" id="dd190b7e-5cf9-48ed-b9fd-e5dd06eee8c7.0" configVersion="227885890f6b74498056ab9392338f8100000000"/>
-		<Metadata name="Configuration.ИТДБ_Торговля_8_3" id="0e96bf56-f658-47bc-a738-6c33ab9bcc41" configVersion="e101bd417253234aaf8b83e02594c99e00000000"/>
+		<Metadata name="Configuration.ИТДБ_Торговля_8_3" id="0e96bf56-f658-47bc-a738-6c33ab9bcc41" configVersion="4e89a0560055444988b2208861d5403600000000"/>
 		<Metadata name="Configuration.ИТДБ_Торговля_8_3.ClientApplicationInterface" id="90e3974d-e3d1-4201-8437-980bc2d5c502.b" configVersion="b077136cd0c10f40ac2cfa1735bcfed700000000"/>
 		<Metadata name="Configuration.ИТДБ_Торговля_8_3.CommandInterface" id="90e3974d-e3d1-4201-8437-980bc2d5c502.a" configVersion="78bab49fa604c54fb24c62625d455d3a00000000"/>
 		<Metadata name="Configuration.ИТДБ_Торговля_8_3.HomePageWorkArea" id="90e3974d-e3d1-4201-8437-980bc2d5c502.8" configVersion="8f6898fc956d214880eb8da75bc257d500000000"/>
@@ -2469,6 +2469,9 @@
 		<Metadata name="Report.АнализПравДоступа.Template.Макет.Template" id="12d5f2fe-4f49-4dba-a5b7-fc9206795864.0" configVersion="d69136e29c1f8b4ebee7659cf9cbbbd300000000"/>
 		<Metadata name="Report.АнализПравДоступа.Template.ОсновнаяСхемаКомпоновкиДанных" id="f560de1b-d86b-4cfe-8060-8c313c920a43" configVersion="75015140e5fd464e9a2ef2de5b3edbef00000000"/>
 		<Metadata name="Report.АнализПравДоступа.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="f560de1b-d86b-4cfe-8060-8c313c920a43.0" configVersion="622b52b5ae66494aa72187b38436fbb100000000"/>
+		<Metadata name="Report.АнализПродаж" id="e6a70498-83d1-4aa8-b7ed-bd1b62e27ac8" configVersion="44f20d059c4c0a499d2ef744bd4675e100000000"/>
+		<Metadata name="Report.АнализПродаж.Template.ОсновнаяСхемаКомпоновкиДанных" id="dfef552e-91f6-4982-936d-9238509a3351" configVersion="390f24aad61d40419018befe1d3277dc00000000"/>
+		<Metadata name="Report.АнализПродаж.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="dfef552e-91f6-4982-936d-9238509a3351.0" configVersion="c39c2c4813b7bb4aaebe83b70ba8a65400000000"/>
 		<Metadata name="Report.Биржа" id="c9ce0a51-dcc6-4b13-8551-fc918866cbee" configVersion="c6e84db11f36ab4ea27f8985a36af36700000000">
 			<Metadata name="Report.Биржа.Command.Биржа" id="7aa4ae43-0450-42fd-8caf-d1838af60092"/>
 		</Metadata>
@@ -2733,8 +2736,8 @@
 		<Metadata name="Report.ОборотыТовара.Form.ФормаОтчета" id="49d48231-381f-4fd3-a008-034dc23cde82" configVersion="559ab9b2e90614408ca9813bd52fd11800000000"/>
 		<Metadata name="Report.ОборотыТовара.Form.ФормаОтчета.Form" id="49d48231-381f-4fd3-a008-034dc23cde82.0" configVersion="8b604d8791af7f478c92bf59b5cda9d400000000"/>
 		<Metadata name="Report.ОборотыТовара.ObjectModule" id="5910cb6f-6317-4c1a-bb9b-f24aea75175f.0" configVersion="d8328e8e53ad324088d777b63697a6c300000000"/>
-		<Metadata name="Report.ОборотыТовара.Template.ОсновнаяСхемаКомпоновкиДанных" id="533f8a72-ada2-45d5-b822-5516280ad47f" configVersion="8e8dcb8370512e42909a83f7af08836400000000"/>
-		<Metadata name="Report.ОборотыТовара.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="533f8a72-ada2-45d5-b822-5516280ad47f.0" configVersion="0de262871963c54ea87cc97a62336eed00000000"/>
+		<Metadata name="Report.ОборотыТовара.Template.ОсновнаяСхемаКомпоновкиДанных" id="533f8a72-ada2-45d5-b822-5516280ad47f" configVersion="e436f3a34c3a3a4e87e2b925a3e2294200000000"/>
+		<Metadata name="Report.ОборотыТовара.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="533f8a72-ada2-45d5-b822-5516280ad47f.0" configVersion="4318466ee2176744a91eae0276d1a3f800000000"/>
 		<Metadata name="Report.ОдинДолгПокупателя" id="76f2c4af-4f64-45b0-8fa1-23a80a7fbb3e" configVersion="4941f5016ac9484a9a9f5a7bc455ed2600000000">
 			<Metadata name="Report.ОдинДолгПокупателя.Command.ОдинДолгПокупателя" id="a3b97541-8c77-4c24-bd16-247bdf16aa83"/>
 		</Metadata>
