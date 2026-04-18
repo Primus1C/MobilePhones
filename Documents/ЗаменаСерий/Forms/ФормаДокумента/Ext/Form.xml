@@ -7,6 +7,7 @@
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -195,12 +196,14 @@
 							<ChildItems>
 								<InputField name="Создан" id="10">
 									<DataPath>Объект.Создан</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СозданКонтекстноеМеню" id="11"/>
 									<ExtendedTooltip name="СозданРасширеннаяПодсказка" id="12"/>
 								</InputField>
 								<InputField name="КемСоздан" id="7">
 									<DataPath>Объект.КемСоздан</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="КемСозданКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="КемСозданРасширеннаяПодсказка" id="9"/>
@@ -220,12 +223,14 @@
 							<ChildItems>
 								<InputField name="Сохранен" id="16">
 									<DataPath>Объект.Сохранен</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СохраненКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="СохраненРасширеннаяПодсказка" id="18"/>
 								</InputField>
 								<InputField name="КемСохранен" id="13">
 									<DataPath>Объект.КемСохранен</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="КемСохраненКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="КемСохраненРасширеннаяПодсказка" id="15"/>
@@ -236,6 +241,32 @@
 				</Page>
 			</ChildItems>
 		</Pages>
+		<CheckBoxField name="ЗаменаПроведена" id="145">
+			<DataPath>Объект.ЗаменаПроведена</DataPath>
+			<Visible>false</Visible>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗаменаПроведенаКонтекстноеМеню" id="146"/>
+			<ExtendedTooltip name="ЗаменаПроведенаРасширеннаяПодсказка" id="147"/>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияИнфо" id="105">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:AccentColor</TextColor>
+			<Font bold="true" kind="AutoFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация инфо</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Декорация инфо</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="106"/>
+			<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="107"/>
+		</LabelDecoration>
 		<Pages name="ГруппаТабличныеЧасти" id="96">
 			<Title>
 				<v8:item>
@@ -345,6 +376,9 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="45"/>
 									<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="46"/>
+									<Events>
+										<Event name="OnChange">ТоварыСерияПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="ТоварыСерияНовая" id="47">
 									<DataPath>Объект.Товары.СерияНовая</DataPath>
@@ -360,7 +394,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Протокол</v8:content>
+							<v8:content>Результаты выполнения замены</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -371,14 +405,118 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="101"/>
 					<ChildItems>
-						<InputField name="Комментарий" id="102">
-							<DataPath>Объект.Комментарий</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<TitleLocation>None</TitleLocation>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<ContextMenu name="КомментарийКонтекстноеМеню" id="103"/>
-							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="104"/>
-						</InputField>
+						<Table name="ВыполненныеЗамены" id="148">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ВыполненныеЗамены</DataPath>
+							<RowPictureDataPath>ВыполненныеЗамены.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ВыполненныеЗаменыКонтекстноеМеню" id="149"/>
+							<AutoCommandBar name="ВыполненныеЗаменыКоманднаяПанель" id="150"/>
+							<ExtendedTooltip name="ВыполненныеЗаменыРасширеннаяПодсказка" id="151"/>
+							<SearchStringAddition name="ВыполненныеЗаменыСтрокаПоиска" id="152">
+								<AdditionSource>
+									<Item>ВыполненныеЗамены</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыполненныеЗаменыСтрокаПоискаКонтекстноеМеню" id="153"/>
+								<ExtendedTooltip name="ВыполненныеЗаменыСтрокаПоискаРасширеннаяПодсказка" id="154"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВыполненныеЗаменыСостояниеПросмотра" id="155">
+								<AdditionSource>
+									<Item>ВыполненныеЗамены</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыполненныеЗаменыСостояниеПросмотраКонтекстноеМеню" id="156"/>
+								<ExtendedTooltip name="ВыполненныеЗаменыСостояниеПросмотраРасширеннаяПодсказка" id="157"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВыполненныеЗаменыУправлениеПоиском" id="158">
+								<AdditionSource>
+									<Item>ВыполненныеЗамены</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыполненныеЗаменыУправлениеПоискомКонтекстноеМеню" id="159"/>
+								<ExtendedTooltip name="ВыполненныеЗаменыУправлениеПоискомРасширеннаяПодсказка" id="160"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ВыполненныеЗаменыВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВыполненныеЗаменыРегистратор" id="161">
+									<DataPath>ВыполненныеЗамены.Recorder</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ВыполненныеЗаменыРегистраторКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыРегистраторРасширеннаяПодсказка" id="163"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыНомерСтроки" id="164">
+									<DataPath>ВыполненныеЗамены.LineNumber</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВыполненныеЗаменыНомерСтрокиКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыНомерСтрокиРасширеннаяПодсказка" id="166"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыИсточник" id="167">
+									<DataPath>ВыполненныеЗамены.Источник</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ВыполненныеЗаменыИсточникКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыИсточникРасширеннаяПодсказка" id="169"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыОбъектЗамены" id="170">
+									<DataPath>ВыполненныеЗамены.ОбъектЗамены</DataPath>
+									<CellHyperlink>true</CellHyperlink>
+									<TextColor>style:ЦветНадписиИнфоСиний</TextColor>
+									<ContextMenu name="ВыполненныеЗаменыОбъектЗаменыКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыОбъектЗаменыРасширеннаяПодсказка" id="172"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыСтрокаТЧ" id="173">
+									<DataPath>ВыполненныеЗамены.СтрокаТЧ</DataPath>
+									<ContextMenu name="ВыполненныеЗаменыСтрокаТЧКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыСтрокаТЧРасширеннаяПодсказка" id="175"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыСтароеЗначение" id="176">
+									<DataPath>ВыполненныеЗамены.СтароеЗначение</DataPath>
+									<ContextMenu name="ВыполненныеЗаменыСтароеЗначениеКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыСтароеЗначениеРасширеннаяПодсказка" id="178"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыНовоеЗначение" id="179">
+									<DataPath>ВыполненныеЗамены.НовоеЗначение</DataPath>
+									<ContextMenu name="ВыполненныеЗаменыНовоеЗначениеКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыНовоеЗначениеРасширеннаяПодсказка" id="181"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыАвтор" id="182">
+									<DataPath>ВыполненныеЗамены.Автор</DataPath>
+									<ContextMenu name="ВыполненныеЗаменыАвторКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыАвторРасширеннаяПодсказка" id="184"/>
+								</LabelField>
+								<LabelField name="ВыполненныеЗаменыДата" id="185">
+									<DataPath>ВыполненныеЗамены.Дата</DataPath>
+									<ContextMenu name="ВыполненныеЗаменыДатаКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ВыполненныеЗаменыДатаРасширеннаяПодсказка" id="187"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -467,6 +605,41 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ВыполненныеЗамены" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполненные замены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ВыполненныеЗамены.Recorder</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.Замены</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
 	</Attributes>
 	<CommandInterface>
 		<NavigationPanel>
@@ -479,7 +652,7 @@
 				</Visible>
 			</Item>
 			<Item>
-				<Command>InformationRegister.ДокументыКПроведению.StandardCommand.OpenByValue.Документ</Command>
+				<Command>0</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>

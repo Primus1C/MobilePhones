@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-04-15</Version>
+			<Version>2026-04-18</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -735,6 +735,7 @@
 			<InformationRegister>Затраты</InformationRegister>
 			<InformationRegister>СведенияТоварныхГруппПеревозчиков</InformationRegister>
 			<InformationRegister>ДокументыКПроведению</InformationRegister>
+			<InformationRegister>Замены</InformationRegister>
 			<AccumulationRegister>ОстаткиТовара</AccumulationRegister>
 			<AccumulationRegister>НезакрытыеДокументы</AccumulationRegister>
 			<AccumulationRegister>Долги</AccumulationRegister>

@@ -526,7 +526,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>46</f>
+					<f>47</f>
 				</c>
 			</c>
 			<c>
@@ -546,12 +546,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>47</f>
+					<f>48</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>47</f>
+					<f>48</f>
 				</c>
 			</c>
 		</row>
@@ -563,7 +563,7 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>48</f>
+					<f>49</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -592,7 +592,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>49</f>
+					<f>50</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -606,27 +606,27 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>50</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>50</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>50</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>50</f>
+					<f>51</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>51</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>51</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>51</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>52</f>
 				</c>
 			</c>
 		</row>
@@ -657,32 +657,32 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>52</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>53</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>53</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>53</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>53</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>55</f>
 				</c>
 			</c>
 		</row>
@@ -713,26 +713,6 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>52</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>53</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>53</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>53</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>53</f>
 				</c>
 			</c>
@@ -741,12 +721,32 @@ b2b@metreon.store</v8:content>
 					<f>54</f>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>54</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>55</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
 		<index>11</index>
 		<row>
-			<formatIndex>55</formatIndex>
+			<formatIndex>56</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
@@ -770,26 +770,6 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>56</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>57</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>57</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>57</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>57</f>
 				</c>
 			</c>
@@ -798,12 +778,32 @@ b2b@metreon.store</v8:content>
 					<f>58</f>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>58</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>58</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>58</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>59</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
 		<index>12</index>
 		<row>
-			<formatIndex>59</formatIndex>
+			<formatIndex>60</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
@@ -865,11 +865,11 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>13</index>
 		<row>
-			<formatIndex>60</formatIndex>
+			<formatIndex>61</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
-					<f>61</f>
+					<f>62</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -880,7 +880,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>62</f>
+					<f>63</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -891,37 +891,37 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>63</f>
+					<f>64</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>64</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>64</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>64</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>64</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>64</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>63</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>63</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>63</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>63</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>63</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>62</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -932,7 +932,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>62</f>
+					<f>63</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -943,7 +943,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>64</f>
+					<f>65</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -961,39 +961,14 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>65</f>
+					<f>66</f>
 					<parameter>НомерСтроки</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>66</f>
+					<f>67</f>
 					<parameter>Номенклатура</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>67</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>67</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>67</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>67</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>67</f>
 				</c>
 			</c>
 			<c>
@@ -1003,19 +978,44 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>65</f>
-					<parameter>Количество</parameter>
+					<f>68</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>68</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>68</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>68</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>69</f>
-					<parameter>Цена</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>66</f>
+					<parameter>Количество</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>70</f>
+					<parameter>Цена</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>71</f>
 					<parameter>Сумма</parameter>
 				</c>
 			</c>
@@ -1027,39 +1027,14 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>71</f>
+					<f>72</f>
 					<parameter>НомерСтроки</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>72</f>
+					<f>73</f>
 					<parameter>Номенклатура</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
 				</c>
 			</c>
 			<c>
@@ -1069,19 +1044,44 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>71</f>
-					<parameter>Количество</parameter>
+					<f>74</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>74</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>74</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>74</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>75</f>
-					<parameter>Цена</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>72</f>
+					<parameter>Количество</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>76</f>
+					<parameter>Цена</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>77</f>
 					<parameter>Сумма</parameter>
 				</c>
 			</c>
@@ -1093,7 +1093,7 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>77</f>
+					<f>78</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1104,7 +1104,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>78</f>
+					<f>79</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1115,27 +1115,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>73</f>
+					<f>74</f>
 				</c>
 			</c>
 			<c>
@@ -1145,7 +1125,27 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>79</f>
+					<f>74</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>74</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>74</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>75</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>80</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1156,7 +1156,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>80</f>
+					<f>81</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1167,7 +1167,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>81</f>
+					<f>82</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1184,16 +1184,6 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>82</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>82</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>83</f>
 				</c>
 			</c>
@@ -1204,22 +1194,32 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>83</f>
+					<f>84</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>83</f>
+					<f>84</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>83</f>
+					<f>84</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>83</f>
+					<f>84</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>84</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>84</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1230,18 +1230,18 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>84</f>
+					<f>85</f>
 					<parameter>Количество</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>85</f>
+					<f>86</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>86</f>
+					<f>87</f>
 					<parameter>Сумма</parameter>
 				</c>
 			</c>
@@ -1250,7 +1250,7 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>18</index>
 		<row>
-			<formatIndex>87</formatIndex>
+			<formatIndex>88</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
@@ -1304,7 +1304,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>82</f>
+					<f>83</f>
 				</c>
 			</c>
 		</row>
@@ -1360,12 +1360,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>88</f>
+					<f>89</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>89</f>
+					<f>90</f>
 				</c>
 			</c>
 		</row>
@@ -1376,7 +1376,7 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>90</f>
+					<f>91</f>
 					<parameter>Примечание</parameter>
 				</c>
 			</c>
@@ -1388,7 +1388,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>91</f>
+					<f>92</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1399,7 +1399,7 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>92</f>
+					<f>93</f>
 					<parameter>Сумма</parameter>
 				</c>
 			</c>
@@ -1469,22 +1469,17 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>22</index>
 		<row>
-			<formatIndex>93</formatIndex>
+			<formatIndex>94</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
-					<f>94</f>
+					<f>95</f>
 					<parameter>РеквизитыСчета</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>95</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>95</f>
+					<f>96</f>
 				</c>
 			</c>
 			<c>
@@ -1499,12 +1494,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
@@ -1514,7 +1509,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>98</f>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1535,37 +1535,27 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>99</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>100</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>101</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
@@ -1576,6 +1566,16 @@ b2b@metreon.store</v8:content>
 			<c>
 				<c>
 					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1596,37 +1596,27 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>99</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>100</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>101</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
@@ -1637,6 +1627,16 @@ b2b@metreon.store</v8:content>
 			<c>
 				<c>
 					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1654,19 +1654,9 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>25</index>
 		<row>
-			<formatIndex>59</formatIndex>
+			<formatIndex>60</formatIndex>
 			<c>
 				<i>1</i>
-				<c>
-					<f>101</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>102</f>
-				</c>
-			</c>
-			<c>
 				<c>
 					<f>102</f>
 				</c>
@@ -1678,17 +1668,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>103</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>97</f>
+					<f>104</f>
 				</c>
 			</c>
 			<c>
@@ -1699,6 +1684,21 @@ b2b@metreon.store</v8:content>
 			<c>
 				<c>
 					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1716,22 +1716,17 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>26</index>
 		<row>
-			<formatIndex>93</formatIndex>
+			<formatIndex>94</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
-					<f>94</f>
+					<f>95</f>
 					<parameter>РеквизитыСчетаДоп</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>95</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>95</f>
+					<f>96</f>
 				</c>
 			</c>
 			<c>
@@ -1746,12 +1741,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
@@ -1761,7 +1756,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>98</f>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1782,37 +1782,27 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>99</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>100</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>101</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
@@ -1823,6 +1813,16 @@ b2b@metreon.store</v8:content>
 			<c>
 				<c>
 					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1843,37 +1843,27 @@ b2b@metreon.store</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>99</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>98</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>100</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>101</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
 				</c>
 			</c>
 			<c>
@@ -1884,6 +1874,16 @@ b2b@metreon.store</v8:content>
 			<c>
 				<c>
 					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -1901,19 +1901,9 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>29</index>
 		<row>
-			<formatIndex>104</formatIndex>
+			<formatIndex>105</formatIndex>
 			<c>
 				<i>1</i>
-				<c>
-					<f>101</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>102</f>
-				</c>
-			</c>
-			<c>
 				<c>
 					<f>102</f>
 				</c>
@@ -1925,17 +1915,12 @@ b2b@metreon.store</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
+					<f>103</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>97</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>97</f>
+					<f>104</f>
 				</c>
 			</c>
 			<c>
@@ -1946,6 +1931,21 @@ b2b@metreon.store</v8:content>
 			<c>
 				<c>
 					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>99</f>
 				</c>
 			</c>
 			<c>
@@ -2025,11 +2025,11 @@ b2b@metreon.store</v8:content>
 	<rowsItem>
 		<index>31</index>
 		<row>
-			<formatIndex>93</formatIndex>
+			<formatIndex>94</formatIndex>
 			<c>
 				<i>1</i>
 				<c>
-					<f>105</f>
+					<f>106</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2046,11 +2046,6 @@ We only accept the payment from the invoiced party.
 Note.Metreon accepting only online payments</v8:content>
 						</v8:item>
 					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>106</f>
 				</c>
 			</c>
 			<c>
@@ -2085,7 +2080,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>112</f>
+					<f>113</f>
 				</c>
 			</c>
 			<c>
@@ -2098,6 +2093,11 @@ Note.Metreon accepting only online payments</v8:content>
 					<f>114</f>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>115</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -2105,11 +2105,6 @@ Note.Metreon accepting only online payments</v8:content>
 		<row>
 			<c>
 				<i>1</i>
-				<c>
-					<f>115</f>
-				</c>
-			</c>
-			<c>
 				<c>
 					<f>116</f>
 				</c>
@@ -2146,7 +2141,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>122</f>
+					<f>123</f>
 				</c>
 			</c>
 			<c>
@@ -2157,6 +2152,11 @@ Note.Metreon accepting only online payments</v8:content>
 			<c>
 				<c>
 					<f>124</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>125</f>
 				</c>
 			</c>
 		</row>
@@ -2167,11 +2167,6 @@ Note.Metreon accepting only online payments</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>115</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>116</f>
 				</c>
 			</c>
@@ -2207,7 +2202,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>122</f>
+					<f>123</f>
 				</c>
 			</c>
 			<c>
@@ -2218,6 +2213,11 @@ Note.Metreon accepting only online payments</v8:content>
 			<c>
 				<c>
 					<f>124</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>125</f>
 				</c>
 			</c>
 		</row>
@@ -2228,11 +2228,6 @@ Note.Metreon accepting only online payments</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>115</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>116</f>
 				</c>
 			</c>
@@ -2268,7 +2263,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>122</f>
+					<f>123</f>
 				</c>
 			</c>
 			<c>
@@ -2279,6 +2274,11 @@ Note.Metreon accepting only online payments</v8:content>
 			<c>
 				<c>
 					<f>124</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>125</f>
 				</c>
 			</c>
 		</row>
@@ -2289,11 +2289,6 @@ Note.Metreon accepting only online payments</v8:content>
 			<c>
 				<i>1</i>
 				<c>
-					<f>115</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>116</f>
 				</c>
 			</c>
@@ -2329,7 +2324,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>122</f>
+					<f>123</f>
 				</c>
 			</c>
 			<c>
@@ -2342,19 +2337,19 @@ Note.Metreon accepting only online payments</v8:content>
 					<f>124</f>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>125</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
 		<index>36</index>
 		<row>
-			<formatIndex>125</formatIndex>
+			<formatIndex>126</formatIndex>
 			<c>
 				<i>1</i>
-				<c>
-					<f>126</f>
-				</c>
-			</c>
-			<c>
 				<c>
 					<f>127</f>
 				</c>
@@ -2391,7 +2386,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>133</f>
+					<f>134</f>
 				</c>
 			</c>
 			<c>
@@ -2404,6 +2399,11 @@ Note.Metreon accepting only online payments</v8:content>
 					<f>135</f>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>136</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -2411,11 +2411,6 @@ Note.Metreon accepting only online payments</v8:content>
 		<row>
 			<c>
 				<i>1</i>
-				<c>
-					<f>136</f>
-				</c>
-			</c>
-			<c>
 				<c>
 					<f>137</f>
 				</c>
@@ -2452,7 +2447,7 @@ Note.Metreon accepting only online payments</v8:content>
 			</c>
 			<c>
 				<c>
-					<f>143</f>
+					<f>144</f>
 				</c>
 			</c>
 			<c>
@@ -2465,12 +2460,17 @@ Note.Metreon accepting only online payments</v8:content>
 					<f>145</f>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>146</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>1</id>
-		<formatIndex>146</formatIndex>
+		<formatIndex>147</formatIndex>
 		<beginRow>1</beginRow>
 		<beginRowOffset>21</beginRowOffset>
 		<endRow>2</endRow>
@@ -2485,7 +2485,7 @@ Note.Metreon accepting only online payments</v8:content>
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>147</defaultFormatIndex>
+	<defaultFormatIndex>148</defaultFormatIndex>
 	<height>38</height>
 	<vgRows>38</vgRows>
 	<merge>
@@ -2493,11 +2493,6 @@ Note.Metreon accepting only online payments</v8:content>
 		<c>1</c>
 		<h>3</h>
 		<w>2</w>
-	</merge>
-	<merge>
-		<r>7</r>
-		<c>5</c>
-		<w>1</w>
 	</merge>
 	<merge>
 		<r>8</r>
@@ -2689,14 +2684,14 @@ Note.Metreon accepting only online payments</v8:content>
 		<hidden>false</hidden>
 	</format>
 	<format>
-		<width>79</width>
+		<width>93</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
 	</format>
 	<format>
-		<width>82</width>
+		<width>113</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
 		<textPlacement>Auto</textPlacement>
@@ -3038,6 +3033,17 @@ Note.Metreon accepting only online payments</v8:content>
 	<format>
 		<font>14</font>
 		<leftBorder>0</leftBorder>
+		<topBorder>0</topBorder>
+		<bottomBorder>1</bottomBorder>
+		<borderColor>#000000</borderColor>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<textColor>#1E3864</textColor>
+		<textPlacement>Auto</textPlacement>
+		<indent>0</indent>
+	</format>
+	<format>
+		<font>14</font>
 		<topBorder>0</topBorder>
 		<rightBorder>0</rightBorder>
 		<bottomBorder>1</bottomBorder>
@@ -3602,7 +3608,7 @@ Note.Metreon accepting only online payments</v8:content>
 		<rightBorder>0</rightBorder>
 		<bottomBorder>1</bottomBorder>
 		<borderColor>#000000</borderColor>
-		<horizontalAlignment>Right</horizontalAlignment>
+		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<textColor>#323F4E</textColor>
 		<textPlacement>Auto</textPlacement>
