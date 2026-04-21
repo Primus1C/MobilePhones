@@ -11,76 +11,6 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаВерх" id="111">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа верх</v8:content>
-				</v8:item>
-			</Title>
-			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="112"/>
-			<ChildItems>
-				<Button name="Обновить" id="178">
-					<Type>UsualButton</Type>
-					<SkipOnInput>true</SkipOnInput>
-					<CommandName>Form.Command.КомандаОбновить</CommandName>
-					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="179"/>
-				</Button>
-				<PictureDecoration name="Декорация1" id="169">
-					<Width>2</Width>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<Height>1</Height>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<ContextMenu name="Декорация1КонтекстноеМеню" id="170"/>
-					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="171"/>
-				</PictureDecoration>
-				<InputField name="РучнойШК" id="106">
-					<DataPath>РучнойШК</DataPath>
-					<TitleFont ref="style:TextFont" height="10" kind="StyleItem"/>
-					<Font height="10" kind="AutoFont"/>
-					<ContextMenu name="РучнойШККонтекстноеМеню" id="107"/>
-					<ExtendedTooltip name="РучнойШКРасширеннаяПодсказка" id="108"/>
-					<Events>
-						<Event name="OnChange">РучнойШКПриИзменении</Event>
-					</Events>
-				</InputField>
-				<Button name="КтоЕщеСканирует" id="183">
-					<Type>UsualButton</Type>
-					<SkipOnInput>true</SkipOnInput>
-					<CommandName>Form.Command.КтоЕщеСканирует</CommandName>
-					<ExtendedTooltip name="КтоЕщеСканируетРасширеннаяПодсказка" id="184"/>
-				</Button>
-				<PictureDecoration name="Декорация3" id="187">
-					<Width>8</Width>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<Height>1</Height>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<ContextMenu name="Декорация3КонтекстноеМеню" id="188"/>
-					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="189"/>
-				</PictureDecoration>
-				<Button name="ВставитьИзБуфера" id="192">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.ВставитьИзБуфера</CommandName>
-					<ExtendedTooltip name="ВставитьИзБуфераРасширеннаяПодсказка" id="193"/>
-				</Button>
-				<Button name="Удалить" id="185">
-					<Type>UsualButton</Type>
-					<Representation>PictureAndText</Representation>
-					<SkipOnInput>true</SkipOnInput>
-					<CommandName>Form.Item.БуферСерии.StandardCommand.Delete</CommandName>
-					<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="186"/>
-				</Button>
-				<Button name="УдалитьВсе" id="190">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.УдалитьВсе</CommandName>
-					<ExtendedTooltip name="УдалитьВсеРасширеннаяПодсказка" id="191"/>
-				</Button>
-			</ChildItems>
-		</UsualGroup>
 		<UsualGroup name="ГруппаТаблицы" id="6">
 			<Title>
 				<v8:item>
@@ -107,6 +37,51 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="9"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаВерх" id="111">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа верх</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="112"/>
+							<ChildItems>
+								<Button name="Обновить" id="178">
+									<Type>UsualButton</Type>
+									<SkipOnInput>true</SkipOnInput>
+									<CommandName>Form.Command.КомандаОбновить</CommandName>
+									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="179"/>
+								</Button>
+								<PictureDecoration name="Декорация1" id="169">
+									<Width>2</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="171"/>
+								</PictureDecoration>
+								<InputField name="РучнойШК" id="106">
+									<DataPath>РучнойШК</DataPath>
+									<TitleFont ref="style:TextFont" height="10" kind="StyleItem"/>
+									<Font height="10" kind="AutoFont"/>
+									<ContextMenu name="РучнойШККонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="РучнойШКРасширеннаяПодсказка" id="108"/>
+									<Events>
+										<Event name="OnChange">РучнойШКПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="КтоЕщеСканирует" id="183">
+									<Type>UsualButton</Type>
+									<SkipOnInput>true</SkipOnInput>
+									<CommandName>Form.Command.КтоЕщеСканирует</CommandName>
+									<ExtendedTooltip name="КтоЕщеСканируетРасширеннаяПодсказка" id="184"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="БуферНоменклатура" id="144">
 							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
@@ -268,6 +243,39 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="11"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаПравоВерх" id="194">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Группа право верх</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПравоВерхРасширеннаяПодсказка" id="195"/>
+							<ChildItems>
+								<Button name="ВставитьИзБуфера" id="192">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВставитьИзБуфера</CommandName>
+									<ExtendedTooltip name="ВставитьИзБуфераРасширеннаяПодсказка" id="193"/>
+								</Button>
+								<Button name="Удалить" id="185">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<SkipOnInput>true</SkipOnInput>
+									<CommandName>Form.Item.БуферСерии.StandardCommand.Delete</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="186"/>
+								</Button>
+								<Button name="УдалитьВсе" id="190">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УдалитьВсе</CommandName>
+									<ExtendedTooltip name="УдалитьВсеРасширеннаяПодсказка" id="191"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="БуферСерии" id="81">
 							<CommandBarLocation>None</CommandBarLocation>
 							<MultipleChoice>true</MultipleChoice>
@@ -282,11 +290,14 @@
 							<CommandSet>
 								<ExcludedCommand>CancelSearch</ExcludedCommand>
 								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>ChangeHistory</ExcludedCommand>
 								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
 								<ExcludedCommand>Create</ExcludedCommand>
 								<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
 								<ExcludedCommand>Find</ExcludedCommand>
 								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>GetURL</ExcludedCommand>
 								<ExcludedCommand>ListSettings</ExcludedCommand>
 								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
 								<ExcludedCommand>OutputList</ExcludedCommand>
@@ -313,7 +324,26 @@
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="БуферСерииКонтекстноеМеню" id="82"/>
-							<AutoCommandBar name="БуферСерииКоманднаяПанель" id="83"/>
+							<AutoCommandBar name="БуферСерииКоманднаяПанель" id="83">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="БуферСерииУдалить" id="196">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.БуферСерии.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="БуферСерииУдалитьРасширеннаяПодсказка" id="197"/>
+									</Button>
+									<Button name="БуферСерииВставитьИзБуфера" id="198">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВставитьИзБуфера</CommandName>
+										<ExtendedTooltip name="БуферСерииВставитьИзБуфераРасширеннаяПодсказка" id="199"/>
+									</Button>
+									<Button name="БуферСерииУдалитьВсе" id="200">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьВсе</CommandName>
+										<ExtendedTooltip name="БуферСерииУдалитьВсеРасширеннаяПодсказка" id="201"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="БуферСерииРасширеннаяПодсказка" id="84"/>
 							<SearchStringAddition name="БуферСерииСтрокаПоиска" id="85">
 								<Enabled>false</Enabled>
@@ -871,7 +901,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Transfer to document</v8:content>
+					<v8:content>Transfer to the document</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

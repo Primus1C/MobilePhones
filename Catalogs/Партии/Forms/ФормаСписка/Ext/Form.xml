@@ -393,21 +393,15 @@
 	Спр.Создан КАК Создан,
 	Спр.КемСохранен КАК КемСохранен,
 	Спр.Сохранен КАК Сохранен,
-	Спр.Предопределенный КАК Предопределенный,
 	Спр.Консигнация КАК Консигнация,
 	ЕСТЬNULL(Рег.ОстатокОстаток, 0) КАК Остаток,
 	ЕСТЬNULL(Рег.РезервОстаток, 0) КАК Резерв,
-	Спр.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
 	Спр.ВКД_ЦенаСоСкидкой КАК ВКД_ЦенаСоСкидкой,
 	Спр.ВКД_ЦенаСЗатратами КАК ВКД_ЦенаСЗатратами
 ИЗ
 	Справочник.Партии КАК Спр
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиТовара.Остатки(, {(Фирма = &amp;Фирма), (Склад В (&amp;ФильтрСклады))}) КАК Рег
 		ПО (Рег.Партия = Спр.Ссылка)</QueryText>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
-					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
-				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Ссылка</dcssch:dataPath>
 					<dcssch:field>Ссылка</dcssch:field>
@@ -509,10 +503,6 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>КемСохранен</dcssch:dataPath>
 					<dcssch:field>КемСохранен</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
-					<dcssch:field>Предопределенный</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Консигнация</dcssch:dataPath>

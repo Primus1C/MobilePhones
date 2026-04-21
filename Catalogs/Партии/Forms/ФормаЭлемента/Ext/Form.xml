@@ -71,12 +71,24 @@
 			<ContextMenu name="ПоставщикКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="15"/>
 		</InputField>
-		<UsualGroup name="Группа1" id="25">
+		<UsualGroup name="ГруппаЗакупка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закупка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закупка</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+			<ExtendedTooltip name="ГруппаЗакупкаРасширеннаяПодсказка" id="26"/>
 			<ChildItems>
 				<InputField name="ЦенаЗакупки" id="22">
 					<DataPath>Объект.ЦенаЗакупки</DataPath>
@@ -145,6 +157,18 @@
 					<ContextMenu name="КонсигнацияКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="КонсигнацияРасширеннаяПодсказка" id="39"/>
 				</CheckBoxField>
+				<InputField name="ЦенаЗакупкиВБазВалюте" id="48">
+					<DataPath>Объект.ЦенаЗакупкиВБазВалюте</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена закупки в USD</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЦенаЗакупкиВБазВалютеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ЦенаЗакупкиВБазВалютеРасширеннаяПодсказка" id="50"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="46">
