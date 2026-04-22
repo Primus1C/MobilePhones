@@ -111,6 +111,16 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Примечание</dataPath>
+			<field>Примечание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Примечание</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	РОО.Фирма,
@@ -119,6 +129,7 @@
 	РОО.Валюта,
 	РОО.СуммаОборот,
 	РОО.Регистратор,
+	Выразить (РОО.Регистратор.Примечание как Строка(200)) КАК Примечание,
 	РОО.Период,
 	НАЧАЛОПЕРИОДА(РОО.Период, МЕСЯЦ) КАК Месяц,
 	РОО.Регистратор.ДСчет КАК Касса
@@ -1242,11 +1253,6 @@
 					<dcscor:parameter>ВалютаПересчета</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>a701fb72-3c55-4fb9-b018-3904396f28f9</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Кассы</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>

@@ -96,7 +96,7 @@
 	РОО.Валюта КАК Валюта,
 	РОО.СуммаОборот КАК СуммаОборот,
 	РОО.Регистратор КАК Регистратор,
-	РОО.Регистратор.Примечание КАК Примечание,
+	Выразить(РОО.Регистратор.Примечание КАК строка(200)) КАК Примечание,
 	РОО.Период КАК Период,
 	НАЧАЛОПЕРИОДА(РОО.Период, МЕСЯЦ) КАК Месяц,
 	РОО.Регистратор.ДСчет КАК Касса
@@ -185,11 +185,6 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Кассы</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Фирма</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>

@@ -154,6 +154,17 @@
 					<ContextMenu name="НаценкаВалютнаяКонтекстноеМеню" id="62"/>
 					<ExtendedTooltip name="НаценкаВалютнаяРасширеннаяПодсказка" id="63"/>
 				</LabelField>
+				<LabelField name="НаценкаВБазВалюте" id="67">
+					<DataPath>Список.НаценкаВБазВалюте</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наценка в USD</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаценкаВБазВалютеКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="НаценкаВБазВалютеРасширеннаяПодсказка" id="69"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
