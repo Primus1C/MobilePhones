@@ -453,6 +453,7 @@
 			<CommonModule>ТлгИнструменты</CommonModule>
 			<CommonModule>ТлгДействия</CommonModule>
 			<CommonModule>ОбработкаДокументов</CommonModule>
+			<CommonModule>РаботаСВалютой</CommonModule>
 			<CommonAttribute>КемСоздан</CommonAttribute>
 			<CommonAttribute>Создан</CommonAttribute>
 			<CommonAttribute>КемСохранен</CommonAttribute>

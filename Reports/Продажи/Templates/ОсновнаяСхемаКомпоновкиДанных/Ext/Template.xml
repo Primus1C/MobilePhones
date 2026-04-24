@@ -230,6 +230,10 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	РОО.Фирма КАК Фирма,
@@ -259,7 +263,7 @@
 	</dataSet>
 	<calculatedField>
 		<dataPath>Пересчет</dataPath>
-		<expression>гоПересчитать2025(СуммаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
+		<expression>РаботаСВалютой.Пересчитать2025(СуммаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -295,7 +299,7 @@
 	</calculatedField>
 	<calculatedField>
 		<dataPath>НаценкаПересчет</dataPath>
-		<expression>гоПересчитать2025(НаценкаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
+		<expression>РаботаСВалютой.Пересчитать2025(НаценкаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>

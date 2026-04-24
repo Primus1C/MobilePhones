@@ -256,7 +256,7 @@
 							<v8:content>Наценка</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
+					<Comment>в валюте док-та продажи</Comment>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
