@@ -201,7 +201,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister._ВзаиморасчетыСПоставщиками</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.НезакрытыеДокументы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасчетыПоИнвойсам</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Затраты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасходыДоходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Зарплата</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Деньги</xr:Item>

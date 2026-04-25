@@ -1267,10 +1267,18 @@
 				</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:SlateGray</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Текст</dcscor:parameter>
 						<dcscor:value xsi:type="v8:LocalStringType">
 							<v8:item>
 								<v8:lang>ru</v8:lang>
+								<v8:content>инвойс полностью</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
 								<v8:content>инвойс полностью</v8:content>
 							</v8:item>
 						</dcscor:value>

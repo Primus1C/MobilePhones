@@ -241,32 +241,103 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<CheckBoxField name="ЗаменаПроведена" id="145">
-			<DataPath>Объект.ЗаменаПроведена</DataPath>
-			<Visible>false</Visible>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ЗаменаПроведенаКонтекстноеМеню" id="146"/>
-			<ExtendedTooltip name="ЗаменаПроведенаРасширеннаяПодсказка" id="147"/>
-		</CheckBoxField>
-		<LabelDecoration name="ДекорацияИнфо" id="105">
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<HorizontalStretch>true</HorizontalStretch>
-			<TextColor>style:AccentColor</TextColor>
-			<Font bold="true" kind="AutoFont"/>
-			<Title formatted="false">
+		<UsualGroup name="ГруппаСлужебн" id="188">
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Декорация инфо</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Декорация инфо</v8:content>
+					<v8:content>Группа служебн</v8:content>
 				</v8:item>
 			</Title>
-			<HorizontalAlign>Center</HorizontalAlign>
-			<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="106"/>
-			<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="107"/>
-		</LabelDecoration>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСлужебнРасширеннаяПодсказка" id="189"/>
+			<ChildItems>
+				<CheckBoxField name="ЗаменаПроведена" id="145">
+					<DataPath>Объект.ЗаменаПроведена</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">false</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+						<xr:Value name="Role.ИнвойсПродажи">false</xr:Value>
+						<xr:Value name="Role.Логистика">false</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">false</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+						<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаИнвестиции">false</xr:Value>
+						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+						<xr:Value name="Role.Отправка">false</xr:Value>
+						<xr:Value name="Role.ОтправкаAWB">false</xr:Value>
+						<xr:Value name="Role.ОтправкаПеремещений">false</xr:Value>
+						<xr:Value name="Role.Инвентаризация">false</xr:Value>
+						<xr:Value name="Role.ОтчетИнвентаризация">false</xr:Value>
+						<xr:Value name="Role.ВидимостьНаценки">false</xr:Value>
+						<xr:Value name="Role.Разработка">true</xr:Value>
+						<xr:Value name="Role.ИзменениеОтсрочки">false</xr:Value>
+						<xr:Value name="Role.ПриходованиеВводомНаОсновании">false</xr:Value>
+						<xr:Value name="Role.Перемещение">false</xr:Value>
+						<xr:Value name="Role.РасходныеНакладные">false</xr:Value>
+						<xr:Value name="Role.ПриходныеНакладные">false</xr:Value>
+						<xr:Value name="Role.ЗаменаСерий">false</xr:Value>
+						<xr:Value name="Role.ОтчетЗадачиПользователя">false</xr:Value>
+					</UserVisible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаменаПроведенаКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="ЗаменаПроведенаРасширеннаяПодсказка" id="147"/>
+				</CheckBoxField>
+				<LabelDecoration name="ДекорацияИнфо" id="105">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:AccentColor</TextColor>
+					<Font bold="true" kind="AutoFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация инфо</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Декорация инфо</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="107"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="ГруппаТабличныеЧасти" id="96">
 			<Title>
 				<v8:item>
@@ -653,6 +724,14 @@
 			</Item>
 			<Item>
 				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.ДокументыКПроведению.StandardCommand.OpenByValue.Документ</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
