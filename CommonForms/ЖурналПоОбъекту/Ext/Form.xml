@@ -106,13 +106,13 @@
 				</Button>
 				<Button name="МинусДень" id="33">
 					<Type>UsualButton</Type>
-					<Width>3</Width>
+					<Width>4</Width>
 					<CommandName>Form.Command.МинусДень</CommandName>
 					<ExtendedTooltip name="МинусДеньРасширеннаяПодсказка" id="46"/>
 				</Button>
 				<Button name="ПлюсДень" id="32">
 					<Type>UsualButton</Type>
-					<Width>3</Width>
+					<Width>4</Width>
 					<CommandName>Form.Command.ПлюсДень</CommandName>
 					<ExtendedTooltip name="ПлюсДеньРасширеннаяПодсказка" id="47"/>
 				</Button>
