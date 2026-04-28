@@ -66,6 +66,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтправкаПеремещений</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ПроверкаПриходных</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаменаСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.PriceCheck</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -3410,7 +3410,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>AH</v8:content>
+							<v8:content>AFR</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3442,7 +3442,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>AR</v8:content>
+							<v8:content>AH</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3474,7 +3474,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Arabic</v8:content>
+							<v8:content>AR</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3506,7 +3506,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>BA</v8:content>
+							<v8:content>Arabic</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3538,7 +3538,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>CH</v8:content>
+							<v8:content>BA</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3570,7 +3570,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>CN</v8:content>
+							<v8:content>CH</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3602,7 +3602,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>EU</v8:content>
+							<v8:content>CN</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3634,7 +3634,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>HK</v8:content>
+							<v8:content>EU</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3666,7 +3666,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>HN</v8:content>
+							<v8:content>HK</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3698,7 +3698,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>IN</v8:content>
+							<v8:content>HN</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3730,7 +3730,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>J/A</v8:content>
+							<v8:content>IN</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3762,7 +3762,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>JA</v8:content>
+							<v8:content>IND</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3794,7 +3794,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>JP</v8:content>
+							<v8:content>J/A</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3826,7 +3826,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>KG</v8:content>
+							<v8:content>JA</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3858,7 +3858,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>KH</v8:content>
+							<v8:content>JP</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3890,7 +3890,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>KZ</v8:content>
+							<v8:content>KG</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3922,7 +3922,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>LL</v8:content>
+							<v8:content>KH</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3954,7 +3954,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>LZ</v8:content>
+							<v8:content>KZ</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -3986,7 +3986,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>PA</v8:content>
+							<v8:content>LL</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4018,7 +4018,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>RU</v8:content>
+							<v8:content>LZ</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4050,7 +4050,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>TW</v8:content>
+							<v8:content>MY</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4082,7 +4082,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>UK</v8:content>
+							<v8:content>PA</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4114,7 +4114,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>US</v8:content>
+							<v8:content>RU</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4146,7 +4146,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>VC</v8:content>
+							<v8:content>SG</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4178,7 +4178,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>VN</v8:content>
+							<v8:content>TH</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4210,7 +4210,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>XA</v8:content>
+							<v8:content>TW</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4242,7 +4242,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ZA</v8:content>
+							<v8:content>UK</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4274,7 +4274,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ZP</v8:content>
+							<v8:content>US</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -4284,11 +4284,171 @@
 	<rowsItem>
 		<index>112</index>
 		<row>
-			<empty>true</empty>
+			<c>
+				<c>
+					<f>1</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СвойствоСпецификация</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>16</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>VC</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
 		<index>113</index>
+		<row>
+			<c>
+				<c>
+					<f>1</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СвойствоСпецификация</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>16</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>VN</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>114</index>
+		<row>
+			<c>
+				<c>
+					<f>1</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СвойствоСпецификация</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>16</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>XA</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>115</index>
+		<row>
+			<c>
+				<c>
+					<f>1</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СвойствоСпецификация</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>16</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ZA</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>116</index>
+		<row>
+			<c>
+				<c>
+					<f>1</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СвойствоСпецификация</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>16</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ZP</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>117</index>
+		<row>
+			<empty>true</empty>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>118</index>
 		<row>
 			<c>
 				<c>
@@ -4316,7 +4476,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>114</index>
+		<index>119</index>
 		<row>
 			<c>
 				<c>
@@ -4344,7 +4504,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>115</index>
+		<index>120</index>
 		<row>
 			<c>
 				<c>
@@ -4372,13 +4532,13 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>116</index>
+		<index>121</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>117</index>
+		<index>122</index>
 		<row>
 			<c>
 				<c>
@@ -4406,7 +4566,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>118</index>
+		<index>123</index>
 		<row>
 			<c>
 				<c>
@@ -4434,7 +4594,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>119</index>
+		<index>124</index>
 		<row>
 			<c>
 				<c>
@@ -4462,7 +4622,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>120</index>
+		<index>125</index>
 		<row>
 			<c>
 				<c>
@@ -4490,7 +4650,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>121</index>
+		<index>126</index>
 		<row>
 			<c>
 				<c>
@@ -4518,7 +4678,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>122</index>
+		<index>127</index>
 		<row>
 			<c>
 				<c>
@@ -4546,7 +4706,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>123</index>
+		<index>128</index>
 		<row>
 			<c>
 				<c>
@@ -4574,7 +4734,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>124</index>
+		<index>129</index>
 		<row>
 			<c>
 				<c>
@@ -4602,7 +4762,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>125</index>
+		<index>130</index>
 		<row>
 			<c>
 				<c>
@@ -4630,7 +4790,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>126</index>
+		<index>131</index>
 		<row>
 			<c>
 				<c>
@@ -4658,7 +4818,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>127</index>
+		<index>132</index>
 		<row>
 			<c>
 				<c>
@@ -4686,7 +4846,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>128</index>
+		<index>133</index>
 		<row>
 			<c>
 				<c>
@@ -4714,7 +4874,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>129</index>
+		<index>134</index>
 		<row>
 			<c>
 				<c>
@@ -4742,7 +4902,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>130</index>
+		<index>135</index>
 		<row>
 			<c>
 				<c>
@@ -4770,7 +4930,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>131</index>
+		<index>136</index>
 		<row>
 			<c>
 				<c>
@@ -4798,7 +4958,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>132</index>
+		<index>137</index>
 		<row>
 			<c>
 				<c>
@@ -4826,7 +4986,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>133</index>
+		<index>138</index>
 		<row>
 			<c>
 				<c>
@@ -4854,7 +5014,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>134</index>
+		<index>139</index>
 		<row>
 			<c>
 				<c>
@@ -4882,7 +5042,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>135</index>
+		<index>140</index>
 		<row>
 			<c>
 				<c>
@@ -4910,7 +5070,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>136</index>
+		<index>141</index>
 		<row>
 			<c>
 				<c>
@@ -4938,7 +5098,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>137</index>
+		<index>142</index>
 		<row>
 			<c>
 				<c>
@@ -4966,7 +5126,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>138</index>
+		<index>143</index>
 		<row>
 			<c>
 				<c>
@@ -4994,7 +5154,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>139</index>
+		<index>144</index>
 		<row>
 			<c>
 				<c>
@@ -5022,7 +5182,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>140</index>
+		<index>145</index>
 		<row>
 			<c>
 				<c>
@@ -5050,13 +5210,13 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>141</index>
+		<index>146</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>142</index>
+		<index>147</index>
 		<row>
 			<c>
 				<c>
@@ -5084,7 +5244,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>143</index>
+		<index>148</index>
 		<row>
 			<c>
 				<c>
@@ -5112,7 +5272,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>144</index>
+		<index>149</index>
 		<row>
 			<c>
 				<c>
@@ -5140,7 +5300,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>145</index>
+		<index>150</index>
 		<row>
 			<c>
 				<c>
@@ -5168,7 +5328,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>146</index>
+		<index>151</index>
 		<row>
 			<c>
 				<c>
@@ -5196,7 +5356,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>147</index>
+		<index>152</index>
 		<row>
 			<c>
 				<c>
@@ -5224,13 +5384,13 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>148</index>
+		<index>153</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>149</index>
+		<index>154</index>
 		<row>
 			<c>
 				<c>
@@ -5258,7 +5418,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>150</index>
+		<index>155</index>
 		<row>
 			<c>
 				<c>
@@ -5286,13 +5446,13 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>151</index>
+		<index>156</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>152</index>
+		<index>157</index>
 		<row>
 			<c>
 				<c>
@@ -5320,7 +5480,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>153</index>
+		<index>158</index>
 		<row>
 			<c>
 				<c>
@@ -5348,7 +5508,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>154</index>
+		<index>159</index>
 		<row>
 			<c>
 				<c>
@@ -5376,7 +5536,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>155</index>
+		<index>160</index>
 		<row>
 			<c>
 				<c>
@@ -5404,13 +5564,13 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>156</index>
+		<index>161</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>157</index>
+		<index>162</index>
 		<row>
 			<c>
 				<c>
@@ -5438,7 +5598,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>158</index>
+		<index>163</index>
 		<row>
 			<c>
 				<c>
@@ -5466,13 +5626,13 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>159</index>
+		<index>164</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>160</index>
+		<index>165</index>
 		<row>
 			<c>
 				<c>
@@ -5500,7 +5660,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>161</index>
+		<index>166</index>
 		<row>
 			<c>
 				<c>
@@ -5528,7 +5688,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>162</index>
+		<index>167</index>
 		<row>
 			<c>
 				<c>
@@ -5556,7 +5716,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>163</index>
+		<index>168</index>
 		<row>
 			<c>
 				<c>
@@ -5584,7 +5744,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>164</index>
+		<index>169</index>
 		<row>
 			<c>
 				<c>
@@ -5612,7 +5772,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>165</index>
+		<index>170</index>
 		<row>
 			<c>
 				<c>
@@ -5640,7 +5800,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>166</index>
+		<index>171</index>
 		<row>
 			<c>
 				<c>
@@ -5668,7 +5828,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>167</index>
+		<index>172</index>
 		<row>
 			<c>
 				<c>
@@ -5696,7 +5856,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>168</index>
+		<index>173</index>
 		<row>
 			<c>
 				<c>
@@ -5724,7 +5884,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>169</index>
+		<index>174</index>
 		<row>
 			<c>
 				<c>
@@ -5752,7 +5912,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>170</index>
+		<index>175</index>
 		<row>
 			<c>
 				<c>
@@ -5780,7 +5940,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>171</index>
+		<index>176</index>
 		<row>
 			<c>
 				<c>
@@ -5808,7 +5968,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>172</index>
+		<index>177</index>
 		<row>
 			<c>
 				<c>
@@ -5836,7 +5996,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>173</index>
+		<index>178</index>
 		<row>
 			<c>
 				<c>
@@ -5865,8 +6025,8 @@
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>10</defaultFormatIndex>
-	<height>174</height>
-	<vgRows>174</vgRows>
+	<height>179</height>
+	<vgRows>179</vgRows>
 	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
 		<width>177</width>

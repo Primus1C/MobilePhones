@@ -4,6 +4,7 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -88,6 +89,13 @@
 			<ChildItems>
 				<CheckBoxField name="ВестиПартионныйУчет" id="29">
 					<DataPath>Объект.ВестиПартионныйУчет</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если есть проведенные документы по текущему счету, изменение признака партионного учета запрещено</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ВестиПартионныйУчетКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ВестиПартионныйУчетРасширеннаяПодсказка" id="31"/>

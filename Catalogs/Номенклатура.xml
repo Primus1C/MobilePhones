@@ -476,7 +476,7 @@
 							<v8:content>Service (do not check balances)</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>(удалить)</Comment>
+					<Comment>(удалить, заменен на ТипНоменклатуры)</Comment>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>

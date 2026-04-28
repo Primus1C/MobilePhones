@@ -57,9 +57,12 @@
 					<CommandParameterType/>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
-					<Representation>Auto</Representation>
+					<Representation>Picture</Representation>
 					<ToolTip/>
-					<Picture/>
+					<Picture>
+						<xr:Ref>StdPicture.Report</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<Shortcut/>
 					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 				</Properties>

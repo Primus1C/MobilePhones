@@ -16,6 +16,16 @@
 				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 				<ExtendedTooltip name="ФормаОбработкаГенераторШтрихкдовШтрихКодыРасширеннаяПодсказка" id="106"/>
 			</Button>
+			<Button name="ОтчетВесНоменклатурыОткрыть" id="107">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Report.ВесНоменклатуры.StandardCommand.Open</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Report</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ОтчетВесНоменклатурыОткрытьРасширеннаяПодсказка" id="108"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

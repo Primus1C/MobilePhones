@@ -24,8 +24,10 @@
 			<Representation>Tree</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Дерево</DataPath>
 			<RowPictureDataPath>Дерево.DefaultPicture</RowPictureDataPath>
 			<AutoRefresh>false</AutoRefresh>
@@ -35,7 +37,7 @@
 				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
 				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 			</Period>
-			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
 			<RestoreCurrentRow>false</RestoreCurrentRow>
 			<TopLevelParent xsi:nil="true"/>
 			<ShowRoot>true</ShowRoot>
@@ -74,11 +76,6 @@
 					<DataPath>Дерево.Description</DataPath>
 					<ContextMenu name="ДеревоНаименованиеКонтекстноеМеню" id="45"/>
 					<ExtendedTooltip name="ДеревоНаименованиеРасширеннаяПодсказка" id="46"/>
-				</LabelField>
-				<LabelField name="ДеревоКод" id="47">
-					<DataPath>Дерево.Code</DataPath>
-					<ContextMenu name="ДеревоКодКонтекстноеМеню" id="48"/>
-					<ExtendedTooltip name="ДеревоКодРасширеннаяПодсказка" id="49"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -149,11 +146,23 @@
 					<ContextMenu name="ПрефиксКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="30"/>
 				</LabelField>
-				<LabelField name="Код" id="25">
-					<DataPath>Список.Code</DataPath>
-					<ContextMenu name="КодКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
+				<LabelField name="Офис" id="50">
+					<DataPath>Список.Офис</DataPath>
+					<ContextMenu name="ОфисКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ОфисРасширеннаяПодсказка" id="52"/>
 				</LabelField>
+				<CheckBoxField name="ВестиПартионныйУчет" id="47">
+					<DataPath>Список.ВестиПартионныйУчет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Парт.учет</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВестиПартионныйУчетКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ВестиПартионныйУчетРасширеннаяПодсказка" id="49"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>

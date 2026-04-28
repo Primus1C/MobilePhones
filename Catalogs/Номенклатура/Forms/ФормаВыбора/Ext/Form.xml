@@ -235,6 +235,10 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>У</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>S</v8:content>
+								</v8:item>
 							</Title>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="УслугиКонтекстноеМеню" id="75"/>
@@ -593,6 +597,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Остатки на</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remaining on</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
@@ -610,6 +618,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Только остатки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remaining only</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
