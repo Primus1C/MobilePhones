@@ -708,6 +708,7 @@
 			<Report>ЗадачиПользователя</Report>
 			<Report>АнализПродаж</Report>
 			<Report>PriceCheck</Report>
+			<Report>ПартииВалют</Report>
 			<DataProcessor>Внимание</DataProcessor>
 			<DataProcessor>Предупреждение</DataProcessor>
 			<DataProcessor>Ошибка</DataProcessor>

@@ -317,17 +317,52 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаВерхПравоРасширеннаяПодсказка" id="286"/>
 									<ChildItems>
-										<InputField name="ДСчет" id="19">
-											<DataPath>Объект.ДСчет</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<OpenButton>true</OpenButton>
-											<ContextMenu name="ДСчетКонтекстноеМеню" id="20"/>
-											<ExtendedTooltip name="ДСчетРасширеннаяПодсказка" id="21"/>
-											<Events>
-												<Event name="OnChange">ДСчетПриИзменении</Event>
-											</Events>
-										</InputField>
+										<UsualGroup name="ГруппаДСчет" id="431">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа д счет</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДСчетРасширеннаяПодсказка" id="432"/>
+											<ChildItems>
+												<InputField name="ДСчет" id="19">
+													<DataPath>Объект.ДСчет</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<OpenButton>true</OpenButton>
+													<ContextMenu name="ДСчетКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="ДСчетРасширеннаяПодсказка" id="21"/>
+													<Events>
+														<Event name="OnChange">ДСчетПриИзменении</Event>
+													</Events>
+												</InputField>
+												<PictureDecoration name="ДекорацияПартионныйУчет" id="428">
+													<Visible>false</Visible>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация партионный учет</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Партионный учет</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Picture>
+														<xr:Ref>StdPicture.Constant</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияПартионныйУчетКонтекстноеМеню" id="429"/>
+													<ExtendedTooltip name="ДекорацияПартионныйУчетРасширеннаяПодсказка" id="430"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
 										<UsualGroup name="ГруппаКР" id="79">
 											<Group>Horizontal</Group>
 											<Behavior>Usual</Behavior>

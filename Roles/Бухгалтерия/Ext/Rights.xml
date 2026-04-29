@@ -2110,6 +2110,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ПартииВалют.Command.ПартииВалют</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.ВводСтрокиРН</name>
 		<right>
 			<name>View</name>
@@ -3583,6 +3590,17 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ПартииВалют</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
