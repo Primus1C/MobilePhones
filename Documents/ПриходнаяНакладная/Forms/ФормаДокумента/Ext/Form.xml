@@ -864,6 +864,7 @@
 					</Button>
 					<Button name="ТоварыЗаменаАдмин" id="293">
 						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
 						<CommandName>Form.Command.ЗаменаАдмин</CommandName>
 						<ExtendedTooltip name="ТоварыЗаменаАдминРасширеннаяПодсказка" id="294"/>
 					</Button>

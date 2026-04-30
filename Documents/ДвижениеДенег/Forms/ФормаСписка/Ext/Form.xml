@@ -93,6 +93,12 @@
 				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 				<ExtendedTooltip name="ФормаОтчетОднаПредоплатаПоставщикуОднаПредоплатаОбщаяРасширеннаяПодсказка" id="138"/>
 			</Button>
+			<Button name="ОтчетПартииВалюты" id="151">
+				<Type>CommandBarButton</Type>
+				<Width>3</Width>
+				<CommandName>Form.Command.ОтчетПартииВалюты</CommandName>
+				<ExtendedTooltip name="ОтчетПартииВалютыРасширеннаяПодсказка" id="152"/>
+			</Button>
 			<ButtonGroup name="ФормаГруппаПоиск" id="143">
 				<Title>
 					<v8:item>
@@ -198,12 +204,6 @@
 							<Type>UsualButton</Type>
 							<CommandName>CommonCommand.ИнтервалДень</CommandName>
 							<ExtendedTooltip name="ИнтервалДеньРасширеннаяПодсказка" id="68"/>
-						</Button>
-						<Button name="ОтчетПартииВалюты" id="151">
-							<Type>UsualButton</Type>
-							<Width>3</Width>
-							<CommandName>Form.Command.ОтчетПартииВалюты</CommandName>
-							<ExtendedTooltip name="ОтчетПартииВалютыРасширеннаяПодсказка" id="152"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -941,7 +941,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчет партии валюты</v8:content>
+					<v8:content>Партии валюты</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -951,11 +951,11 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Constant</xr:Ref>
+				<xr:Ref>StdPicture.Report</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОтчетПартииВалюты</Action>
-			<Representation>Picture</Representation>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

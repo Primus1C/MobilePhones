@@ -9,10 +9,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
-			<role>
-				<dcscom:periodNumber>1</dcscom:periodNumber>
-				<dcscom:periodType>Main</dcscom:periodType>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СуммаНачальныйОстаток</dataPath>
@@ -28,6 +24,12 @@
 				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
 				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
 			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СуммаПриход</dataPath>
@@ -63,6 +65,12 @@
 				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
 				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
 			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Касса</dataPath>
@@ -82,16 +90,48 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзКассы</dataPath>
+			<field>ИзКассы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из кассы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКассу</dataPath>
+			<field>ВКассу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В кассу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧетностьДаты</dataPath>
+			<field>ЧетностьДаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Четность даты</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ПартииВалютыОстаткиИОбороты.СуммаНачальныйОстаток КАК СуммаНачальныйОстаток,
-	ПартииВалютыОстаткиИОбороты.Регистратор.ВидДвиженияДенег КАК  ВидДвижения,   
-	//ПартииВалютыОстаткиИОбороты.Регистратор.ДСчет КАК ИзКассы,
-	//ПартииВалютыОстаткиИОбороты.Регистратор.СубДСчет КАК ВКассу,
+	ПартииВалютыОстаткиИОбороты.Регистратор.ВидДвиженияДенег КАК ВидДвижения,
+	ПартииВалютыОстаткиИОбороты.Регистратор.ДСчет КАК ИзКассы,
+	ПартииВалютыОстаткиИОбороты.Регистратор.СубДСчет КАК ВКассу,
 	ПартииВалютыОстаткиИОбороты.СуммаПриход КАК СуммаПриход,
 	ПартииВалютыОстаткиИОбороты.СуммаРасход КАК СуммаРасход,
 	ПартииВалютыОстаткиИОбороты.СуммаКонечныйОстаток КАК СуммаКонечныйОстаток,
-	ПартииВалютыОстаткиИОбороты.Регистратор КАК Регистратор
+	ПартииВалютыОстаткиИОбороты.Регистратор КАК Регистратор,
+	НАЧАЛОПЕРИОДА(ПартииВалютыОстаткиИОбороты.Регистратор.Дата, ДЕНЬ) КАК ДатаДокумента
+ПОМЕСТИТЬ ВТОстатки
 ИЗ
 	РегистрНакопления.ПартииВалюты.ОстаткиИОбороты(
 			&amp;НачалоПериода,
@@ -99,7 +139,44 @@
 			Авто,
 			,
 			Валюта = &amp;Валюта
-				И Касса = &amp;Касса) КАК ПартииВалютыОстаткиИОбороты</query>
+				И Касса = &amp;Касса) КАК ПартииВалютыОстаткиИОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаДат.ДатаДокумента КАК ДатаДокумента,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТаблицаДатДляСравнения.ДатаДокумента) КАК НомерДаты
+ПОМЕСТИТЬ ВТУникальныеДатыСНомерами
+ИЗ
+	(ВЫБРАТЬ РАЗЛИЧНЫЕ
+		ВТОстатки.ДатаДокумента КАК ДатаДокумента
+	ИЗ
+		ВТОстатки КАК ВТОстатки) КАК ТаблицаДат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ВТОстатки.ДатаДокумента КАК ДатаДокумента
+		ИЗ
+			ВТОстатки КАК ВТОстатки) КАК ТаблицаДатДляСравнения
+		ПО ТаблицаДат.ДатаДокумента &gt;= ТаблицаДатДляСравнения.ДатаДокумента
+
+СГРУППИРОВАТЬ ПО
+	ТаблицаДат.ДатаДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТОстатки.СуммаНачальныйОстаток КАК СуммаНачальныйОстаток,
+	ВТОстатки.ВидДвижения КАК ВидДвижения,
+	ВТОстатки.ИзКассы КАК ИзКассы,
+	ВТОстатки.ВКассу КАК ВКассу,
+	ВТОстатки.СуммаПриход КАК СуммаПриход,
+	ВТОстатки.СуммаРасход КАК СуммаРасход,
+	ВТОстатки.СуммаКонечныйОстаток КАК СуммаКонечныйОстаток,
+	ВТОстатки.Регистратор КАК Регистратор,
+	ВЫРАЗИТЬ(ВТУникальныеДатыСНомерами.НомерДаты / 2 КАК ЧИСЛО(15, 0)) КАК ЧетностьДаты
+ИЗ
+	ВТОстатки КАК ВТОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТУникальныеДатыСНомерами КАК ВТУникальныеДатыСНомерами
+		ПО ВТОстатки.ДатаДокумента = ВТУникальныеДатыСНомерами.ДатаДокумента</query>
 	</dataSet>
 	<totalField>
 		<dataPath>СуммаКонечныйОстаток</dataPath>
@@ -224,13 +301,13 @@
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Валюта</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>a3644c11-f029-478b-9a30-a2db35afe47e</dcsset:userSettingID>
+					<dcsset:userSettingID>55190f43-c40e-4409-95ee-7cd79a36f8cd</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Касса</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>9a444d75-8584-46a6-9d40-5ea394bf9197</dcsset:userSettingID>
+					<dcsset:userSettingID>75c87aa3-f51e-43db-be6e-01b1635ee8b5</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
@@ -243,6 +320,30 @@
 					<dcsset:userSettingID>39674727-0ee0-4ec2-9837-8a4ee5e6ab22</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Регистратор.Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЧетностьДаты</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Azure</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
@@ -260,7 +361,6 @@
 						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:use>false</dcsset:use>
 						<dcsset:field>ИзКассы</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
@@ -268,7 +368,6 @@
 						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:use>false</dcsset:use>
 						<dcsset:field>ВКассу</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
