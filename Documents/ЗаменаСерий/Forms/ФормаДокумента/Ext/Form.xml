@@ -113,6 +113,13 @@
 						</UsualGroup>
 						<InputField name="ВидОперации" id="90">
 							<DataPath>Объект.ВидОперации</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Замена серий одной номенклатуры возможна только для товаров, к-рые есть на остатках.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="91"/>
 							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="92"/>
 							<Events>
