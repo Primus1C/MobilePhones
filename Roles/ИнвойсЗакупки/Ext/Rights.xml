@@ -1493,6 +1493,13 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.ПартииВалюты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document._ВозвратОтПокупателя</name>
 		<right>
 			<name>Read</name>

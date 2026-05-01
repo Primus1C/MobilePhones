@@ -758,6 +758,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Распределение</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Distribution</v8:content>
+						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ГруппаРаспределениеРасширеннаяПодсказка" id="171"/>
 					<ChildItems>
@@ -1510,6 +1514,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Распределить затраты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Distribute expenses</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

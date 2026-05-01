@@ -108,6 +108,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Фамилия</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Surname</v8:content>
+						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
@@ -151,6 +155,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Имя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Name</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -326,6 +334,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Менеджер</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Manager</v8:content>
+						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
@@ -365,6 +377,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Офис</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Office</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -494,6 +510,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Валюта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Currebcy</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
