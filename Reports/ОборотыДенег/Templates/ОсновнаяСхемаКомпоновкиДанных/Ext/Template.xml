@@ -193,6 +193,26 @@
 ИЗ
 	РегистрНакопления.Деньги.ОстаткиИОбороты(, , Авто, , {(Фирма = &amp;Фирма), (Касса В (&amp;Кассы))}) КАК ДОИО</query>
 	</dataSet>
+	<calculatedField>
+		<dataPath>СортировкаДата</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ВариантСортировки = "ПоДате" ТОГДА Регистратор.Дата ИНАЧЕ ДАТАВРЕМЯ(1,1,1) КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сортировка дата</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СортировкаНомер</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ВариантСортировки = "ПоНомеру" ТОГДА Регистратор.Номер ИНАЧЕ "" КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сортировка номер</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
 	<totalField>
 		<dataPath>ОстатокПриход</dataPath>
 		<expression>Сумма(ОстатокПриход)</expression>
@@ -295,6 +315,49 @@
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 	</parameter>
+	<parameter>
+		<name>ВариантСортировки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вариант сортировки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:string">ПоДате</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по дате</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">ПоНомеру</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по номеру</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -379,6 +442,12 @@
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>045cea4a-0d3c-4633-bd79-ca952701f80f</dcsset:userSettingID>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВариантСортировки</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">по дате</dcscor:value>
+					<dcsset:userSettingID>5a14a29e-4112-48c3-986a-3898e970c478</dcsset:userSettingID>
+				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
@@ -390,8 +459,14 @@
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:field>СортировкаДата</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СортировкаНомер</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
 				</dcsset:item>
 			</dcsset:order>
 			<dcsset:outputParameters>

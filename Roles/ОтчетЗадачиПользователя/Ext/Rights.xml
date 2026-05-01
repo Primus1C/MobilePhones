@@ -51,6 +51,13 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ДокументыКПроведению</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.ЗадачиПользователя</name>
 		<right>
 			<name>Use</name>

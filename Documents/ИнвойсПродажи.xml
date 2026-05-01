@@ -991,11 +991,12 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Template>Метреон</Template>
 			<Template>Форма1</Template>
 			<Template>Форма2</Template>
 			<Template>Bennu</Template>
-			<Template>Metreon</Template>
+			<Template>Metreon1</Template>
+			<Template>Metreon2</Template>
+			<Template>Metreon3</Template>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
