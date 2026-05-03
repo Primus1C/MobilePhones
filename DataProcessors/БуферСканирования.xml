@@ -33,6 +33,7 @@
 		</Properties>
 		<ChildObjects>
 			<Form>Форма</Form>
+			<Form>ФормаОчистки</Form>
 			<Command uuid="80d2d6bf-eed8-46be-9ea6-c93aeb25b094">
 				<Properties>
 					<Name>БуферСканирования</Name>

@@ -56,6 +56,17 @@
 									<CommandName>Form.Command.КомандаОбновить</CommandName>
 									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="179"/>
 								</Button>
+								<Button name="КтоЕщеСканирует" id="183">
+									<Type>UsualButton</Type>
+									<SkipOnInput>true</SkipOnInput>
+									<CommandName>Form.Command.КтоЕщеСканирует</CommandName>
+									<ExtendedTooltip name="КтоЕщеСканируетРасширеннаяПодсказка" id="184"/>
+								</Button>
+								<Button name="ОчиститьБуфер" id="202">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОчиститьБуфер</CommandName>
+									<ExtendedTooltip name="ОчиститьБуферРасширеннаяПодсказка" id="203"/>
+								</Button>
 								<PictureDecoration name="Декорация1" id="169">
 									<Width>2</Width>
 									<AutoMaxWidth>false</AutoMaxWidth>
@@ -74,12 +85,14 @@
 										<Event name="OnChange">РучнойШКПриИзменении</Event>
 									</Events>
 								</InputField>
-								<Button name="КтоЕщеСканирует" id="183">
-									<Type>UsualButton</Type>
-									<SkipOnInput>true</SkipOnInput>
-									<CommandName>Form.Command.КтоЕщеСканирует</CommandName>
-									<ExtendedTooltip name="КтоЕщеСканируетРасширеннаяПодсказка" id="184"/>
-								</Button>
+								<PictureDecoration name="Декорация3" id="204">
+									<Width>2</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="206"/>
+								</PictureDecoration>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="БуферНоменклатура" id="144">
@@ -1032,6 +1045,34 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВставитьИзБуфера</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОчиститьБуфер" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить буфер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear buffer</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить буфер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear buffer</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardCreateTempTableDropQuery</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьБуфер</Action>
 			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
