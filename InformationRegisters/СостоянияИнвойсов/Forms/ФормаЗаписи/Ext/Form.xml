@@ -119,6 +119,38 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаОплата" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаОплатаРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="СуммаОплаты" id="29">
+					<DataPath>Запись.СуммаОплаты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СуммаОплатыКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СуммаОплатыРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ДатаОплаты" id="32">
+					<DataPath>Запись.ДатаОплаты</DataPath>
+					<ContextMenu name="ДатаОплатыКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДатаОплатыРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="Курс" id="35">
+					<DataPath>Запись.Курс</DataPath>
+					<ContextMenu name="КурсКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Запись" id="1">

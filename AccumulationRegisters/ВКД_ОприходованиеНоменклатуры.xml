@@ -330,7 +330,7 @@
 							<v8:content>Discount price</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
+					<Comment>(в долларах)</Comment>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -375,7 +375,7 @@
 							<v8:content>Price</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
+					<Comment>(в долларах)</Comment>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>

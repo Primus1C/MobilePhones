@@ -132,6 +132,21 @@
 					<ContextMenu name="СостояниеКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="39"/>
 				</PictureField>
+				<LabelField name="СуммаОплаты" id="46">
+					<DataPath>Список.СуммаОплаты</DataPath>
+					<ContextMenu name="СуммаОплатыКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СуммаОплатыРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="ДатаОплаты" id="49">
+					<DataPath>Список.ДатаОплаты</DataPath>
+					<ContextMenu name="ДатаОплатыКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ДатаОплатыРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="Курс" id="52">
+					<DataPath>Список.Курс</DataPath>
+					<ContextMenu name="КурсКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="54"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -145,16 +160,19 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	РегистрСведенийСостоянияИнвойсов.Инвойс КАК Инвойс,
-	РегистрСведенийСостоянияИнвойсов.Расхождения КАК Расхождения,
-	РегистрСведенийСостоянияИнвойсов.Статус КАК Статус,
-	РегистрСведенийСостоянияИнвойсов.СтатусИнспекции КАК СтатусИнспекции,
-	РегистрСведенийСостоянияИнвойсов.СтатусОплаты КАК СтатусОплаты,
-	РегистрСведенийСостоянияИнвойсов.Состояние КАК Состояние,
-	РегистрСведенийСостоянияИнвойсов.СтатусОплатыАвто КАК СтатусОплатыАвто,
-	ЕСТЬNULL(РегистрСведенийСостоянияИнвойсов.Инвойс.НомерИнвойсаПоставщика, РегистрСведенийСостоянияИнвойсов.Инвойс.ВКД_НомерИнвойсаПоставщика) КАК НомерИнвойсаПоставщика
+	Состояния.Инвойс КАК Инвойс,
+	Состояния.Расхождения КАК Расхождения,
+	Состояния.Статус КАК Статус,
+	Состояния.СтатусИнспекции КАК СтатусИнспекции,
+	Состояния.СтатусОплаты КАК СтатусОплаты,
+	Состояния.Состояние КАК Состояние,
+	Состояния.СтатусОплатыАвто КАК СтатусОплатыАвто,
+	ЕСТЬNULL(Состояния.Инвойс.НомерИнвойсаПоставщика, Состояния.Инвойс.ВКД_НомерИнвойсаПоставщика) КАК НомерИнвойсаПоставщика,
+	Состояния.СуммаОплаты КАК СуммаОплаты,
+	Состояния.ДатаОплаты КАК ДатаОплаты,
+	Состояния.Курс КАК Курс
 ИЗ
-	РегистрСведений.СостоянияИнвойсов КАК РегистрСведенийСостоянияИнвойсов</QueryText>
+	РегистрСведений.СостоянияИнвойсов КАК Состояния</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>СтатусОплатыАвто</dcssch:dataPath>
 					<dcssch:field>СтатусОплатыАвто</dcssch:field>
@@ -192,6 +210,18 @@
 							<v8:content>Номер инвойса поставщика</v8:content>
 						</v8:item>
 					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаОплаты</dcssch:dataPath>
+					<dcssch:field>СуммаОплаты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОплаты</dcssch:dataPath>
+					<dcssch:field>ДатаОплаты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Курс</dcssch:dataPath>
+					<dcssch:field>Курс</dcssch:field>
 				</Field>
 				<MainTable>InformationRegister.СостоянияИнвойсов</MainTable>
 				<ListSettings>

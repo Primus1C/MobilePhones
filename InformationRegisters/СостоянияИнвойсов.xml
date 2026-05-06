@@ -483,7 +483,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата оплаты</v8:content>
+							<v8:content>Дата последней оплаты</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -525,7 +525,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Курс</v8:content>
+							<v8:content>Средний курс</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
