@@ -40,6 +40,8 @@
 		<ChildObjects>
 			<Form>ФормаОтчета</Form>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
+			<Template>МакетИндикатора</Template>
+			<Template>МакетДашборда</Template>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>

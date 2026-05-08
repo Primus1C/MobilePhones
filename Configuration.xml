@@ -367,6 +367,7 @@
 			<SessionParameter>ВариантДоступаККонтрагентамРазрешить</SessionParameter>
 			<SessionParameter>БезусловноеПроведениеДокументов</SessionParameter>
 			<SessionParameter>ДоступныНаименованияКонтрагентов</SessionParameter>
+			<SessionParameter>ГрупповоеПерепроведениеДокументов</SessionParameter>
 			<Role>Администратор</Role>
 			<Role>РазрешитьВариантыОтчетов</Role>
 			<Role>РазрешитьНастройкуСписка</Role>
@@ -769,6 +770,7 @@
 			<ChartOfCharacteristicTypes>НастройкиПользователей</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ЦветаОформления</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ДополнительныеСвойства</ChartOfCharacteristicTypes>
+			<Task>Задача</Task>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

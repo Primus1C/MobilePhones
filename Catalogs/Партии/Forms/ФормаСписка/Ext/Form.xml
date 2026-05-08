@@ -411,16 +411,8 @@
 					<dcssch:field>Склад</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>РезервОстаток</dcssch:dataPath>
-					<dcssch:field>РезервОстаток</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Контрагент</dcssch:dataPath>
 					<dcssch:field>Контрагент</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ОстатокОстаток</dcssch:dataPath>
-					<dcssch:field>ОстатокОстаток</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Остаток</dcssch:dataPath>
@@ -522,6 +514,18 @@
 					<dcssch:dataPath>ВКД_ЦенаСЗатратами</dcssch:dataPath>
 					<dcssch:field>ВКД_ЦенаСЗатратами</dcssch:field>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЦенаЗакупкиВБазВалюте</dcssch:dataPath>
+					<dcssch:field>ЦенаЗакупкиВБазВалюте</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -568,7 +572,7 @@
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>false</dcssch:useRestriction>
 				</Parameter>
-				<MainTable>AccumulationRegister.ОстаткиТовара.Balance</MainTable>
+				<MainTable>Catalog.Партии</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">

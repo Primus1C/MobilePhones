@@ -534,6 +534,10 @@ Procedure DoPost()
 	StatusTitle = StrReplace(StatusTitle, "[1]", Format(MinDoc.Date, "DLF=D"));
 	StatusTitle = StrReplace(StatusTitle, "[2]", Format(MaxDoc.Date, "DLF=D"));
 	
+	// © Primus1C  07.05.2026  НАЧАЛО ►  
+	омСервер.УстановитьПараметрСеанса("ГрупповоеПерепроведениеДокументов", Истина);
+	// © Primus1C  ОКОНЧАНИЕ ◄
+	
 	BarStep = 100/Max((MaxDoc.Date - MinDoc.Date) / 86400, 1);
 	i=0;
 	CurrentDate = BegOfDay(MinDoc.Date);
@@ -558,6 +562,11 @@ Procedure DoPost()
 			Break;
 		EndIf;
 	EndDo;
+	
+	// © Primus1C  07.05.2026  НАЧАЛО ►
+	омСервер.УстановитьПараметрСеанса("ГрупповоеПерепроведениеДокументов", Ложь);
+	// © Primus1C  ОКОНЧАНИЕ ◄
+	
 	Status(StatusTitle, 100, Description, PictureLib.Post);
 	For Each SelectedDocument in SelectedDocumentsList Do
 		NotifyChanged(Type("DocumentRef."+SelectedDocument.Value));

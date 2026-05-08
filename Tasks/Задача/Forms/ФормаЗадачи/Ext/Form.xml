@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДата" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="7">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновное" id="35">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОписание" id="37">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Описание" id="18">
+							<DataPath>Объект.Описание</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="20"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Тэги" id="21">
+					<DataPath>Объект.Тэги</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<Width>24</Width>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ТэгиКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ТэгиРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СсылкаНаОбъект" id="32">
+			<DataPath>Объект.СсылкаНаОбъект</DataPath>
+			<ContextMenu name="СсылкаНаОбъектКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="СсылкаНаОбъектРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<InputField name="Автор" id="27">
+			<DataPath>Объект.Автор</DataPath>
+			<ContextMenu name="АвторКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="29"/>
+		</InputField>
+		<UsualGroup name="ГруппаВыполнение" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаВыполнениеРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<InputField name="Пользователь" id="10">
+					<DataPath>Объект.Пользователь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ДатаВыполнения" id="24">
+					<DataPath>Объект.ДатаВыполнения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаВыполненияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДатаВыполненияРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<CheckBoxField name="Выполнена" id="13">
+					<DataPath>Объект.Executed</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполненаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ВыполненаРасширеннаяПодсказка" id="15"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:TaskObject.Задача</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
