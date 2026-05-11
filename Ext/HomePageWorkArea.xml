@@ -3,7 +3,7 @@
 	<WorkingAreaTemplate>OneColumn</WorkingAreaTemplate>
 	<Column>
 		<Item>
-			<Form>Report.ЗадачиПользователя.Form.ФормаОтчета</Form>
+			<Form>Report.ОшибкиВводаДанных.Form.ФормаОтчета</Form>
 			<Height>10</Height>
 			<Visibility>
 				<xr:Common>true</xr:Common>

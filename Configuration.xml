@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-05-05</Version>
+			<Version>2026-05-08</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -707,7 +707,7 @@
 			<Report>СоставЗатрат</Report>
 			<Report>ПроверкаПриходных</Report>
 			<Report>СреднийКурс</Report>
-			<Report>ЗадачиПользователя</Report>
+			<Report>ОшибкиВводаДанных</Report>
 			<Report>АнализПродаж</Report>
 			<Report>PriceCheck</Report>
 			<Report>ПартииВалют</Report>

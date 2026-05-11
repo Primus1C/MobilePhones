@@ -145,6 +145,11 @@
 					<ContextMenu name="НомерИнвойсаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="НомерИнвойсаРасширеннаяПодсказка" id="33"/>
 				</LabelField>
+				<LabelField name="Номер" id="114">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="116"/>
+				</LabelField>
 				<ColumnGroup name="ГруппаИконки" id="55">
 					<Title>
 						<v8:item>

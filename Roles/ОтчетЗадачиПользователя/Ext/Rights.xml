@@ -58,7 +58,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Report.ЗадачиПользователя</name>
+		<name>Report.ОшибкиВводаДанных</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
