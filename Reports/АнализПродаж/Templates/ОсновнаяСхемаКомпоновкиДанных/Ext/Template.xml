@@ -227,9 +227,9 @@
 	ОстаткиТовараОстаткиИОбороты.ОстатокКонечныйОстаток КАК КонечныйОстаток,
 	ОстаткиТовараОстаткиИОбороты.ОстатокПриход КАК Приход,
 	ОстаткиТовараОстаткиИОбороты.ОстатокРасход КАК Расход,
-	ПродажиОбороты.СуммаОборот КАК СуммаПродаж,
 	ПродажиОбороты.КоличествоОборот КАК КоличествоПродаж,
-	ПродажиОбороты.НаценкаОборот КАК Наценка,
+	ПродажиОбороты.СуммаВБазВалютеОборот КАК СуммаПродаж,
+	ПродажиОбороты.НаценкаВБазВалютеОборот КАК Наценка,
 	ОстаткиТовараОстаткиИОбороты.Партия.ЦенаЗакупки КАК ЦенаЗакупки
 ИЗ
 	РегистрНакопления.ОстаткиТовара.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , ) КАК ОстаткиТовараОстаткиИОбороты
@@ -320,6 +320,27 @@
 			</dcscor:item>
 		</appearance>
 	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентНаценки</dataPath>
+		<expression>Наценка/СуммаПродаж*100</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Наценка %</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=1</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
 	<totalField>
 		<dataPath>КоличествоПродаж</dataPath>
 		<expression>Сумма(КоличествоПродаж)</expression>
@@ -363,6 +384,11 @@
 	<totalField>
 		<dataPath>СуммаПродаж</dataPath>
 		<expression>Сумма(СуммаПродаж)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентНаценки</dataPath>
+		<expression>Среднее(ПроцентНаценки)</expression>
+		<group>Номенклатура</group>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -500,6 +526,9 @@
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>СуммаПродаж</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентНаценки</dcsset:field>
 					</dcsset:item>
 					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>
