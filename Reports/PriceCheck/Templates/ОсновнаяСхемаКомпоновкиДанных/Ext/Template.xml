@@ -9,10 +9,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Партия</dataPath>
 			<field>Партия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Номенклатура</dataPath>
 			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Склад</dataPath>
@@ -33,16 +39,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ЦенаЗакупки</dataPath>
-			<field>ЦенаЗакупки</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Цена закупки</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>МинЦена</dataPath>
 			<field>МинЦена</field>
 			<title xsi:type="v8:LocalStringType">
@@ -58,7 +54,11 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Цена закупки в долларах</v8:content>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Price</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -73,16 +73,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Валюта</dataPath>
-			<field>Валюта</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Валюта</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ПревышениеЦены</dataPath>
 			<field>ПревышениеЦены</field>
 			<title xsi:type="v8:LocalStringType">
@@ -92,49 +82,61 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Остаток</dataPath>
+			<field>Остаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	Партии.Владелец КАК Номенклатура,
-	Партии.Ссылка КАК Партия, 
-	Партии.Ссылка.Серия как Серия,    
-	Партии.Ссылка.Валюта КАК Валюта,
-	Партии.ДатаПартии КАК ДатаПартии,
-	Партии.ЦенаЗакупки КАК ЦенаЗакупки,
-	ВЫБОР
-		КОГДА ЕСТЬNULL(КурсыВалют.Курс, 0) = 0
-			ТОГДА 0
-		ИНАЧЕ Партии.ЦенаЗакупки / КурсыВалют.Курс
-	КОНЕЦ КАК ЦенаЗакупкиВДолларах ,
-	Партии.ЦенаЗакупки - МинимальныеЦены.МинЦена КАК ПревышениеЦены
+	ТекущиеОстатки.Номенклатура КАК Номенклатура,
+	ТекущиеОстатки.Партия КАК Партия,
+	ТекущиеОстатки.Партия.Серия КАК Серия,
+	ТекущиеОстатки.Партия.ДатаПартии КАК ДатаПартии,
+	ТекущиеОстатки.Партия.ЦенаЗакупкиВБазВалюте КАК ЦенаЗакупкиВДолларах,
+	ТекущиеОстатки.Партия.ЦенаЗакупкиВБазВалюте - МинимальныеЦены.МинЦена КАК ПревышениеЦены,
+	ТекущиеОстатки.ОстатокОстаток КАК Остаток
 ИЗ
-	Справочник.Партии КАК Партии
+	РегистрНакопления.ОстаткиТовара.Остатки(, {(Номенклатура В ИЕРАРХИИ (&amp;Номенклатура)), (Склад = &amp;Склад)}) КАК ТекущиеОстатки
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
 			ВложенныйПартии.Номенклатура КАК Номенклатура,
-			МИНИМУМ(ВложенныйПартии.Партия.ЦенаЗакупки) КАК МинЦена
+			МИНИМУМ(ВложенныйПартии.Партия.ЦенаЗакупкиВБазВалюте) КАК МинЦена
 		ИЗ
 			РегистрНакопления.ОстаткиТовара.Остатки(, {(Номенклатура В ИЕРАРХИИ (&amp;Номенклатура)), (Склад = &amp;Склад)}) КАК ВложенныйПартии
 		
 		СГРУППИРОВАТЬ ПО
 			ВложенныйПартии.Номенклатура) КАК МинимальныеЦены
-		ПО Партии.Владелец = МинимальныеЦены.Номенклатура
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалют
-		ПО (КурсыВалют.Валюта = &amp;ВалютаДоллар)
-			И (КурсыВалют.Период В
-				(ВЫБРАТЬ
-					МАКСИМУМ(ВложенныйКурс.Период)
-				ИЗ
-					РегистрСведений.КурсыВалют КАК ВложенныйКурс
-				ГДЕ
-					ВложенныйКурс.Валюта = &amp;ВалютаДоллар
-					И ВложенныйКурс.Период &lt;= Партии.ДатаПартии))
+		ПО ТекущиеОстатки.Номенклатура = МинимальныеЦены.Номенклатура
 ГДЕ
-	Партии.ЦенаЗакупки &gt; МинимальныеЦены.МинЦена + &amp;ПревышениеЦены</query>
+	ТекущиеОстатки.Партия.ЦенаЗакупкиВБазВалюте &gt; МинимальныеЦены.МинЦена + &amp;ПревышениеЦены
+	И ТекущиеОстатки.ОстатокОстаток &gt; 0
+
+//ВЫБРАТЬ
+//	Партии.Владелец КАК Номенклатура,
+//	Партии.Ссылка КАК Партия,
+//	Партии.Ссылка.Серия КАК Серия,
+//	Партии.ДатаПартии КАК ДатаПартии,
+//	Партии.ЦенаЗакупкиВБазВалюте КАК ЦенаЗакупкиВДолларах,
+//	Партии.ЦенаЗакупкиВБазВалюте - МинимальныеЦены.МинЦена КАК ПревышениеЦены
+//ИЗ
+//	Справочник.Партии КАК Партии
+//		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+//			ВложенныйПартии.Номенклатура КАК Номенклатура,
+//			МИНИМУМ(ВложенныйПартии.Партия.ЦенаЗакупкиВБазВалюте) КАК МинЦена
+//		ИЗ
+//			РегистрНакопления.ОстаткиТовара.Остатки(, {(Номенклатура В ИЕРАРХИИ (&amp;Номенклатура)), (Склад = &amp;Склад)}) КАК ВложенныйПартии
+//		
+//		СГРУППИРОВАТЬ ПО
+//			ВложенныйПартии.Номенклатура) КАК МинимальныеЦены
+//		ПО Партии.Владелец = МинимальныеЦены.Номенклатура
+//ГДЕ
+//	Партии.ЦенаЗакупкиВБазВалюте &gt; МинимальныеЦены.МинЦена + &amp;ПревышениеЦены</query>
 	</dataSet>
-	<totalField>
-		<dataPath>ЦенаЗакупки</dataPath>
-		<expression>Максимум(ЦенаЗакупки)</expression>
-		<group>Партия</group>
-	</totalField>
 	<totalField>
 		<dataPath>ЦенаЗакупкиВДолларах</dataPath>
 		<expression>Сумма(ЦенаЗакупкиВДолларах)</expression>
@@ -197,21 +199,6 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ВалютаДоллар</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Валюта доллар</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>true</useRestriction>
-		<expression>справочники.Валюты.НайтиПоКоду("USD")</expression>
-	</parameter>
-	<parameter>
 		<name>Склад</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -231,10 +218,6 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ЦенаЗакупки</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЦенаЗакупкиВДолларах</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -308,13 +291,6 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
 							<dcsset:field>ДатаПартии</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Валюта</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

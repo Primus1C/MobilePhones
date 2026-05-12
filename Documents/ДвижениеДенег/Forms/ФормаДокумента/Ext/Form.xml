@@ -503,6 +503,16 @@
 											<ContextMenu name="ПроцентИнвестицийКонтекстноеМеню" id="320"/>
 											<ExtendedTooltip name="ПроцентИнвестицийРасширеннаяПодсказка" id="321"/>
 										</InputField>
+										<LabelField name="Долг" id="433">
+											<DataPath>Долг</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ДолгКонтекстноеМеню" id="434"/>
+											<ExtendedTooltip name="ДолгРасширеннаяПодсказка" id="435"/>
+											<Events>
+												<Event name="Click">ДолгНажатие</Event>
+											</Events>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаЛогистика" id="388">
@@ -1567,6 +1577,21 @@
 			</Title>
 			<Type>
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Долг" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
