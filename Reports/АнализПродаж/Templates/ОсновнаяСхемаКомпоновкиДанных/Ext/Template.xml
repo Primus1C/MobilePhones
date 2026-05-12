@@ -23,10 +23,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Фирма</dataPath>
 			<field>Фирма</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Партия</dataPath>
 			<field>Партия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>НачальныйОстаток</dataPath>
@@ -165,6 +171,10 @@
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -221,20 +231,28 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ОстаткиТовараОстаткиИОбороты.Номенклатура КАК Номенклатура,
-	ОстаткиТовараОстаткиИОбороты.Склад КАК Склад,
-	ОстаткиТовараОстаткиИОбороты.ОстатокНачальныйОстаток КАК НачальныйОстаток,
-	ОстаткиТовараОстаткиИОбороты.ОстатокКонечныйОстаток КАК КонечныйОстаток,
-	ОстаткиТовараОстаткиИОбороты.ОстатокПриход КАК Приход,
-	ОстаткиТовараОстаткиИОбороты.ОстатокРасход КАК Расход,
-	ПродажиОбороты.КоличествоОборот КАК КоличествоПродаж,
-	ПродажиОбороты.СуммаВБазВалютеОборот КАК СуммаПродаж,
-	ПродажиОбороты.НаценкаВБазВалютеОборот КАК Наценка,
-	ОстаткиТовараОстаткиИОбороты.Партия.ЦенаЗакупки КАК ЦенаЗакупки
+	ЕСТЬNULL(Остатки.Номенклатура, Продажи.Номенклатура) КАК Номенклатура,
+	ЕСТЬNULL(Остатки.Склад, Продажи.Склад) КАК Склад,
+	ЕСТЬNULL(Остатки.Фирма, Продажи.Фирма) КАК Фирма,
+	ЕСТЬNULL(Остатки.Партия, Продажи.Партия) КАК Партия,
+	// Данные остатков и оборотов
+	ЕСТЬNULL(Остатки.ОстатокНачальныйОстаток, 0) КАК НачальныйОстаток,
+	ЕСТЬNULL(Остатки.ОстатокПриход, 0) КАК Приход,
+	ЕСТЬNULL(Остатки.ОстатокРасход, 0) КАК Расход,
+	ЕСТЬNULL(Остатки.ОстатокКонечныйОстаток, 0) КАК КонечныйОстаток,
+	// Данные продаж
+	ЕСТЬNULL(Продажи.КоличествоОборот, 0) КАК КоличествоПродаж,
+	ЕСТЬNULL(Продажи.СуммаВБазВалютеОборот, 0) КАК СуммаПродаж,
+	ЕСТЬNULL(Продажи.НаценкаВБазВалютеОборот, 0) КАК Наценка,
+	// Реквизит цены для расчетов сумм
+	ЕСТЬNULL(Остатки.Партия.ЦенаЗакупкиВБазВалюте, Продажи.Партия.ЦенаЗакупкиВБазВалюте) КАК ЦенаЗакупки
 ИЗ
-	РегистрНакопления.ОстаткиТовара.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , ) КАК ОстаткиТовараОстаткиИОбороты
-		ПОЛНОЕ СОЕДИНЕНИЕ РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ПродажиОбороты
-		ПО ОстаткиТовараОстаткиИОбороты.Номенклатура = ПродажиОбороты.Номенклатура</query>
+	РегистрНакопления.ОстаткиТовара.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , {Номенклатура.*, Склад.*, Фирма.*, Партия.*}) КАК Остатки
+		ПОЛНОЕ СОЕДИНЕНИЕ РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, {Номенклатура.*, Склад.*, Фирма.*, Партия.*}) КАК Продажи
+		ПО Остатки.Номенклатура = Продажи.Номенклатура
+			И Остатки.Склад = Продажи.Склад
+			И Остатки.Фирма = Продажи.Фирма
+			И Остатки.Партия = Продажи.Партия</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>НачальныйОстатокСумма</dataPath>
@@ -322,7 +340,7 @@
 	</calculatedField>
 	<calculatedField>
 		<dataPath>ПроцентНаценки</dataPath>
-		<expression>Наценка/СуммаПродаж*100</expression>
+		<expression>выбор когда СуммаПродаж=0 тогда 0 иначе Наценка/СуммаПродаж*100 конец</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -338,6 +356,10 @@
 						<v8:content>ЧДЦ=1</v8:content>
 					</v8:item>
 				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
 			</dcscor:item>
 		</appearance>
 	</calculatedField>
@@ -554,7 +576,13 @@
 					<dcsset:left xsi:type="dcscor:Field">КонечныйОстаток</dcsset:left>
 					<dcsset:comparisonType>Greater</dcsset:comparisonType>
 					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-					<dcsset:userSettingID>3f20252b-394b-4eaf-aa1b-e6381c8f5009</dcsset:userSettingID>
+					<dcsset:userSettingID>d61d9b0e-f9e1-4905-bcdf-528447a5d6ed</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конечный остаток</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
@@ -569,6 +597,22 @@
 					<dcsset:userSettingID>0379e67c-8dcc-4f0e-8130-d0a838f954f1</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">34</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
@@ -634,6 +678,13 @@
 						<dcsset:field>КонечныйОстаток</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
