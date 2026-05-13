@@ -23,16 +23,10 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Фирма</dataPath>
 			<field>Фирма</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Партия</dataPath>
 			<field>Партия</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>НачальныйОстаток</dataPath>
@@ -196,6 +190,10 @@
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -220,135 +218,168 @@
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ЦенаЗакупки</dataPath>
-			<field>ЦенаЗакупки</field>
+			<dataPath>НачальныйОстатокСумма</dataPath>
+			<field>НачальныйОстатокСумма</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Цена закупки</v8:content>
+					<v8:content>нач. сумма</v8:content>
 				</v8:item>
 			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Группа2</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#333399</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ЕстьОстатки</dataPath>
-			<field>ЕстьОстатки</field>
+			<dataPath>ПриходСумма</dataPath>
+			<field>ПриходСумма</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Есть остатки</v8:content>
+					<v8:content>прих. сумма</v8:content>
 				</v8:item>
 			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходСумма</dataPath>
+			<field>РасходСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>расх. сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонечныйОстатокСумма</dataPath>
+			<field>КонечныйОстатокСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>кон. сумма</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Группа2</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ЕСТЬNULL(Остатки.Номенклатура, Продажи.Номенклатура) КАК Номенклатура,
-	ЕСТЬNULL(Остатки.Склад, Продажи.Склад) КАК Склад,
-	ЕСТЬNULL(Остатки.Фирма, Продажи.Фирма) КАК Фирма,
-	ЕСТЬNULL(Остатки.Партия, Продажи.Партия) КАК Партия,
-	// Данные остатков и оборотов
-	ЕСТЬNULL(Остатки.ОстатокНачальныйОстаток, 0) КАК НачальныйОстаток,
-	ЕСТЬNULL(Остатки.ОстатокПриход, 0) КАК Приход,
-	ЕСТЬNULL(Остатки.ОстатокРасход, 0) КАК Расход,
-	ЕСТЬNULL(Остатки.ОстатокКонечныйОстаток, 0) КАК КонечныйОстаток,  
-	выбор когда ЕСТЬNULL(Остатки.ОстатокКонечныйОстаток, 0) &gt; 0 Тогда Истина Иначе Ложь Конец КАК ЕстьОстатки,  
-	// Данные продаж
-	ЕСТЬNULL(Продажи.КоличествоОборот, 0) КАК КоличествоПродаж,
-	ЕСТЬNULL(Продажи.СуммаВБазВалютеОборот, 0) КАК СуммаПродаж,
-	ЕСТЬNULL(Продажи.НаценкаВБазВалютеОборот, 0) КАК Наценка,
-	// Реквизит цены для расчетов сумм
-	ЕСТЬNULL(Остатки.Партия.ЦенаЗакупкиВБазВалюте, Продажи.Партия.ЦенаЗакупкиВБазВалюте) КАК ЦенаЗакупки
+	База.Номенклатура КАК Номенклатура,
+	База.Склад КАК Склад,
+	СУММА(База.НачальныйОстаток) КАК НачальныйОстаток,
+	СУММА(База.НачальныйОстатокСумма) КАК НачальныйОстатокСумма,
+	СУММА(База.Приход) КАК Приход,
+	СУММА(База.ПриходСумма) КАК ПриходСумма,
+	СУММА(База.Расход) КАК Расход,
+	СУММА(База.РасходСумма) КАК РасходСумма,
+	СУММА(База.КонечныйОстаток) КАК КонечныйОстаток,
+	СУММА(База.КонечныйОстатокСумма) КАК КонечныйОстатокСумма,
+	СУММА(База.КоличествоПродаж) КАК КоличествоПродаж,
+	СУММА(База.СуммаПродаж) КАК СуммаПродаж,
+	СУММА(База.Наценка) КАК Наценка
 ИЗ
-	РегистрНакопления.ОстаткиТовара.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , {Номенклатура.*, Склад.*, Фирма.*, Партия.*}) КАК Остатки
-		ПОЛНОЕ СОЕДИНЕНИЕ РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, {Номенклатура.*, Склад.*, Фирма.*, Партия.*}) КАК Продажи
-		ПО Остатки.Номенклатура = Продажи.Номенклатура
-			И Остатки.Склад = Продажи.Склад
-			И Остатки.Фирма = Продажи.Фирма
-			И Остатки.Партия = Продажи.Партия</query>
+	(ВЫБРАТЬ
+		Остатки.Номенклатура КАК Номенклатура,
+		Остатки.Склад КАК Склад,
+		Остатки.Фирма КАК Фирма,
+		Остатки.Партия КАК Партия,
+		Остатки.ОстатокНачальныйОстаток КАК НачальныйОстаток,
+		Остатки.ОстатокНачальныйОстаток * Остатки.Партия.ЦенаЗакупкиВБазВалюте КАК НачальныйОстатокСумма,
+		Остатки.ОстатокПриход КАК Приход,
+		Остатки.ОстатокПриход * Остатки.Партия.ЦенаЗакупкиВБазВалюте КАК ПриходСумма,
+		Остатки.ОстатокРасход КАК Расход,
+		Остатки.ОстатокРасход * Остатки.Партия.ЦенаЗакупкиВБазВалюте КАК РасходСумма,
+		Остатки.ОстатокКонечныйОстаток КАК КонечныйОстаток,
+		Остатки.ОстатокКонечныйОстаток * Остатки.Партия.ЦенаЗакупкиВБазВалюте КАК КонечныйОстатокСумма,
+		0 КАК КоличествоПродаж,
+		0 КАК СуммаПродаж,
+		0 КАК Наценка
+	ИЗ
+		РегистрНакопления.ОстаткиТовара.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , {(Номенклатура).*, (Склад).*}) КАК Остатки
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Продажи.Номенклатура,
+		Продажи.Склад,
+		Продажи.Фирма,
+		Продажи.Партия,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		Продажи.КоличествоОборот,
+		Продажи.СуммаВБазВалютеОборот,
+		Продажи.НаценкаВБазВалютеОборот
+	ИЗ
+		РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, {(Номенклатура).*, (Склад).*}) КАК Продажи) КАК База
+
+СГРУППИРОВАТЬ ПО
+	База.Номенклатура,
+	База.Склад</query>
 	</dataSet>
-	<calculatedField>
-		<dataPath>НачальныйОстатокСумма</dataPath>
-		<expression>ЦенаЗакупки*НачальныйОстаток</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>сумма</v8:content>
-			</v8:item>
-		</title>
-		<appearance>
-			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-				<dcscor:parameter>Формат</dcscor:parameter>
-				<dcscor:value xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>ЧДЦ=2</v8:content>
-					</v8:item>
-				</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</calculatedField>
-	<calculatedField>
-		<dataPath>КонечныйОстатокСумма</dataPath>
-		<expression>ЦенаЗакупки*КонечныйОстаток</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>сумма</v8:content>
-			</v8:item>
-		</title>
-		<appearance>
-			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-				<dcscor:parameter>Формат</dcscor:parameter>
-				<dcscor:value xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>ЧДЦ=2</v8:content>
-					</v8:item>
-				</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</calculatedField>
-	<calculatedField>
-		<dataPath>ПриходСумма</dataPath>
-		<expression>ЦенаЗакупки*Приход</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>сумма</v8:content>
-			</v8:item>
-		</title>
-		<appearance>
-			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-				<dcscor:parameter>Формат</dcscor:parameter>
-				<dcscor:value xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>ЧДЦ=2</v8:content>
-					</v8:item>
-				</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</calculatedField>
-	<calculatedField>
-		<dataPath>РасходСумма</dataPath>
-		<expression>ЦенаЗакупки*Расход</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>сумма</v8:content>
-			</v8:item>
-		</title>
-		<appearance>
-			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-				<dcscor:parameter>Формат</dcscor:parameter>
-				<dcscor:value xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>ЧДЦ=2</v8:content>
-					</v8:item>
-				</dcscor:value>
-			</dcscor:item>
-		</appearance>
-	</calculatedField>
 	<calculatedField>
 		<dataPath>ПроцентНаценки</dataPath>
 		<expression>выбор когда СуммаПродаж=0 тогда 0 иначе Наценка/СуммаПродаж*100 конец</expression>
@@ -383,10 +414,6 @@
 		<expression>Сумма(КонечныйОстаток)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>КонечныйОстатокСумма</dataPath>
-		<expression>Сумма(КонечныйОстатокСумма)</expression>
-	</totalField>
-	<totalField>
 		<dataPath>Наценка</dataPath>
 		<expression>Сумма(Наценка)</expression>
 	</totalField>
@@ -395,24 +422,12 @@
 		<expression>Сумма(НачальныйОстаток)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>НачальныйОстатокСумма</dataPath>
-		<expression>Сумма(НачальныйОстатокСумма)</expression>
-	</totalField>
-	<totalField>
 		<dataPath>Приход</dataPath>
 		<expression>Сумма(Приход)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>ПриходСумма</dataPath>
-		<expression>Сумма(ПриходСумма)</expression>
-	</totalField>
-	<totalField>
 		<dataPath>Расход</dataPath>
 		<expression>Сумма(Расход)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>РасходСумма</dataPath>
-		<expression>Сумма(РасходСумма)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>СуммаПродаж</dataPath>
@@ -422,6 +437,22 @@
 		<dataPath>ПроцентНаценки</dataPath>
 		<expression>Среднее(ПроцентНаценки)</expression>
 		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>НачальныйОстатокСумма</dataPath>
+		<expression>Сумма(НачальныйОстатокСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонечныйОстатокСумма</dataPath>
+		<expression>Сумма(КонечныйОстатокСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПриходСумма</dataPath>
+		<expression>Сумма(ПриходСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасходСумма</dataPath>
+		<expression>Сумма(РасходСумма)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -585,10 +616,16 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ЕстьОстатки</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					<dcsset:userSettingID>d768b0c4-9e57-4404-9f6b-e627124c345f</dcsset:userSettingID>
+					<dcsset:left xsi:type="dcscor:Field">КонечныйОстаток</dcsset:left>
+					<dcsset:comparisonType>Greater</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					<dcsset:userSettingID>ba915d34-6b06-4fca-be72-4a7816ee5d3f</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конечный остаток</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
