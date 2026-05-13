@@ -644,6 +644,7 @@
 			<Enum>РегистраторыЗатрат</Enum>
 			<Enum>ТипыНоменклатуры</Enum>
 			<Enum>ВидыОперацииЗаменаСерий</Enum>
+			<Enum>Важность</Enum>
 			<Report>КонсольЗапросов_82</Report>
 			<Report>ДвиженияДокумента</Report>
 			<Report>ОстаткиТовара</Report>
@@ -707,7 +708,7 @@
 			<Report>СоставЗатрат</Report>
 			<Report>ПроверкаПриходных</Report>
 			<Report>СреднийКурс</Report>
-			<Report>ОшибкиВводаДанных</Report>
+			<Report>КонтрольВводаДанных</Report>
 			<Report>АнализПродаж</Report>
 			<Report>PriceCheck</Report>
 			<Report>ПартииВалют</Report>

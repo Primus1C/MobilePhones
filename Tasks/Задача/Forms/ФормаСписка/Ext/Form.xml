@@ -100,6 +100,11 @@
 					<ContextMenu name="АвторКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="30"/>
 				</LabelField>
+				<LabelField name="Приоритет" id="34">
+					<DataPath>Список.Приоритет</DataPath>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="36"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>

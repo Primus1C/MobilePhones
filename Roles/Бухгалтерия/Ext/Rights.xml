@@ -3525,7 +3525,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Report.ОшибкиВводаДанных</name>
+		<name>Report.КонтрольВводаДанных</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
