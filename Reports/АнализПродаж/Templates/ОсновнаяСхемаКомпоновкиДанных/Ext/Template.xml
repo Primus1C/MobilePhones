@@ -435,8 +435,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>ПроцентНаценки</dataPath>
-		<expression>Среднее(ПроцентНаценки)</expression>
-		<group>Номенклатура</group>
+		<expression>ВЫБОР КОГДА Сумма(СуммаПродаж) = 0 ТОГДА 0 ИНАЧЕ Сумма(Наценка) / Сумма(СуммаПродаж) * 100 КОНЕЦ</expression>
 	</totalField>
 	<totalField>
 		<dataPath>НачальныйОстатокСумма</dataPath>
