@@ -33,6 +33,7 @@
 			<Shortcut/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
 				<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
 				<v8:Type>cfg:CatalogRef.ПричиныВозврата</v8:Type>
 				<v8:Type>cfg:CatalogRef.Партии</v8:Type>
@@ -45,6 +46,8 @@
 				<v8:Type>cfg:DocumentRef._ВозвратОтПокупателя</v8:Type>
 				<v8:Type>cfg:CatalogRef.КодыПроизводителей</v8:Type>
 				<v8:Type>cfg:CatalogRef.Фирмы</v8:Type>
+				<v8:Type>cfg:CatalogRef.Счета</v8:Type>
+				<v8:Type>cfg:CatalogRef.ТоварныеГруппыПеревозчиков</v8:Type>
 				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВозвратПоставщику</v8:Type>
 				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>

@@ -116,7 +116,7 @@
 					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 				<LabelField name="СуммаОплаты" id="43">
-					<DataPath>Список.СуммаОплаты</DataPath>
+					<DataPath>~Список.СуммаОплаты</DataPath>
 					<ContextMenu name="СуммаОплатыКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="СуммаОплатыРасширеннаяПодсказка" id="45"/>
 				</LabelField>

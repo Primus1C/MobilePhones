@@ -1133,6 +1133,7 @@
 								</LabelField>
 								<LabelField name="Недоплата" id="335">
 									<DataPath>Объект.Недоплата</DataPath>
+									<Visible>false</Visible>
 									<TitleLocation>None</TitleLocation>
 									<Width>10</Width>
 									<HorizontalStretch>false</HorizontalStretch>
