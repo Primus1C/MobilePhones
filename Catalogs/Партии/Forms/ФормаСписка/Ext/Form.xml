@@ -284,55 +284,6 @@
 					<ContextMenu name="ВКД_ЦенаСоСкидкойКонтекстноеМеню" id="71"/>
 					<ExtendedTooltip name="ВКД_ЦенаСоСкидкойРасширеннаяПодсказка" id="72"/>
 				</LabelField>
-				<LabelField name="ВКД_ЦенаСЗатратами" id="73">
-					<DataPath>Список.ВКД_ЦенаСЗатратами</DataPath>
-					<UserVisible>
-						<xr:Common>true</xr:Common>
-						<xr:Value name="Role.Администратор">true</xr:Value>
-						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
-						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
-						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
-						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
-						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
-						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
-						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
-						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
-						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
-						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
-						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
-						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
-						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
-						<xr:Value name="Role.Менеджер">false</xr:Value>
-						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">true</xr:Value>
-						<xr:Value name="Role.ИнвойсЗакупки">true</xr:Value>
-						<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
-						<xr:Value name="Role.Логистика">true</xr:Value>
-						<xr:Value name="Role.Бухгалтерия">true</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
-						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
-						<xr:Value name="Role.МетреонПолный">true</xr:Value>
-						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
-						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
-						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
-						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
-						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
-						<xr:Value name="Role.ВидимостьЦенЗакупки">true</xr:Value>
-						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
-						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
-						<xr:Value name="Role.Инвентаризация">false</xr:Value>
-						<xr:Value name="Role.Разработка">false</xr:Value>
-					</UserVisible>
-					<ContextMenu name="ВКД_ЦенаСЗатратамиКонтекстноеМеню" id="74"/>
-					<ExtendedTooltip name="ВКД_ЦенаСЗатратамиРасширеннаяПодсказка" id="75"/>
-				</LabelField>
 				<LabelField name="Валюта" id="37">
 					<DataPath>Список.Валюта</DataPath>
 					<ContextMenu name="ВалютаКонтекстноеМеню" id="38"/>
@@ -396,8 +347,7 @@
 	Спр.Консигнация КАК Консигнация,
 	ЕСТЬNULL(Рег.ОстатокОстаток, 0) КАК Остаток,
 	ЕСТЬNULL(Рег.РезервОстаток, 0) КАК Резерв,
-	Спр.ВКД_ЦенаСоСкидкой КАК ВКД_ЦенаСоСкидкой,
-	Спр.ВКД_ЦенаСЗатратами КАК ВКД_ЦенаСЗатратами
+	Спр.ВКД_ЦенаСоСкидкой КАК ВКД_ЦенаСоСкидкой
 ИЗ
 	Справочник.Партии КАК Спр
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиТовара.Остатки(, {(Фирма = &amp;Фирма), (Склад В (&amp;ФильтрСклады))}) КАК Рег

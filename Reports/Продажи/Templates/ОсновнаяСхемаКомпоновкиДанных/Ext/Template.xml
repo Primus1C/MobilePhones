@@ -230,6 +230,10 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	РОО.Фирма КАК Фирма,
@@ -259,7 +263,7 @@
 	</dataSet>
 	<calculatedField>
 		<dataPath>Пересчет</dataPath>
-		<expression>гоПересчитать2025(СуммаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
+		<expression>РаботаСВалютой.Пересчитать2025(СуммаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -295,7 +299,7 @@
 	</calculatedField>
 	<calculatedField>
 		<dataPath>НаценкаПересчет</dataPath>
-		<expression>гоПересчитать2025(НаценкаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
+		<expression>РаботаСВалютой.Пересчитать2025(НаценкаОборот, Валюта, &amp;ВалютаПересчета, Фирма, Период)</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -565,8 +569,8 @@
 		<valueType>
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Склады</v8:Type>
 		</valueType>
-		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
 	</parameter>
 	<parameter>
 		<name>Регистратор</name>
@@ -1830,7 +1834,11 @@
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>437c3c73-93d9-4b8b-9ea7-3f87a63e1326</dcsset:userSettingID>
 				</dcsset:item>

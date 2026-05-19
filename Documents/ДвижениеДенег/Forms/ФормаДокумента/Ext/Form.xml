@@ -237,6 +237,21 @@
 														<Event name="OnChange">ВалютаПриИзменении</Event>
 													</Events>
 												</InputField>
+												<InputField name="КурсОплатыИнвойсов" id="439">
+													<DataPath>Объект.СубДКурс</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Очистите поле, чтобы автоматически установить курс из справочника</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="КурсОплатыИнвойсовКонтекстноеМеню" id="440"/>
+													<ExtendedTooltip name="КурсОплатыИнвойсовРасширеннаяПодсказка" id="441"/>
+													<Events>
+														<Event name="OnChange">КурсОплатыИнвойсовПриИзменении</Event>
+													</Events>
+												</InputField>
 												<UsualGroup name="ГруппаСреднийКурс" id="411">
 													<Title>
 														<v8:item>
@@ -1141,6 +1156,12 @@
 								</InputField>
 								<LabelField name="ИнвойсыВалюта" id="372">
 									<DataPath>Объект.Инвойсы.Инвойс.ДокументОснование.Валюта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Валюта инвойса</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ИнвойсыВалютаКонтекстноеМеню" id="373"/>
 									<ExtendedTooltip name="ИнвойсыВалютаРасширеннаяПодсказка" id="374"/>
