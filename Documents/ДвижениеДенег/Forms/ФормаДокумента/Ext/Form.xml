@@ -237,21 +237,50 @@
 														<Event name="OnChange">ВалютаПриИзменении</Event>
 													</Events>
 												</InputField>
-												<InputField name="КурсОплатыИнвойсов" id="439">
-													<DataPath>Объект.СубДКурс</DataPath>
-													<ToolTip>
+												<UsualGroup name="ГруппаОплатаИнвойсов" id="442">
+													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Очистите поле, чтобы автоматически установить курс из справочника</v8:content>
+															<v8:content>Группа оплата инвойсов</v8:content>
 														</v8:item>
-													</ToolTip>
-													<ToolTipRepresentation>Button</ToolTipRepresentation>
-													<ContextMenu name="КурсОплатыИнвойсовКонтекстноеМеню" id="440"/>
-													<ExtendedTooltip name="КурсОплатыИнвойсовРасширеннаяПодсказка" id="441"/>
-													<Events>
-														<Event name="OnChange">КурсОплатыИнвойсовПриИзменении</Event>
-													</Events>
-												</InputField>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОплатаИнвойсовРасширеннаяПодсказка" id="443"/>
+													<ChildItems>
+														<InputField name="КурсОплатыИнвойсов" id="439">
+															<DataPath>Объект.СубДКурс</DataPath>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Очистите поле, чтобы автоматически установить курс из справочника</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ClearButton>true</ClearButton>
+															<ContextMenu name="КурсОплатыИнвойсовКонтекстноеМеню" id="440"/>
+															<ExtendedTooltip name="КурсОплатыИнвойсовРасширеннаяПодсказка" id="441"/>
+															<Events>
+																<Event name="OnChange">КурсОплатыИнвойсовПриИзменении</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияВалютаИнвойсов" id="444">
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;color #0000ff&gt;AED / USD&lt;/&gt;</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>&lt;color #0000ff&gt;AED / USD&lt;/&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияВалютаИнвойсовКонтекстноеМеню" id="445"/>
+															<ExtendedTooltip name="ДекорацияВалютаИнвойсовРасширеннаяПодсказка" id="446"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
 												<UsualGroup name="ГруппаСреднийКурс" id="411">
 													<Title>
 														<v8:item>
