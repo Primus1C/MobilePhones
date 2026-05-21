@@ -229,7 +229,7 @@
 					<ExtendedTooltip name="ВКД_ЦенаСоСкидкойРасширеннаяПодсказка" id="45"/>
 				</InputField>
 				<InputField name="ВКД_ЦенаСЗатратами" id="40">
-					<DataPath>Объект.ВКД_ЦенаСЗатратами</DataPath>
+					<DataPath>Объект.ВКД_ЦенаСЗатратами_</DataPath>
 					<UserVisible>
 						<xr:Common>true</xr:Common>
 						<xr:Value name="Role.Администратор">true</xr:Value>

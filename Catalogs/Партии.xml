@@ -815,7 +815,7 @@
 			</Attribute>
 			<Attribute uuid="9b34366d-b6b0-41b0-8c45-479aadbdec96">
 				<Properties>
-					<Name>ВКД_ЦенаСЗатратами</Name>
+					<Name>ВКД_ЦенаСЗатратами_</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>

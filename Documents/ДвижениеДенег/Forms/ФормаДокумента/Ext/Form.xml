@@ -1174,6 +1174,18 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ИнвойсыСуммаВБазВалютеКонтекстноеМеню" id="437"/>
 									<ExtendedTooltip name="ИнвойсыСуммаВБазВалютеРасширеннаяПодсказка" id="438"/>
+									<Events>
+										<Event name="OnChange">ИнвойсыСуммаВБазВалютеПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИнвойсыСуммаВВалютеИнвойса" id="447">
+									<DataPath>Объект.Инвойсы.СуммаВВалютеИнвойса</DataPath>
+									<Visible>false</Visible>
+									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвойсыСуммаВВалютеИнвойсаКонтекстноеМеню" id="448"/>
+									<ExtendedTooltip name="ИнвойсыСуммаВВалютеИнвойсаРасширеннаяПодсказка" id="449"/>
 								</InputField>
 								<InputField name="ИнвойсыСумма" id="341">
 									<DataPath>Объект.Инвойсы.Сумма</DataPath>

@@ -125,6 +125,16 @@
 					<ContextMenu name="ВалютаОплатыКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="ВалютаОплатыРасширеннаяПодсказка" id="48"/>
 				</LabelField>
+				<LabelField name="СуммаВБазВалюте" id="49">
+					<DataPath>Список.СуммаВБазВалюте</DataPath>
+					<ContextMenu name="СуммаВБазВалютеКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СуммаВБазВалютеРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="Курс" id="52">
+					<DataPath>Список.Курс</DataPath>
+					<ContextMenu name="КурсКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="54"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
