@@ -15,4 +15,10 @@
 	<Item name="ImportantColor">
 		<Color>#0B486B</Color>
 	</Item>
+	<Item name="StyleItem.ЦветФонаВыделениеСлабое">
+		<Color>#DDF8EF</Color>
+	</Item>
+	<Item name="StyleItem.ЦветФонаВыделениеСреднее">
+		<Color>#BCF2E4</Color>
+	</Item>
 </Style>
