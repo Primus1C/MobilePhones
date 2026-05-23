@@ -1215,6 +1215,7 @@
 								</LabelField>
 								<InputField name="ИнвойсыСостояние" id="369">
 									<DataPath>Объект.Инвойсы.Состояние</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ИнвойсыСостояниеКонтекстноеМеню" id="370"/>
 									<ExtendedTooltip name="ИнвойсыСостояниеРасширеннаяПодсказка" id="371"/>
