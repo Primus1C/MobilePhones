@@ -630,16 +630,22 @@
 										<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
 										<xr:Value name="Role.МетреонСклад">false</xr:Value>
 									</UserVisible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для расходных накладных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="НеВидетьЧужиеНакладныеКонтекстноеМеню" id="49"/>
-									<ExtendedTooltip name="НеВидетьЧужиеНакладныеРасширеннаяПодсказка" id="50">
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Для расходных накладных</v8:content>
-											</v8:item>
-										</Title>
-									</ExtendedTooltip>
+									<ExtendedTooltip name="НеВидетьЧужиеНакладныеРасширеннаяПодсказка" id="50"/>
+								</CheckBoxField>
+								<CheckBoxField name="РасширенныеФункцииРазработчика" id="360">
+									<DataPath>Объект.РасширенныеФункцииРазработчика</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасширенныеФункцииРазработчикаКонтекстноеМеню" id="361"/>
+									<ExtendedTooltip name="РасширенныеФункцииРазработчикаРасширеннаяПодсказка" id="362"/>
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>

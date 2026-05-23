@@ -259,7 +259,20 @@
 															</ToolTip>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<ClearButton>true</ClearButton>
-															<ContextMenu name="КурсОплатыИнвойсовКонтекстноеМеню" id="440"/>
+															<ContextMenu name="КурсОплатыИнвойсовКонтекстноеМеню" id="440">
+																<ChildItems>
+																	<Button name="КурсОплатыИнвойсовКонтекстноеМенюИзменитьКурс" id="449">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ИзменитьКурс</CommandName>
+																		<ExtendedTooltip name="КурсОплатыИнвойсовКонтекстноеМенюИзменитьКурсРасширеннаяПодсказка" id="450"/>
+																	</Button>
+																	<Button name="КурсОплатыИнвойсовКонтекстноеМенюИзменитьВалютуИнвойса" id="451">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ИзменитьВалютуИнвойса</CommandName>
+																		<ExtendedTooltip name="КурсОплатыИнвойсовКонтекстноеМенюИзменитьВалютуИнвойсаРасширеннаяПодсказка" id="452"/>
+																	</Button>
+																</ChildItems>
+															</ContextMenu>
 															<ExtendedTooltip name="КурсОплатыИнвойсовРасширеннаяПодсказка" id="441"/>
 															<Events>
 																<Event name="OnChange">КурсОплатыИнвойсовПриИзменении</Event>
@@ -1042,7 +1055,15 @@
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.Инвойсы</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ИнвойсыКонтекстноеМеню" id="323"/>
+							<ContextMenu name="ИнвойсыКонтекстноеМеню" id="323">
+								<ChildItems>
+									<Button name="ИнвойсыКонтекстноеМенюИзменитьСуммуОплатыИнвойса" id="447">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьСуммуОплатыИнвойса</CommandName>
+										<ExtendedTooltip name="ИнвойсыКонтекстноеМенюИзменитьСуммуОплатыИнвойсаРасширеннаяПодсказка" id="448"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="ИнвойсыКоманднаяПанель" id="324">
 								<ChildItems>
 									<ButtonGroup name="ИнвойсыГруппаПривязка" id="396">
@@ -1902,6 +1923,74 @@
 			</Picture>
 			<Action>ОтчетСреднийКурсЛокально</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ИзменитьСуммуОплатыИнвойса" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить сумму оплаты инвойса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить сумму оплаты инвойса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьСуммуОплатыИнвойса</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.РасширенныеФункцииРазработчика</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">Инвойсы</AssociatedTableElementId>
+		</Command>
+		<Command name="ИзменитьКурс" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить курс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить курс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьКурс</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.РасширенныеФункцииРазработчика</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИзменитьВалютуИнвойса" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить валюту инвойса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить валюту инвойса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьВалютуИнвойса</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.РасширенныеФункцииРазработчика</Item>
+			</FunctionalOptions>
 		</Command>
 	</Commands>
 	<CommandInterface>

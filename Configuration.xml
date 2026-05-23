@@ -475,6 +475,7 @@
 			<ScheduledJob>ПроведениеДокументов</ScheduledJob>
 			<FunctionalOption>ИспользоватьСообщения</FunctionalOption>
 			<FunctionalOption>ОстаткиТоваров</FunctionalOption>
+			<FunctionalOption>РасширенныеФункцииРазработчика</FunctionalOption>
 			<FunctionalOptionsParameter>Пользователь</FunctionalOptionsParameter>
 			<DefinedType>ВладелецПрисоединенныхФайлов</DefinedType>
 			<DefinedType>ОбъектСообщений</DefinedType>
