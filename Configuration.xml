@@ -423,6 +423,7 @@
 			<Role>ПриходныеНакладные</Role>
 			<Role>ЗаменаСерий</Role>
 			<Role>ОтчетЗадачиПользователя</Role>
+			<Role>ОтчетPriceCheck</Role>
 			<CommonTemplate>ОсновнойМакетСКД</CommonTemplate>
 			<CommonTemplate>МакетПоменьшеСКД</CommonTemplate>
 			<CommonTemplate>component_body</CommonTemplate>

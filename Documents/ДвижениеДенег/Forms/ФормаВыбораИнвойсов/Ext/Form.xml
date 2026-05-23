@@ -144,12 +144,12 @@
 					<ContextMenu name="ИнвойсыПривязаноКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ИнвойсыПривязаноРасширеннаяПодсказка" id="25"/>
 				</InputField>
-				<InputField name="ИнвойсыОстаток" id="32">
-					<DataPath>Инвойсы.Остаток</DataPath>
+				<InputField name="ИнвойсыОстатокДолга" id="32">
+					<DataPath>Инвойсы.ОстатокДолга</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ИнвойсыОстатокКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="ИнвойсыОстатокРасширеннаяПодсказка" id="34"/>
+					<ContextMenu name="ИнвойсыОстатокДолгаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИнвойсыОстатокДолгаРасширеннаяПодсказка" id="34"/>
 				</InputField>
 				<InputField name="ИнвойсыИнвойсПримечание" id="77">
 					<DataPath>Инвойсы.Инвойс.Примечание</DataPath>
@@ -270,7 +270,7 @@
 						<v8:Type>cfg:EnumRef.Долги</v8:Type>
 					</Type>
 				</Column>
-				<Column name="Остаток" id="2">
+				<Column name="ОстатокДолга" id="2">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>

@@ -75,6 +75,7 @@
 					<ChildItems>
 						<LabelField name="ДеревоНаименование" id="18">
 							<DataPath>Дерево.Description</DataPath>
+							<ReadOnly>true</ReadOnly>
 							<ContextMenu name="ДеревоНаименованиеКонтекстноеМеню" id="19"/>
 							<ExtendedTooltip name="ДеревоНаименованиеРасширеннаяПодсказка" id="20"/>
 						</LabelField>
@@ -86,6 +87,7 @@
 					<UseAlternationRowColor>true</UseAlternationRowColor>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>Список</DataPath>
 					<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 					<AutoRefresh>false</AutoRefresh>

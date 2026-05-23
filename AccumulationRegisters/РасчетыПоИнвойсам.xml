@@ -95,11 +95,11 @@
 			</Resource>
 			<Attribute uuid="f45aaeb7-410e-44dc-b7f1-3daa59dca8e6">
 				<Properties>
-					<Name>СуммаВБазВалюте</Name>
+					<Name>СуммаОплаты</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма в базовой валюте</v8:content>
+							<v8:content>Сумма оплаты</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>

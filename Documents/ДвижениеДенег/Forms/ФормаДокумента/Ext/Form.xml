@@ -1167,25 +1167,16 @@
 									<ContextMenu name="ИнвойсыИнвойсНомерИнвойсаПоставщикаКонтекстноеМеню" id="353"/>
 									<ExtendedTooltip name="ИнвойсыИнвойсНомерИнвойсаПоставщикаРасширеннаяПодсказка" id="354"/>
 								</LabelField>
-								<InputField name="ИнвойсыСуммаВБазВалюте" id="436">
-									<DataPath>Объект.Инвойсы.СуммаВБазВалюте</DataPath>
+								<InputField name="ИнвойсыСуммаОплаты" id="436">
+									<DataPath>Объект.Инвойсы.СуммаОплаты</DataPath>
 									<Enabled>false</Enabled>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ИнвойсыСуммаВБазВалютеКонтекстноеМеню" id="437"/>
-									<ExtendedTooltip name="ИнвойсыСуммаВБазВалютеРасширеннаяПодсказка" id="438"/>
+									<ContextMenu name="ИнвойсыСуммаОплатыКонтекстноеМеню" id="437"/>
+									<ExtendedTooltip name="ИнвойсыСуммаОплатыРасширеннаяПодсказка" id="438"/>
 									<Events>
-										<Event name="OnChange">ИнвойсыСуммаВБазВалютеПриИзменении</Event>
+										<Event name="OnChange">ИнвойсыСуммаОплатыПриИзменении</Event>
 									</Events>
-								</InputField>
-								<InputField name="ИнвойсыСуммаВВалютеИнвойса" id="447">
-									<DataPath>Объект.Инвойсы.СуммаВВалютеИнвойса</DataPath>
-									<Visible>false</Visible>
-									<Enabled>false</Enabled>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ИнвойсыСуммаВВалютеИнвойсаКонтекстноеМеню" id="448"/>
-									<ExtendedTooltip name="ИнвойсыСуммаВВалютеИнвойсаРасширеннаяПодсказка" id="449"/>
 								</InputField>
 								<InputField name="ИнвойсыСумма" id="341">
 									<DataPath>Объект.Инвойсы.Сумма</DataPath>
@@ -1194,6 +1185,9 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ИнвойсыСуммаКонтекстноеМеню" id="342"/>
 									<ExtendedTooltip name="ИнвойсыСуммаРасширеннаяПодсказка" id="343"/>
+									<Events>
+										<Event name="OnChange">ИнвойсыСуммаПриИзменении</Event>
+									</Events>
 								</InputField>
 								<LabelField name="ИнвойсыВалюта" id="372">
 									<DataPath>Объект.Инвойсы.Инвойс.ДокументОснование.Валюта</DataPath>
@@ -1570,17 +1564,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ВалютаРуб" id="20">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Валюта руб</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ВалютаДол" id="22">
 			<Title>
 				<v8:item>
@@ -1662,6 +1645,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоЛогистика" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это логистика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
