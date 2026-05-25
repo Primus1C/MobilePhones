@@ -1480,8 +1480,8 @@
 		<Metadata name="Document.ДвижениеДенег.Form.ФормаВыбора.Form" id="6e83c6aa-21bc-4ac3-b3e0-b5d780bffcf8.0" configVersion="2917f6d9c765914a8f9c485b68e4f09400000000"/>
 		<Metadata name="Document.ДвижениеДенег.Form.ФормаВыбораИнвойсов" id="f59394fe-dd22-44e8-a6f6-f2a8e214f889" configVersion="0e8c7b0c7fead94596517e854d64544700000000"/>
 		<Metadata name="Document.ДвижениеДенег.Form.ФормаВыбораИнвойсов.Form" id="f59394fe-dd22-44e8-a6f6-f2a8e214f889.0" configVersion="f3ae11d44ec47140a3568dff0286514600000000"/>
-		<Metadata name="Document.ДвижениеДенег.Form.ФормаДокумента" id="c2868900-cc50-4518-a69f-e5f780f47d14" configVersion="cacc89edeb29184b8b66e8951a019cc800000000"/>
-		<Metadata name="Document.ДвижениеДенег.Form.ФормаДокумента.Form" id="c2868900-cc50-4518-a69f-e5f780f47d14.0" configVersion="ba1525bca2b4464580853b54e635145600000000"/>
+		<Metadata name="Document.ДвижениеДенег.Form.ФормаДокумента" id="c2868900-cc50-4518-a69f-e5f780f47d14" configVersion="3cee12aaefeb7c45a3a60a19757c2ac000000000"/>
+		<Metadata name="Document.ДвижениеДенег.Form.ФормаДокумента.Form" id="c2868900-cc50-4518-a69f-e5f780f47d14.0" configVersion="67712e8f5ce1d44cb8ec112db210314600000000"/>
 		<Metadata name="Document.ДвижениеДенег.Form.ФормаСписка" id="2b06172b-81e2-4708-8429-be5e981476e6" configVersion="485da52595416643b179460e04f3016900000000"/>
 		<Metadata name="Document.ДвижениеДенег.Form.ФормаСписка.Form" id="2b06172b-81e2-4708-8429-be5e981476e6.0" configVersion="e0d2be17e002e94b803b6873076a6c4b00000000"/>
 		<Metadata name="Document.ДвижениеДенег.ManagerModule" id="f8076ddb-ad1e-449d-bbb1-700263fdaa5f.2" configVersion="8ee3a0424d24bd4096a25fb6b2c8b23e00000000"/>
@@ -2634,12 +2634,12 @@
 		<Metadata name="Report.КонсольОтчетов.Form.ФормаРасшифровки.Form" id="145abce8-23aa-4ff2-84d9-7987cbe7ea32.0" configVersion="ed454f64d23702438f76a9aa963a304f00000000"/>
 		<Metadata name="Report.КонсольОтчетов.Template.ОсновнаяСхемаКомпоновкиДанных" id="84f35c1b-24c8-4610-be91-d9123d6e475a" configVersion="c358ad22ee47ba45b5fbab1ca8b9575d00000000"/>
 		<Metadata name="Report.КонсольОтчетов.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="84f35c1b-24c8-4610-be91-d9123d6e475a.0" configVersion="9966afed6ba946439cc629666439b7e000000000"/>
-		<Metadata name="Report.КонтрольВводаДанных" id="ba032be3-326a-49e5-82f2-c24367c043a2" configVersion="4e1769a8a2f2f1489aafcb0c437308bf00000000">
+		<Metadata name="Report.КонтрольВводаДанных" id="ba032be3-326a-49e5-82f2-c24367c043a2" configVersion="a1a076ae13003e48aae8b2ef612eda9500000000">
 			<Metadata name="Report.КонтрольВводаДанных.Attribute.АдресХранилищаТЗ" id="c9097cd8-8732-472c-b663-53dcfc73ea99"/>
 		</Metadata>
-		<Metadata name="Report.КонтрольВводаДанных.Form.ФормаОтчета" id="2e9d4cb0-64d4-4f80-9a59-d6a56b805887" configVersion="cda38d7ac6337f47ad9820b6454d5bcb00000000"/>
-		<Metadata name="Report.КонтрольВводаДанных.Form.ФормаОтчета.Form" id="2e9d4cb0-64d4-4f80-9a59-d6a56b805887.0" configVersion="7f41efa1d6a9f94785e896ad66d6147b00000000"/>
-		<Metadata name="Report.КонтрольВводаДанных.ObjectModule" id="ba032be3-326a-49e5-82f2-c24367c043a2.0" configVersion="afe3873cc9ca994d94798157660995aa00000000"/>
+		<Metadata name="Report.КонтрольВводаДанных.Form.ФормаОтчета" id="2e9d4cb0-64d4-4f80-9a59-d6a56b805887" configVersion="05de12d2504e4344b20563cc1b9471f600000000"/>
+		<Metadata name="Report.КонтрольВводаДанных.Form.ФормаОтчета.Form" id="2e9d4cb0-64d4-4f80-9a59-d6a56b805887.0" configVersion="546f42dfaea6ec41a10ea9b1c891db5100000000"/>
+		<Metadata name="Report.КонтрольВводаДанных.ObjectModule" id="ba032be3-326a-49e5-82f2-c24367c043a2.0" configVersion="3d50b92b62ae254aaba9008d851e810500000000"/>
 		<Metadata name="Report.КонтрольВводаДанных.Template.МакетДашборда" id="a9861bb4-4336-4208-8ac2-dfe51e18105b" configVersion="3746aff70be03040bd54d52b6da23b3f00000000"/>
 		<Metadata name="Report.КонтрольВводаДанных.Template.МакетДашборда.Template" id="a9861bb4-4336-4208-8ac2-dfe51e18105b.0" configVersion="f44b4f3b9478c74fab168ae668f4036100000000"/>
 		<Metadata name="Report.КонтрольВводаДанных.Template.МакетДашборда2" id="526f718f-06ea-4b0c-96d0-dd4aee2563b7" configVersion="7ced5bcc495704418da73c3997bcaa1e00000000"/>

@@ -260,6 +260,7 @@
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="КурсОплатыИнвойсовКонтекстноеМеню" id="440">
+																<Autofill>false</Autofill>
 																<ChildItems>
 																	<Button name="КурсОплатыИнвойсовКонтекстноеМенюИзменитьКурс" id="449">
 																		<Type>CommandBarButton</Type>
