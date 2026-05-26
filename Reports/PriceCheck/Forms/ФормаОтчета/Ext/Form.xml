@@ -25,6 +25,16 @@
 				<Button name="Сформировать" id="9">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.Сформировать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформировать</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Generate</v8:content>
+						</v8:item>
+					</Title>
 					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="10"/>
 				</Button>
 				<InputField name="РучнойШК" id="6">

@@ -36,6 +36,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Дата партии</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Series date</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -45,6 +49,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Мин цена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Min price</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -70,6 +78,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Серия</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Series</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -80,6 +92,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Превышение цены</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Price exceeded</v8:content>
+				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -89,6 +105,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Остаток</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remaining balance</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -154,6 +174,10 @@
 				<v8:lang>ru</v8:lang>
 				<v8:content>Период</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
@@ -171,6 +195,10 @@
 				<v8:lang>ru</v8:lang>
 				<v8:content>Номенклатура</v8:content>
 			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Good</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
@@ -185,6 +213,10 @@
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Превышение цены</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Price exceeded</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -205,6 +237,10 @@
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Склад</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Warehouse</v8:content>
 			</v8:item>
 		</title>
 		<valueType>

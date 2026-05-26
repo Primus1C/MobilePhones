@@ -100,6 +100,12 @@
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>Список</DataPath>
 					<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Привяз.инв.</v8:content>
+						</v8:item>
+					</Title>
 					<SearchStringLocation>None</SearchStringLocation>
 					<AutoRefresh>false</AutoRefresh>
 					<AutoRefreshPeriod>60</AutoRefreshPeriod>
@@ -209,6 +215,22 @@
 							<ContextMenu name="ПсевдонимКонтекстноеМеню" id="79"/>
 							<ExtendedTooltip name="ПсевдонимРасширеннаяПодсказка" id="80"/>
 						</LabelField>
+						<CheckBoxField name="ПривязыватьИнвойсы" id="81">
+							<DataPath>Список.ПривязыватьИнвойсы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Привяз.инв.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Bind.inv.</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПривязыватьИнвойсыКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ПривязыватьИнвойсыРасширеннаяПодсказка" id="83"/>
+						</CheckBoxField>
 						<CheckBoxField name="ЕстьДолгПоставщику" id="66">
 							<DataPath>Список.ЕстьДолгПоставщику</DataPath>
 							<Title>
@@ -368,7 +390,7 @@
 			ТОГДА Спр.Псевдоним
 		ИНАЧЕ Спр.Наименование
 	КОНЕЦ КАК Название,
-	 Спр.Псевдоним,
+	Спр.Псевдоним КАК Псевдоним,
 	ВЫБОР
 		КОГДА &amp;ИспользоватьПсевдоним
 				И Спр.Псевдоним &lt;&gt; ""
@@ -404,7 +426,8 @@
 		ИНАЧЕ ЛОЖЬ
 	КОНЕЦ КАК ЕстьДолгПокупателя,
 	Спр.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
-	Спр.Город.Страна КАК Страна
+	Спр.Город.Страна КАК Страна,
+	Спр.ПривязыватьИнвойсы КАК ПривязыватьИнвойсы
 ИЗ
 	Справочник.Контрагенты КАК Спр
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Долги.Остатки(, {(Фирма = &amp;Фирма)}) КАК Рег
@@ -598,6 +621,10 @@
 							<v8:content>Name</v8:content>
 						</v8:item>
 					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПривязыватьИнвойсы</dcssch:dataPath>
+					<dcssch:field>ПривязыватьИнвойсы</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>

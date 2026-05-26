@@ -529,6 +529,12 @@
 				<CheckBoxField name="КурсУстановленВручную" id="111">
 					<DataPath>Список.КурсУстановленВручную</DataPath>
 					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Курс установлен вручную</v8:content>
+						</v8:item>
+					</ToolTip>
 					<HeaderPicture>
 						<xr:Ref>CommonPicture.ОбменВалют</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -537,11 +543,73 @@
 					<ContextMenu name="КурсУстановленВручнуюКонтекстноеМеню" id="112"/>
 					<ExtendedTooltip name="КурсУстановленВручнуюРасширеннаяПодсказка" id="113"/>
 				</CheckBoxField>
-				<LabelField name="Состояние" id="106">
-					<DataPath>Список.Состояние</DataPath>
-					<ContextMenu name="СостояниеКонтекстноеМеню" id="107"/>
-					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="108"/>
-				</LabelField>
+				<ColumnGroup name="ГруппаПривязки" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа привязки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаПривязкиРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<LabelField name="Состояние" id="106">
+							<DataPath>Список.Состояние</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:ЦветНадписиИнфоСиний</TitleTextColor>
+							<ContextMenu name="СостояниеКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="108"/>
+						</LabelField>
+						<LabelField name="СтатусОплатыАвто" id="119">
+							<DataPath>Список.СтатусОплатыАвто</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:ЦветНадписиИнфоСиний</TitleTextColor>
+							<ContextMenu name="СтатусОплатыАвтоКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="СтатусОплатыАвтоРасширеннаяПодсказка" id="121"/>
+						</LabelField>
+						<LabelField name="СуммаОплаты" id="122">
+							<DataPath>Список.СуммаОплаты</DataPath>
+							<TitleTextColor>style:ЦветНадписиИнфоСиний</TitleTextColor>
+							<ContextMenu name="СуммаОплатыКонтекстноеМеню" id="123"/>
+							<ExtendedTooltip name="СуммаОплатыРасширеннаяПодсказка" id="124"/>
+						</LabelField>
+						<LabelField name="СреднКурсОплат" id="125">
+							<DataPath>Список.СреднКурсОплат</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Средн.курс оплат</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:ЦветНадписиИнфоСиний</TitleTextColor>
+							<ContextMenu name="СреднКурсОплатКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="СреднКурсОплатРасширеннаяПодсказка" id="127"/>
+						</LabelField>
+						<LabelField name="ДатаПоследнейОплаты" id="128">
+							<DataPath>Список.ДатаПоследнейОплаты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата посл.оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:ЦветНадписиИнфоСиний</TitleTextColor>
+							<ContextMenu name="ДатаПоследнейОплатыКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ДатаПоследнейОплатыРасширеннаяПодсказка" id="130"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
 				<LabelField name="Менеджер" id="80">
 					<DataPath>Список.Менеджер</DataPath>
 					<ContextMenu name="МенеджерКонтекстноеМеню" id="81"/>
@@ -620,7 +688,11 @@
 		КОГДА СостоянияИнвойсов.СтатусОплаты = ЗНАЧЕНИЕ(Перечисление.СтатусыОплаты.ПустаяСсылка)
 			ТОГДА "-"
 		ИНАЧЕ ЕСТЬNULL(СостоянияИнвойсов.СтатусОплаты, "-")
-	КОНЕЦ КАК СтатусОплаты,
+	КОНЕЦ КАК СтатусОплаты,  
+	СостоянияИнвойсов.СтатусОплатыАвто КАК СтатусОплатыАвто,  
+	СостоянияИнвойсов.СуммаОплаты КАК СуммаОплаты,
+	СостоянияИнвойсов.ДатаОплаты КАК ДатаПоследнейОплаты,
+	СостоянияИнвойсов.Курс КАК СреднКурсОплат,
 	НЕ СостоянияИнвойсов.Расхождения КАК РасхожденияОК,
 	ВЫБОР
 		КОГДА ИнвойсыСОшибкамиПоставок.Инвойс ЕСТЬ NULL
@@ -1134,6 +1206,34 @@
 					<dcssch:dataPath>КурсУстановленВручную</dcssch:dataPath>
 					<dcssch:field>КурсУстановленВручную</dcssch:field>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатусОплатыАвто</dcssch:dataPath>
+					<dcssch:field>СтатусОплатыАвто</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоследнейОплаты</dcssch:dataPath>
+					<dcssch:field>ДатаПоследнейОплаты</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата последней оплаты</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СреднКурсОплат</dcssch:dataPath>
+					<dcssch:field>СреднКурсОплат</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средн курс оплат</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаОплаты</dcssch:dataPath>
+					<dcssch:field>СуммаОплаты</dcssch:field>
+				</Field>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -1390,53 +1490,16 @@
 				</v8:item>
 			</ToolTip>
 			<Use>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="Role.Администратор">true</xr:Value>
-				<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
-				<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
-				<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
-				<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
-				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
-				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
-				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
-				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
-				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
-				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
-				<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
-				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
-				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
-				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
-				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
-				<xr:Value name="Role.Менеджер">false</xr:Value>
-				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
-				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
-				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
-				<xr:Value name="Role.Логистика">false</xr:Value>
-				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
-				<xr:Value name="Role.Зарплата">false</xr:Value>
-				<xr:Value name="Role.Телеграм">false</xr:Value>
-				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
-				<xr:Value name="Role.МетреонПолный">false</xr:Value>
-				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
-				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-				<xr:Value name="Role.МетреонСклад">false</xr:Value>
-				<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
-				<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
-				<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
-				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
-				<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
-				<xr:Value name="Role.Разработка">false</xr:Value>
-				<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
-				<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
-				<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
-				<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+				<xr:Common>false</xr:Common>
 			</Use>
 			<Picture>
-				<xr:Ref>CommonPicture.ВниманиеКрасный</xr:Ref>
+				<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УстановитьСтатус</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.РасширенныеФункцииРазработчика</Item>
+			</FunctionalOptions>
 			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
 		</Command>

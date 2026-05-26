@@ -1043,6 +1043,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ТоварВПути</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПриходнаяНакладная.TabularSection.Товары</name>
 		<right>
 			<name>Edit</name>
