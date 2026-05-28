@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=edge"></meta><style>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta charset="UTF-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=edge"></meta><style>
             body {
                 font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
                 background-color: #000; /* Темный фон из вашего примера */
@@ -28,8 +28,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer; /* Курсор в виде руки */
+            	transition: transform 0.2s, box-shadow 0.2s; /* Плавная анимация */
             }
-
+            .gauge-card:hover {
+            	transform: translateY(-5px); /* Приподнимаем карточку при наведении */
+            	box-shadow: 0 12px 30px rgba(255, 0, 94, 0.2); /* Легкое неоновое свечение фона */
+        	} 
+        	
             .svg-container {
                 width: 100%;
                 max-width: 240px;
@@ -106,26 +112,38 @@
                         0 0 160px #00d4ff;
                 }
             }
-        </style></head><body>
-        <div class="dashboard-container">
-            <div class="gauge-card">
-                <div class="svg-container" id="gauge-1"></div>
+        </style><base href="v8config://0e96bf56-f658-47bc-a738-6c33ab9bcc41/mdobject/id8d25fd5a-17a3-4539-841a-1c628fa994f9/8eb4fad1-1fa6-403e-970f-2c12dbb43e23"></base></head><body>
+        
+<div class="dashboard-container">
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-1"></div>
             </div>
-            <div class="gauge-card">
-                <div class="svg-container" id="gauge-2"></div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-2"></div>
             </div>
-            <div class="gauge-card">
-                <div class="svg-container" id="gauge-3"></div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-3"></div>
             </div>
-            <div class="gauge-card">
-                <div class="svg-container" id="gauge-4"></div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-4"></div>
             </div>
-            <div class="gauge-card">
-                <div class="svg-container" id="gauge-5"></div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-5"></div>
             </div>
         </div>
 
-        <script>
+        
+<script>
             var size = 300,
                 center = 150,
                 baseRadius = 125,
@@ -214,7 +232,13 @@
 
         var container = document.getElementById('gauge-' + indIndex);
         if(container) {
-            container.innerHTML = svgHTML;
+            
+            // ОБОРАЧИВАЕМ ГРАФИК В ССЫЛКУ С ПЕРЕДАЧЕЙ НОМЕРА ИНДИКАТОРА
+            var linkStart = '<a href="action://indicator_click?index=' + indIndex + '" style="text-decoration: none; outline: none; display: block;">';
+            var linkEnd = '</a>';
+            
+            container.innerHTML = linkStart + svgHTML + linkEnd;
+            
             container.getBoundingClientRect(); 
             var tracks = container.querySelectorAll('.track-data');
             setTimeout(function() {

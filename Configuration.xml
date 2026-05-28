@@ -251,6 +251,7 @@
 			<StyleItem>НедоступныеДанныеЦвет</StyleItem>
 			<StyleItem>ЦветНадписиИнфоСиний</StyleItem>
 			<StyleItem>ЦветНадписиИнфоМорской</StyleItem>
+			<StyleItem>ЦветНадписиИнфоДополнительный</StyleItem>
 			<StyleItem>ЦветФонаСтрокиИсключаемойИзВыбора</StyleItem>
 			<StyleItem>ЦветФонаСтрокиИсключаемойИзВыбора2</StyleItem>
 			<StyleItem>ЦветНадписиУслуг</StyleItem>
