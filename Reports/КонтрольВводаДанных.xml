@@ -81,6 +81,7 @@
 			<Template>МакетИндикатора</Template>
 			<Template>МакетДашборда</Template>
 			<Template>МакетДашборда2</Template>
+			<Template>МакетДашборда3</Template>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>
