@@ -417,6 +417,12 @@
 											<ContextMenu name="ДокументОснованиеСкладОтправительКонтекстноеМеню" id="564"/>
 											<ExtendedTooltip name="ДокументОснованиеСкладОтправительРасширеннаяПодсказка" id="565"/>
 										</InputField>
+										<CheckBoxField name="Локал" id="771">
+											<DataPath>Объект.Локал</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЛокалКонтекстноеМеню" id="772"/>
+											<ExtendedTooltip name="ЛокалРасширеннаяПодсказка" id="773"/>
+										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаВалюта" id="26">

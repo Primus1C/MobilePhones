@@ -1229,6 +1229,19 @@
 									<ContextMenu name="ИнвойсыДолгКонтекстноеМеню" id="367"/>
 									<ExtendedTooltip name="ИнвойсыДолгРасширеннаяПодсказка" id="368"/>
 								</InputField>
+								<CheckBoxField name="ИнвойсыНеПересчитыватьПриходТовара" id="453">
+									<DataPath>Объект.Инвойсы.НеПересчитыватьПриходТовара</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не пересчитывать приход товара</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИнвойсыНеПересчитыватьПриходТовараКонтекстноеМеню" id="454"/>
+									<ExtendedTooltip name="ИнвойсыНеПересчитыватьПриходТовараРасширеннаяПодсказка" id="455"/>
+								</CheckBoxField>
 								<LabelField name="ИнвойсыИнвойсПримечание" id="400">
 									<DataPath>Объект.Инвойсы.Инвойс.Примечание</DataPath>
 									<EditMode>EnterOnInput</EditMode>

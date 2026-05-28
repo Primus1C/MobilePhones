@@ -1871,27 +1871,18 @@
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="eb27f66d-1ef5-49ca-a320-4ac864e46559">
+					<Attribute uuid="c0e89ce4-ba9b-4942-a2dd-7702afc9fb16">
 						<Properties>
-							<Name>Курс</Name>
+							<Name>НеПересчитыватьПриходТовара</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Курс</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Rate</v8:content>
+									<v8:content>Не пересчитывать приход товара</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>11</v8:Digits>
-									<v8:FractionDigits>6</v8:FractionDigits>
-									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-								</v8:NumberQualifiers>
+								<v8:Type>xs:boolean</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -1913,7 +1904,7 @@
 							<LinkByType/>
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
-							<FullTextSearch>DontUse</FullTextSearch>
+							<FullTextSearch>Use</FullTextSearch>
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
@@ -1961,7 +1952,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Скопировать  обратной суммой</v8:content>
+							<v8:content>Скопировать документ с обратной суммой</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Picture>
