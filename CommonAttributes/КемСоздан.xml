@@ -40,7 +40,17 @@
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 			<Content>
 				<xr:Item>
+					<xr:Metadata>Document.ОтчетКомиссионера</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Document.ЗаказТовара</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Document.ВозвратСКомиссии</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>
@@ -110,7 +120,17 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
+					<xr:Metadata>Document.ПередачаНаКомиссию</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
 					<xr:Metadata>Catalog.СпискиЭлементов</xr:Metadata>
+					<xr:Use>Use</xr:Use>
+					<xr:ConditionalSeparation/>
+				</xr:Item>
+				<xr:Item>
+					<xr:Metadata>Document.ПереоценкаТовараНаКомиссии</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>
 				</xr:Item>

@@ -24,6 +24,12 @@
 			<ContextMenu name="НаименованиеАнглКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="НаименованиеАнглРасширеннаяПодсказка" id="9"/>
 		</InputField>
+		<CheckBoxField name="СкладКомиссии" id="10">
+			<DataPath>Объект.СкладКомиссии</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

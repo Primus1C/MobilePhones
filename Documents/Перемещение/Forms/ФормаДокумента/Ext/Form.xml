@@ -55,7 +55,7 @@
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<BackColor>style:ReportHeaderBackColor</BackColor>
+					<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
 					<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="193"/>
 					<ChildItems>
 						<PictureField name="КартинкаСостоянияДокумента" id="194">
@@ -181,6 +181,7 @@
 						<InputField name="Примечание" id="28">
 							<DataPath>Объект.Примечание</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="ПримечаниеКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="30"/>
 						</InputField>

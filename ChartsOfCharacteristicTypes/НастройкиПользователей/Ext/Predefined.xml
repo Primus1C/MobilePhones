@@ -151,6 +151,15 @@
 				</Type>
 				<IsFolder>false</IsFolder>
 			</Item>
+			<Item id="763c5cc9-0725-425b-a620-6521df0a05f6">
+				<Name>ВалютаРасчетовСКомиссионером</Name>
+				<Code>00028</Code>
+				<Description>Валюта расчетов с комиссионером</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Валюты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
 			<Item id="ba448555-0385-4770-822f-92da56bf0fe9">
 				<Name>ВыборВалют</Name>
 				<Code>00019</Code>
@@ -182,6 +191,15 @@
 				<Name>Склад</Name>
 				<Code>00010</Code>
 				<Description>Склад</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Склады</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e3527bf0-31fd-4992-b6a6-5af2c98ca045">
+				<Name>СкладКомиссии</Name>
+				<Code>00027</Code>
+				<Description>Склад комиссии</Description>
 				<Type>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Склады</v8:Type>
 				</Type>
