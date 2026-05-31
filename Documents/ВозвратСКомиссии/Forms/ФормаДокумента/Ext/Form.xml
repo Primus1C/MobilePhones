@@ -246,7 +246,15 @@
 			<DataPath>Объект.Товары</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="29"/>
-			<AutoCommandBar name="ТоварыКоманднаяПанель" id="30"/>
+			<AutoCommandBar name="ТоварыКоманднаяПанель" id="30">
+				<ChildItems>
+					<Button name="ТоварыИзБуфераОбмена" id="101">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
+						<ExtendedTooltip name="ТоварыИзБуфераОбменаРасширеннаяПодсказка" id="102"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="31"/>
 			<SearchStringAddition name="ТоварыСтрокаПоиска" id="32">
 				<AdditionSource>
@@ -317,6 +325,65 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<UsualGroup name="ГруппаИтого" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итого</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИтогоРасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияИтого" id="93">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияИтогоКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ДекорацияИтогоРасширеннаяПодсказка" id="95"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИнфоСтроки" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнфоСтрокиРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфоСтроки" id="98">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация инфо строки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИнфоСтрокиКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ДекорацияИнфоСтрокиРасширеннаяПодсказка" id="100"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -376,6 +443,32 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ИзБуфераОбмена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From clipboard</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paste from clipboard</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзБуфераОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>

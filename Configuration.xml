@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-05-30</Version>
+			<Version>2026-05-31</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -447,7 +447,7 @@
 			<CommonModule>МенеджерОборудованияСерверПовтИсп</CommonModule>
 			<CommonModule>МенеджерОборудованияВызовСервера</CommonModule>
 			<CommonModule>ПодключаемоеОборудование1ССканерыШтрихкодаКлиент</CommonModule>
-			<CommonModule>мСканерШК</CommonModule>
+			<CommonModule>РаботаСоСканеромШК</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
@@ -460,6 +460,7 @@
 			<CommonModule>ТлгИнструменты</CommonModule>
 			<CommonModule>ТлгДействия</CommonModule>
 			<CommonModule>ОбработкаДокументов</CommonModule>
+			<CommonModule>ПроведениеДокументов</CommonModule>
 			<CommonModule>РаботаСВалютой</CommonModule>
 			<CommonModule>РаботаСИнвойсами</CommonModule>
 			<CommonAttribute>КемСоздан</CommonAttribute>

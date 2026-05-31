@@ -31,6 +31,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Основное</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Basic</v8:content>
+						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
@@ -173,7 +177,7 @@
 									<ExtendedTooltip name="ГруппаКудаРасширеннаяПодсказка" id="111"/>
 									<ChildItems>
 										<InputField name="СкладКомисии" id="13">
-											<DataPath>Объект.СкладКомисии</DataPath>
+											<DataPath>Объект.СкладКомиссии</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="СкладКомисииКонтекстноеМеню" id="14"/>
 											<ExtendedTooltip name="СкладКомисииРасширеннаяПодсказка" id="15"/>
@@ -304,6 +308,12 @@
 						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
 						<ExtendedTooltip name="ТоварыОтчетОборотыОднойСерииОборотыСерииРасширеннаяПодсказка" id="122"/>
 					</Button>
+					<Button name="ТоварыОтчетЗатратыПартииЗатратыПартии" id="135">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ЗатратыПартии.Command.ЗатратыПартии</CommandName>
+						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+						<ExtendedTooltip name="ТоварыОтчетЗатратыПартииЗатратыПартииРасширеннаяПодсказка" id="136"/>
+					</Button>
 					<Button name="ТоварыИзБуфераОбмена" id="123">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
@@ -336,6 +346,11 @@
 				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="45"/>
 				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="46"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ТоварыПриАктивизацииСтроки</Event>
+				<Event name="AfterDeleteRow">ТоварыПослеУдаления</Event>
+				<Event name="OnChange">ТоварыПриИзменении</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="ТоварыНомерСтроки" id="47">
 					<DataPath>Объект.Товары.LineNumber</DataPath>
@@ -393,6 +408,65 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<UsualGroup name="ГруппаИтого" id="125">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итого</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИтогоРасширеннаяПодсказка" id="126"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияИтого" id="127">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияИтогоКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="ДекорацияИтогоРасширеннаяПодсказка" id="129"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИнфоСтроки" id="130">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнфоСтрокиРасширеннаяПодсказка" id="131"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфоСтроки" id="132">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация инфо строки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИнфоСтрокиКонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="ДекорацияИнфоСтрокиРасширеннаяПодсказка" id="134"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

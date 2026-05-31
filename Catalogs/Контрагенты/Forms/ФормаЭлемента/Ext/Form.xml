@@ -210,6 +210,11 @@
 									<ContextMenu name="ДоставкаКонтекстноеМеню" id="45"/>
 									<ExtendedTooltip name="ДоставкаРасширеннаяПодсказка" id="46"/>
 								</InputField>
+								<InputField name="ПроцентКомиссионногоВознаграждения" id="81">
+									<DataPath>Объект.ПроцентКомиссионногоВознаграждения</DataPath>
+									<ContextMenu name="ПроцентКомиссионногоВознагражденияКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПроцентКомиссионногоВознагражденияРасширеннаяПодсказка" id="83"/>
+								</InputField>
 								<UsualGroup name="ГруппаОтсрочка" id="61">
 									<Title>
 										<v8:item>

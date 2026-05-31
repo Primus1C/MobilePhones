@@ -1086,12 +1086,18 @@
 					<ContextMenu name="ДекорацияИтогоКонтекстноеМеню" id="296"/>
 					<ExtendedTooltip name="ДекорацияИтогоРасширеннаяПодсказка" id="297"/>
 				</LabelDecoration>
-				<UsualGroup name="Группа8" id="305">
+				<UsualGroup name="ГруппаИнфоСтроки" id="305">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
 					<HorizontalAlign>Right</HorizontalAlign>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="306"/>
+					<ExtendedTooltip name="ГруппаИнфоСтрокиРасширеннаяПодсказка" id="306"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияИнфоСтроки" id="302">
 							<Title formatted="true">
