@@ -7,6 +7,7 @@
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -63,46 +64,61 @@
 									<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 								</InputField>
-								<UsualGroup name="ГруппаСостояние" id="68">
+								<UsualGroup name="ГруппаСостояниеОтступ" id="103">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа состояние</v8:content>
+											<v8:content>Группа состояние отступ</v8:content>
 										</v8:item>
 									</Title>
-									<Width>10</Width>
-									<Group>AlwaysHorizontal</Group>
+									<HorizontalStretch>true</HorizontalStretch>
 									<HorizontalAlign>Right</HorizontalAlign>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<BackColor>style:ReportHeaderBackColor</BackColor>
-									<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="69"/>
+									<ExtendedTooltip name="ГруппаСостояниеОтступРасширеннаяПодсказка" id="104"/>
 									<ChildItems>
-										<PictureField name="КартинкаСостоянияДокумента" id="70">
-											<DataPath>КартинкаСостоянияДокумента</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<Width>3</Width>
-											<Height>1</Height>
+										<UsualGroup name="ГруппаСостояние" id="68">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа состояние</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
 											<HorizontalStretch>false</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
-											<ValuesPicture>
-												<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</ValuesPicture>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-											</Border>
-											<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="71"/>
-											<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="72"/>
-										</PictureField>
-										<LabelField name="СостояниеДокумента" id="73">
-											<DataPath>ИмяДокумента</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<TextColor>web:DarkBlue</TextColor>
-											<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="74"/>
-											<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="75"/>
-										</LabelField>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ReportHeaderBackColor</BackColor>
+											<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="69"/>
+											<ChildItems>
+												<PictureField name="КартинкаСостоянияДокумента" id="70">
+													<DataPath>КартинкаСостоянияДокумента</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>3</Width>
+													<Height>1</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<Border width="1">
+														<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+													</Border>
+													<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="71"/>
+													<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="72"/>
+												</PictureField>
+												<LabelField name="СостояниеДокумента" id="73">
+													<DataPath>ИмяДокумента</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<TextColor>web:DarkBlue</TextColor>
+													<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="74"/>
+													<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="75"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -129,10 +145,10 @@
 									<Group>Vertical</Group>
 									<ExtendedTooltip name="ГруппаОткудаРасширеннаяПодсказка" id="85"/>
 									<ChildItems>
-										<InputField name="СкладКомиссии" id="88">
-											<DataPath>Объект.СкладКомиссии</DataPath>
-											<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="89"/>
-											<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="90"/>
+										<InputField name="Склад" id="88">
+											<DataPath>Объект.Склад</DataPath>
+											<ContextMenu name="СкладКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="90"/>
 										</InputField>
 										<InputField name="Контрагент" id="7">
 											<DataPath>Объект.Контрагент</DataPath>
@@ -152,11 +168,11 @@
 									<Group>Vertical</Group>
 									<ExtendedTooltip name="ГруппаКудаРасширеннаяПодсказка" id="87"/>
 									<ChildItems>
-										<InputField name="Склад" id="10">
+										<InputField name="СкладКомиссии" id="10">
 											<DataPath>Объект.СкладКомиссии</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
-											<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="12"/>
+											<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="12"/>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
@@ -280,6 +296,11 @@
 				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="39"/>
 				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="40"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ТоварыПриАктивизацииСтроки</Event>
+				<Event name="AfterDeleteRow">ТоварыПослеУдаления</Event>
+				<Event name="OnChange">ТоварыПриИзменении</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="ТоварыНомерСтроки" id="41">
 					<DataPath>Объект.Товары.LineNumber</DataPath>
@@ -292,6 +313,9 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="45"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="StartChoice">ТоварыНоменклатураНачалоВыбора</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыСерия" id="47">
 					<DataPath>Объект.Товары.Серия</DataPath>
@@ -304,9 +328,13 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыПартияКонтекстноеМеню" id="51"/>
 					<ExtendedTooltip name="ТоварыПартияРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">ТоварыПартияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыЦена" id="53">
 					<DataPath>Объект.Товары.Цена</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="ТоварыЦенаРасширеннаяПодсказка" id="55"/>
@@ -316,9 +344,13 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыСумма" id="59">
 					<DataPath>Объект.Товары.Сумма</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="60"/>
 					<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="61"/>

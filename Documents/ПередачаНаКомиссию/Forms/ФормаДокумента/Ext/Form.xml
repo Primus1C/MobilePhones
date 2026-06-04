@@ -5,6 +5,7 @@
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -86,7 +87,7 @@
 													<v8:content>Группа состояние</v8:content>
 												</v8:item>
 											</Title>
-											<Width>10</Width>
+											<Width>20</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 											<Group>AlwaysHorizontal</Group>
@@ -361,11 +362,23 @@
 				<InputField name="ТоварыНоменклатура" id="50">
 					<DataPath>Объект.Товары.Номенклатура</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameters>
+						<app:item name="Отбор.ТипНоменклатуры">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНоменклатуры.EnumValue.Товар</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="51"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="StartChoice">ТоварыНоменклатураНачалоВыбора</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыСерия" id="53">
 					<DataPath>Объект.Товары.Серия</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="55"/>
@@ -375,21 +388,29 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыПартияКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ТоварыПартияРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">ТоварыПартияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыКоличество" id="59">
 					<DataPath>Объект.Товары.Количество</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="60"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыЦенаЗакупки" id="62">
 					<DataPath>Объект.Товары.ЦенаЗакупки</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыЦенаЗакупкиКонтекстноеМеню" id="63"/>
 					<ExtendedTooltip name="ТоварыЦенаЗакупкиРасширеннаяПодсказка" id="64"/>
 				</InputField>
 				<InputField name="ТоварыЦенаЗакупкиСЗатратами" id="65">
 					<DataPath>Объект.Товары.ЦенаЗакупкиСЗатратами</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыЦенаЗакупкиСЗатратамиКонтекстноеМеню" id="66"/>
 					<ExtendedTooltip name="ТоварыЦенаЗакупкиСЗатратамиРасширеннаяПодсказка" id="67"/>
@@ -399,12 +420,18 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыЦенаКомитентаКонтекстноеМеню" id="69"/>
 					<ExtendedTooltip name="ТоварыЦенаКомитентаРасширеннаяПодсказка" id="70"/>
+					<Events>
+						<Event name="OnChange">ТоварыЦенаКомитентаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыСумма" id="71">
 					<DataPath>Объект.Товары.Сумма</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="72"/>
 					<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="73"/>
+					<Events>
+						<Event name="OnChange">ТоварыСуммаПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -540,11 +567,11 @@
 				<v8:TypeSet>cfg:DefinedType.ДлинаРучногоШК</v8:TypeSet>
 			</Type>
 		</Attribute>
-		<Attribute name="НовНом" id="6">
+		<Attribute name="НовНоменклатура" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Нов ном</v8:content>
+					<v8:content>Новая номенклатура</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -571,6 +598,48 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Примечание</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Примечание</dcsset:left>
+						<dcsset:comparisonType>Like</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">%удалить%</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Примечание</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Примечание</dcsset:left>
+						<dcsset:comparisonType>Like</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">%УДАЛИТЬ%</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="ИзБуфераОбмена" id="1">

@@ -195,6 +195,16 @@
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="49"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="50"/>
 						</LabelField>
+						<PictureField name="Флаг" id="82">
+							<DataPath>Список.Флаг</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ФлагиСтран</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ФлагКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ФлагРасширеннаяПодсказка" id="84"/>
+						</PictureField>
 						<LabelField name="Остаток" id="60">
 							<DataPath>Список.Остаток</DataPath>
 							<HorizontalAlign>Right</HorizontalAlign>
@@ -355,12 +365,19 @@
 	Спр.Предопределенный,
 	ЕСТЬNULL(Рег.ОстатокОстаток, 0) КАК Остаток,
 	ЕСТЬNULL(Рег.РезервОстаток, 0) КАК Резерв,
-	Спр.ИмяПредопределенныхДанных
+	Спецификации.ЗначениеСвойства.Наименование КАК Флаг
 ИЗ
 	Справочник.Номенклатура КАК Спр
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиТовара.Остатки(, {(Фирма = &amp;Фирма), (Склад В (&amp;ФильтрСклады))}) КАК Рег
 		ПО (Рег.Номенклатура = Спр.Ссылка)
-	</QueryText>
+	    ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЗначенияСвойствОбъектов.Объект КАК Объект,
+			ЗначенияСвойствОбъектов.ЗначениеСвойства КАК ЗначениеСвойства
+		ИЗ
+			РегистрСведений.ЗначенияСвойствОбъектов КАК ЗначенияСвойствОбъектов
+		ГДЕ
+			ЗначенияСвойствОбъектов.Свойство.Наименование = "Спецификация") КАК Спецификации
+		ПО Спр.Ссылка = Спецификации.Объект</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ГруппаПодбора</dcssch:dataPath>
 					<dcssch:field>ГруппаПодбора</dcssch:field>
@@ -512,6 +529,24 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ТипНоменклатуры</dcssch:dataPath>
 					<dcssch:field>ТипНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗначениеСвойства</dcssch:dataPath>
+					<dcssch:field>ЗначениеСвойства</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Объект</dcssch:dataPath>
+					<dcssch:field>Объект</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Флаг</dcssch:dataPath>
+					<dcssch:field>Флаг</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>

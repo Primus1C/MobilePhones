@@ -150,13 +150,6 @@
 					<ContextMenu name="ВалютаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="18"/>
 				</InputField>
-				<CheckBoxField name="Консигнация" id="37">
-					<DataPath>Объект.Консигнация</DataPath>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="КонсигнацияКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="КонсигнацияРасширеннаяПодсказка" id="39"/>
-				</CheckBoxField>
 				<InputField name="ЦенаЗакупкиВБазВалюте" id="48">
 					<DataPath>Объект.ЦенаЗакупкиВБазВалюте</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -228,56 +221,13 @@
 					<ContextMenu name="ВКД_ЦенаСоСкидкойКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ВКД_ЦенаСоСкидкойРасширеннаяПодсказка" id="45"/>
 				</InputField>
-				<InputField name="ВКД_ЦенаСЗатратами" id="40">
-					<DataPath>Объект.ВКД_ЦенаСЗатратами_</DataPath>
-					<UserVisible>
-						<xr:Common>true</xr:Common>
-						<xr:Value name="Role.Администратор">true</xr:Value>
-						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
-						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
-						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
-						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
-						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
-						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
-						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
-						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
-						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
-						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
-						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
-						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
-						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
-						<xr:Value name="Role.Менеджер">false</xr:Value>
-						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">true</xr:Value>
-						<xr:Value name="Role.ИнвойсЗакупки">true</xr:Value>
-						<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
-						<xr:Value name="Role.Логистика">true</xr:Value>
-						<xr:Value name="Role.Бухгалтерия">true</xr:Value>
-						<xr:Value name="Role.Зарплата">false</xr:Value>
-						<xr:Value name="Role.Телеграм">false</xr:Value>
-						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
-						<xr:Value name="Role.МетреонПолный">true</xr:Value>
-						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
-						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
-						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
-						<xr:Value name="Role.МетреонСклад">false</xr:Value>
-						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
-						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
-						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
-						<xr:Value name="Role.ВидимостьЦенЗакупки">true</xr:Value>
-						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
-						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
-						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
-						<xr:Value name="Role.Инвентаризация">false</xr:Value>
-						<xr:Value name="Role.Разработка">false</xr:Value>
-					</UserVisible>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="ВКД_ЦенаСЗатратамиКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="ВКД_ЦенаСЗатратамиРасширеннаяПодсказка" id="42"/>
-				</InputField>
+				<CheckBoxField name="Консигнация" id="37">
+					<DataPath>Объект.Консигнация</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонсигнацияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КонсигнацияРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

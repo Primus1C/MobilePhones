@@ -7,6 +7,7 @@
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -51,46 +52,61 @@
 									<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 								</InputField>
-								<UsualGroup name="ГруппаСостояние" id="77">
+								<UsualGroup name="ГруппаСостояниеОтступ" id="99">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа состояние</v8:content>
+											<v8:content>Группа состояние отступ</v8:content>
 										</v8:item>
 									</Title>
-									<Width>10</Width>
-									<Group>AlwaysHorizontal</Group>
+									<HorizontalStretch>true</HorizontalStretch>
 									<HorizontalAlign>Right</HorizontalAlign>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<BackColor>style:ReportHeaderBackColor</BackColor>
-									<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="78"/>
+									<ExtendedTooltip name="ГруппаСостояниеОтступРасширеннаяПодсказка" id="100"/>
 									<ChildItems>
-										<PictureField name="КартинкаСостоянияДокумента" id="79">
-											<DataPath>КартинкаСостоянияДокумента</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<Width>3</Width>
-											<Height>1</Height>
+										<UsualGroup name="ГруппаСостояние" id="77">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа состояние</v8:content>
+												</v8:item>
+											</Title>
+											<Width>10</Width>
 											<HorizontalStretch>false</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
-											<ValuesPicture>
-												<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</ValuesPicture>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-											</Border>
-											<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="80"/>
-											<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="81"/>
-										</PictureField>
-										<LabelField name="СостояниеДокумента" id="82">
-											<DataPath>ИмяДокумента</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<TextColor>web:DarkBlue</TextColor>
-											<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="83"/>
-											<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="84"/>
-										</LabelField>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ReportHeaderBackColor</BackColor>
+											<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="78"/>
+											<ChildItems>
+												<PictureField name="КартинкаСостоянияДокумента" id="79">
+													<DataPath>КартинкаСостоянияДокумента</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>3</Width>
+													<Height>1</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<Border width="1">
+														<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+													</Border>
+													<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="81"/>
+												</PictureField>
+												<LabelField name="СостояниеДокумента" id="82">
+													<DataPath>ИмяДокумента</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<TextColor>web:DarkBlue</TextColor>
+													<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="83"/>
+													<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="84"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -260,7 +276,33 @@
 			<DataPath>Объект.Товары</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="38"/>
-			<AutoCommandBar name="ТоварыКоманднаяПанель" id="39"/>
+			<AutoCommandBar name="ТоварыКоманднаяПанель" id="39">
+				<ChildItems>
+					<Button name="ТоварыОтчетОборотыОднойПартииОборотыПартии" id="115">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ОборотыОднойПартии.Command.ОборотыПартии</CommandName>
+						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+						<ExtendedTooltip name="ТоварыОтчетОборотыОднойПартииОборотыПартииРасширеннаяПодсказка" id="116"/>
+					</Button>
+					<Button name="ТоварыОтчетОборотыОднойСерииОборотыСерии" id="113">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ОборотыОднойСерии.Command.ОборотыСерии</CommandName>
+						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+						<ExtendedTooltip name="ТоварыОтчетОборотыОднойСерииОборотыСерииРасширеннаяПодсказка" id="114"/>
+					</Button>
+					<Button name="ТоварыОтчетЗатратыПартииЗатратыПартии" id="111">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ЗатратыПартии.Command.ЗатратыПартии</CommandName>
+						<DataPath>Items.Товары.CurrentData.Партия</DataPath>
+						<ExtendedTooltip name="ТоварыОтчетЗатратыПартииЗатратыПартииРасширеннаяПодсказка" id="112"/>
+					</Button>
+					<Button name="ТоварыИзБуфераОбмена" id="117">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзБуфераОбмена</CommandName>
+						<ExtendedTooltip name="ТоварыИзБуфераОбменаРасширеннаяПодсказка" id="118"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="40"/>
 			<SearchStringAddition name="ТоварыСтрокаПоиска" id="41">
 				<AdditionSource>
@@ -331,6 +373,65 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<UsualGroup name="ГруппаИтого" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итого</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИтогоРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияИтого" id="103">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого Декорация итого</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияИтогоКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ДекорацияИтогоРасширеннаяПодсказка" id="105"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИнфоСтроки" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо строки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнфоСтрокиРасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфоСтроки" id="108">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация инфо строки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИнфоСтрокиКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ДекорацияИнфоСтрокиРасширеннаяПодсказка" id="110"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -390,6 +491,32 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ИзБуфераОбмена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From clipboard</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paste from clipboard</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзБуфераОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>
