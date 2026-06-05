@@ -48,7 +48,6 @@
 				<v8:Type>cfg:DocumentRef.ПередачаНаКомиссию</v8:Type>
 				<v8:Type>cfg:DocumentRef._ВозвратОтПокупателя</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВозвратСКомиссии</v8:Type>
-				<v8:Type>cfg:CatalogRef.КодыПроизводителей</v8:Type>
 				<v8:Type>cfg:CatalogRef.Фирмы</v8:Type>
 				<v8:Type>cfg:CatalogRef.Счета</v8:Type>
 				<v8:Type>cfg:CatalogRef.ТоварныеГруппыПеревозчиков</v8:Type>
@@ -57,7 +56,6 @@
 				<v8:Type>cfg:DocumentRef.ВозвратПоставщику</v8:Type>
 				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
-				<v8:Type>cfg:CatalogRef.СемействаМоделей</v8:Type>
 				<v8:Type>cfg:CatalogRef.Статьи</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
 				<v8:Type>cfg:DocumentRef.КорректировкаИнвойса</v8:Type>

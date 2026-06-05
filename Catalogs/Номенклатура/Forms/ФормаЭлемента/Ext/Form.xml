@@ -79,59 +79,11 @@
 				</PictureField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаВендор" id="25">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Вендор</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Vendor</v8:content>
-				</v8:item>
-			</Title>
-			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаВендорРасширеннаяПодсказка" id="26"/>
-			<ChildItems>
-				<InputField name="ПроизводительВендор" id="51">
-					<DataPath>Объект.Производитель</DataPath>
-					<ContextMenu name="ПроизводительВендорКонтекстноеМеню" id="52"/>
-					<ExtendedTooltip name="ПроизводительВендорРасширеннаяПодсказка" id="53"/>
-				</InputField>
-				<InputField name="КодВендора" id="27">
-					<DataPath>Объект.КодВендора</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Код</v8:content>
-						</v8:item>
-					</Title>
-					<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.Владелец</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Объект.Производитель</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
-					<ContextMenu name="КодВендораКонтекстноеМеню" id="28"/>
-					<ExtendedTooltip name="КодВендораРасширеннаяПодсказка" id="29"/>
-				</InputField>
-				<InputField name="Семейство" id="30">
-					<DataPath>Объект.Семейство</DataPath>
-					<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.Владелец</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Объект.Производитель</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
-					<ContextMenu name="СемействоКонтекстноеМеню" id="31"/>
-					<ExtendedTooltip name="СемействоРасширеннаяПодсказка" id="32"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
+		<InputField name="ПроизводительВендор" id="51">
+			<DataPath>Объект.Производитель</DataPath>
+			<ContextMenu name="ПроизводительВендорКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ПроизводительВендорРасширеннаяПодсказка" id="53"/>
+		</InputField>
 		<InputField name="ОсновнойПоставщик" id="36">
 			<DataPath>Объект.ОсновнойПоставщик</DataPath>
 			<ContextMenu name="ОсновнойПоставщикКонтекстноеМеню" id="37"/>

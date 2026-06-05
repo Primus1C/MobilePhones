@@ -676,17 +676,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Номенклатура.Attribute.КодВендора</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ОстаткиТовара.Dimension.Номенклатура</name>
 		<right>
 			<name>View</name>
@@ -1828,17 +1817,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Номенклатура.Attribute.Семейство</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Constant.НоменклатураУслугаДоставки</name>
 		<right>
 			<name>Read</name>
@@ -1902,13 +1880,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СемействаМоделей</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>

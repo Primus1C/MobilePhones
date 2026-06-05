@@ -98,11 +98,6 @@
 					<xr:ConditionalSeparation/>
 				</xr:Item>
 				<xr:Item>
-					<xr:Metadata>Catalog.СемействаМоделей</xr:Metadata>
-					<xr:Use>Use</xr:Use>
-					<xr:ConditionalSeparation/>
-				</xr:Item>
-				<xr:Item>
 					<xr:Metadata>Catalog.Номенклатура</xr:Metadata>
 					<xr:Use>Use</xr:Use>
 					<xr:ConditionalSeparation/>

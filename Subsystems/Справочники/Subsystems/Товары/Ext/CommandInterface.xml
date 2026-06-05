@@ -19,7 +19,7 @@
 				<xr:Value name="Role.Менеджер">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Catalog.СемействаМоделей.StandardCommand.OpenList">
+		<Command name="0:526a29d2-299a-48a7-a06d-3741dfdbd62f">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role.Менеджер">false</xr:Value>
@@ -43,7 +43,7 @@
 				<xr:Value name="Role.Менеджер">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="Catalog.СемействаМоделей.StandardCommand.Create">
+		<Command name="1:526a29d2-299a-48a7-a06d-3741dfdbd62f">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="Role.Менеджер">false</xr:Value>
@@ -65,7 +65,7 @@
 		<Command name="Catalog.Производители.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Catalog.СемействаМоделей.StandardCommand.OpenList">
+		<Command name="0:526a29d2-299a-48a7-a06d-3741dfdbd62f">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.ОборотыСерии">

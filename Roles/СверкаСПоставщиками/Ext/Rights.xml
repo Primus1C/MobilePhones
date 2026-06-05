@@ -712,13 +712,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.СемействаМоделей</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonCommand.Сумма</name>
 		<right>
 			<name>View</name>

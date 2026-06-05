@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<HTTPService uuid="ee93eb0d-ab8c-40b7-9ec3-e909b1f114e1">
+		<Properties>
+			<Name>StockAPI</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>API остатков</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>stock</RootURL>
+			<ReuseSessions>DontUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="cc4865fa-44ac-4ef9-be0d-8e91ab721ea1">
+				<Properties>
+					<Name>ШаблонURL1</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/balances</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e69d3348-a98a-4d9d-8eb1-1fad6790458f">
+						<Properties>
+							<Name>balancesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Balances GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ШаблонURL1Остатки</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="f8e7d6c5-b4a3-4291-8f7e-6d5c4b3a2910">
+				<Properties>
+					<Name>ШаблонURL2</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/orders</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="a9b8c7d6-e5f4-4321-9abc-def012345678">
+						<Properties>
+							<Name>ordersPOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Orders POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ordersPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="b1c2d3e4-f5a6-4789-abcd-ef0123456701">
+				<Properties>
+					<Name>ШаблонURL3</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/customers</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c2d3e4f5-a6b7-4890-bcde-f01234567012">
+						<Properties>
+							<Name>customersGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Customers GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>customersGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="d3e4f5a6-b7c8-4901-cdef-012345670123">
+						<Properties>
+							<Name>customersPOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Customers POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>customersPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c8d9e0f1-a2b3-4456-c789-012345678901">
+				<Properties>
+					<Name>ШаблонURL6</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/customer-groups</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d9e0f1a2-b3c4-4567-d890-123456789012">
+						<Properties>
+							<Name>customerGroupsGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Customer groups GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>customerGroupsGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="e0f1a2b3-c4d5-4678-e901-234567890123">
+						<Properties>
+							<Name>customerGroupsPOST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Customer groups POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>customerGroupsPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="e4f5a6b7-c8d9-4012-ef01-234567890124">
+				<Properties>
+					<Name>ШаблонURL4</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/warehouses</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="f5a6b7c8-d9e0-4123-f012-345678901235">
+						<Properties>
+							<Name>warehousesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Warehouses GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>warehousesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="a6b7c8d9-e0f1-4234-0123-456789012346">
+				<Properties>
+					<Name>ШаблонURL5</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/currencies</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="b7c8d9e0-f1a2-4345-1234-567890123457">
+						<Properties>
+							<Name>currenciesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Currencies GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>currenciesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

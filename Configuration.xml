@@ -471,6 +471,7 @@
 			<CommonAttribute>Примечание</CommonAttribute>
 			<CommonAttribute>Окончательно</CommonAttribute>
 			<CommonAttribute>ЕстьЗатраты</CommonAttribute>
+			<HTTPService>StockAPI</HTTPService>
 			<EventSubscription>Сооб_ОбработкаПолученияФормы</EventSubscription>
 			<EventSubscription>Сооб_ЗаписьКонстант</EventSubscription>
 			<EventSubscription>ПроведениеДокументов</EventSubscription>
@@ -578,7 +579,6 @@
 			<Catalog>СкладыКонтрагентов</Catalog>
 			<Catalog>ВидыНоменклатуры</Catalog>
 			<Catalog>КодыПроизводителей</Catalog>
-			<Catalog>СемействаМоделей</Catalog>
 			<Catalog>ЗначенияСвойствОбъектов</Catalog>
 			<Catalog>Офисы</Catalog>
 			<Catalog>ПричиныВозврата</Catalog>
@@ -587,6 +587,7 @@
 			<Catalog>Счета</Catalog>
 			<Catalog>ТоварныеГруппыПеревозчиков</Catalog>
 			<Catalog>ХранилищеДопИнформации</Catalog>
+			<Catalog>УчетныеЗаписиИнтеграции</Catalog>
 			<Document>ПриходнаяНакладная</Document>
 			<Document>РасходнаяНакладная</Document>
 			<Document>ДвижениеДенег</Document>
