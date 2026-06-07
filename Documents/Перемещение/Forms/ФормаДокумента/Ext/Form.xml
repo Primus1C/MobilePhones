@@ -19,6 +19,7 @@
 					<v8:content>Гр просмотр оплата</v8:content>
 				</v8:item>
 			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
@@ -43,45 +44,60 @@
 					<ContextMenu name="стрОплатаКонтекстноеМеню" id="114"/>
 					<ExtendedTooltip name="стрОплатаРасширеннаяПодсказка" id="115"/>
 				</LabelField>
-				<UsualGroup name="ГруппаСостояние" id="192">
+				<UsualGroup name="ГруппаСостояниеОтступ" id="216">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа состояние</v8:content>
+							<v8:content>Группа состояние отступ</v8:content>
 						</v8:item>
 					</Title>
-					<Width>10</Width>
-					<Group>AlwaysHorizontal</Group>
-					<Behavior>Usual</Behavior>
+					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalAlign>Right</HorizontalAlign>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
-					<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="193"/>
+					<ExtendedTooltip name="ГруппаСостояниеОтступРасширеннаяПодсказка" id="217"/>
 					<ChildItems>
-						<PictureField name="КартинкаСостоянияДокумента" id="194">
-							<DataPath>КартинкаСостоянияДокумента</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<Width>3</Width>
-							<Height>1</Height>
-							<HorizontalStretch>false</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
-							<ValuesPicture>
-								<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</ValuesPicture>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-							</Border>
-							<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="195"/>
-							<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="196"/>
-						</PictureField>
-						<LabelField name="СостояниеДокумента" id="197">
-							<DataPath>СостояниеДокумента</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<TextColor>web:DarkBlue</TextColor>
-							<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="198"/>
-							<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="199"/>
-						</LabelField>
+						<UsualGroup name="ГруппаСостояние" id="192">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
+							<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="193"/>
+							<ChildItems>
+								<PictureField name="КартинкаСостоянияДокумента" id="194">
+									<DataPath>КартинкаСостоянияДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>3</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="196"/>
+								</PictureField>
+								<LabelField name="СостояниеДокумента" id="197">
+									<DataPath>СостояниеДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>web:DarkBlue</TextColor>
+									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="199"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>

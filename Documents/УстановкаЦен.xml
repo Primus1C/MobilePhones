@@ -129,21 +129,18 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="8a1dbc67-14c2-45c6-9124-1bcc8bf3b9a0">
+			<Attribute uuid="ccd84aa4-1733-4799-8653-fe7104abc392">
 				<Properties>
-					<Name>Передан</Name>
+					<Name>Склад</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Передан</v8:content>
+							<v8:content>Склад</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>xs:dateTime</v8:Type>
-						<v8:DateQualifiers>
-							<v8:DateFractions>DateTime</v8:DateFractions>
-						</v8:DateQualifiers>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

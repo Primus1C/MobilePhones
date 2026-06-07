@@ -2927,17 +2927,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УстановкаЦен.Attribute.Передан</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document._Инвойс.Attribute.ВКД_Распределить</name>
 		<right>
 			<name>View</name>

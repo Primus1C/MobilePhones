@@ -1304,6 +1304,7 @@
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаВыбора</Form>
 			<Form>ФормаВыбораИнвойсов</Form>
+			<Form>ФормаКомиссии</Form>
 			<TabularSection uuid="020efbef-3d46-4cbe-b443-aff3f1694b70">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ДвижениеДенег.Привязки" category="TabularSection">
