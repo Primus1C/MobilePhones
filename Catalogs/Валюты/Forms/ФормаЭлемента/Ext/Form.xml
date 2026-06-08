@@ -27,6 +27,16 @@
 				</InputField>
 				<InputField name="КодISO" id="95">
 					<DataPath>Объект.КодISO</DataPath>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=3; ЧВН=</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧЦ=3; ЧВН=</v8:content>
+						</v8:item>
+					</EditFormat>
 					<ContextMenu name="КодISOКонтекстноеМеню" id="96"/>
 					<ExtendedTooltip name="КодISOРасширеннаяПодсказка" id="97"/>
 				</InputField>

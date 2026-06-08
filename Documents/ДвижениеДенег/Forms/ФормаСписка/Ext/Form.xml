@@ -449,6 +449,8 @@
 	ВЫБОР
 		КОГДА Докум.ВидДвиженияДенег = ЗНАЧЕНИЕ(Перечисление.ВидДвиженияДенег.ОбменВалюты)
 			ТОГДА Докум.СубДКурс
+		КОГДА Докум.ВидДвиженияДенег = ЗНАЧЕНИЕ(Перечисление.ВидДвиженияДенег.ВводОстатков)
+			ТОГДА Докум.СубДКурс
 		ИНАЧЕ 0
 	КОНЕЦ КАК Курс,
 	ВЫБОР
@@ -687,6 +689,10 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ДокументРасчетов</dcssch:dataPath>
 					<dcssch:field>ДокументРасчетов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РассчитыватьСреднийКурс</dcssch:dataPath>
+					<dcssch:field>РассчитыватьСреднийКурс</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>

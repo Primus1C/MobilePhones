@@ -221,6 +221,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Subsystem.Деньги</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonForm.ФормаСтруктурыПодчиненности</name>
 		<right>
 			<name>View</name>
@@ -373,6 +380,13 @@
 	</object>
 	<object>
 		<name>CommonAttribute.Создан</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ДвижениеДенег.Command.ДвиженияДенег</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
