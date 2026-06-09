@@ -10,6 +10,7 @@
 			<v8:content>Select</v8:content>
 		</v8:item>
 	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>

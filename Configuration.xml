@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-07</Version>
+			<Version>2026-06-09</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -463,6 +463,7 @@
 			<CommonModule>ПроведениеДокументов</CommonModule>
 			<CommonModule>РаботаСВалютой</CommonModule>
 			<CommonModule>РаботаСИнвойсами</CommonModule>
+			<CommonModule>Комиссия</CommonModule>
 			<CommonAttribute>КемСоздан</CommonAttribute>
 			<CommonAttribute>Создан</CommonAttribute>
 			<CommonAttribute>КемСохранен</CommonAttribute>

@@ -129,11 +129,11 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="92"/>
 									<ChildItems>
-										<InputField name="Склад" id="10">
+										<InputField name="СкладКомиссии" id="10">
 											<DataPath>Объект.СкладКомиссии</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
-											<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="12"/>
+											<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="12"/>
 										</InputField>
 										<InputField name="Контрагент" id="7">
 											<DataPath>Объект.Контрагент</DataPath>
@@ -172,6 +172,9 @@
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="ВалютаКонтекстноеМеню" id="17"/>
 													<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="18"/>
+													<Events>
+														<Event name="OnChange">ВалютаПриИзменении</Event>
+													</Events>
 												</InputField>
 												<InputField name="Курс" id="19">
 													<DataPath>Объект.Курс</DataPath>
@@ -328,6 +331,10 @@
 				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="48"/>
 				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="49"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ТоварыПриАктивизацииСтроки</Event>
+				<Event name="AfterDeleteRow">ТоварыПослеУдаления</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="ТоварыНомерСтроки" id="50">
 					<DataPath>Объект.Товары.LineNumber</DataPath>
@@ -340,36 +347,54 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="55"/>
+					<Events>
+						<Event name="StartChoice">ТоварыНоменклатураНачалоВыбора</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыСерия" id="56">
 					<DataPath>Объект.Товары.Серия</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">ТоварыСерияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыПартия" id="59">
 					<DataPath>Объект.Товары.Партия</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыПартияКонтекстноеМеню" id="60"/>
 					<ExtendedTooltip name="ТоварыПартияРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">ТоварыПартияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыЦена" id="62">
 					<DataPath>Объект.Товары.Цена</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="63"/>
 					<ExtendedTooltip name="ТоварыЦенаРасширеннаяПодсказка" id="64"/>
+					<Events>
+						<Event name="OnChange">ТоварыЦенаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыКоличество" id="65">
 					<DataPath>Объект.Товары.Количество</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="66"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="67"/>
+					<Events>
+						<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыСумма" id="68">
 					<DataPath>Объект.Товары.Сумма</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="69"/>
 					<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="70"/>
+					<Events>
+						<Event name="OnChange">ТоварыСуммаПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -489,6 +514,15 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="КэшДанных" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кэш данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
 		</Attribute>
 	</Attributes>
 	<Commands>
