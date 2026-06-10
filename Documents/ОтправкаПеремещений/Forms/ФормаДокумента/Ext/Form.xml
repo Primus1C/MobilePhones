@@ -75,7 +75,7 @@
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<BackColor>style:AuxiliaryNavigationColor</BackColor>
+							<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
 							<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="144"/>
 							<ChildItems>
 								<PictureField name="КартинкаСостоянияДокумента" id="145">

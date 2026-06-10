@@ -149,7 +149,7 @@
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<BackColor>style:ReportHeaderBackColor</BackColor>
+							<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
 							<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="127"/>
 							<ChildItems>
 								<PictureField name="КартинкаСостоянияДокумента" id="128">

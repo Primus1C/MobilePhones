@@ -84,13 +84,13 @@
 													<v8:content>Группа состояние</v8:content>
 												</v8:item>
 											</Title>
-											<Width>10</Width>
+											<Width>14</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<Group>AlwaysHorizontal</Group>
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<BackColor>style:ReportHeaderBackColor</BackColor>
+											<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
 											<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="69"/>
 											<ChildItems>
 												<PictureField name="КартинкаСостоянияДокумента" id="70">
@@ -111,7 +111,7 @@
 													<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="72"/>
 												</PictureField>
 												<LabelField name="СостояниеДокумента" id="73">
-													<DataPath>ИмяДокумента</DataPath>
+													<DataPath>СостояниеДокумента</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<TextColor>web:DarkBlue</TextColor>
 													<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="74"/>
@@ -145,10 +145,11 @@
 									<Group>Vertical</Group>
 									<ExtendedTooltip name="ГруппаОткудаРасширеннаяПодсказка" id="85"/>
 									<ChildItems>
-										<InputField name="Склад" id="88">
-											<DataPath>Объект.Склад</DataPath>
-											<ContextMenu name="СкладКонтекстноеМеню" id="89"/>
-											<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="90"/>
+										<InputField name="СкладКомиссии" id="10">
+											<DataPath>Объект.СкладКомиссии</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="12"/>
 										</InputField>
 										<InputField name="Контрагент" id="7">
 											<DataPath>Объект.Контрагент</DataPath>
@@ -168,11 +169,10 @@
 									<Group>Vertical</Group>
 									<ExtendedTooltip name="ГруппаКудаРасширеннаяПодсказка" id="87"/>
 									<ChildItems>
-										<InputField name="СкладКомиссии" id="10">
-											<DataPath>Объект.СкладКомиссии</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="СкладКомиссииКонтекстноеМеню" id="11"/>
-											<ExtendedTooltip name="СкладКомиссииРасширеннаяПодсказка" id="12"/>
+										<InputField name="Склад" id="88">
+											<DataPath>Объект.Склад</DataPath>
+											<ContextMenu name="СкладКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="90"/>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
@@ -322,6 +322,9 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ТоварыСерияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыПартия" id="50">
 					<DataPath>Объект.Товары.Партия</DataPath>

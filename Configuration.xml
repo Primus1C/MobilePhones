@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-09</Version>
+			<Version>2026-06-10</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -212,6 +212,10 @@
 			<Copyright>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
+					<v8:content>Primus1C</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
 					<v8:content>Primus1C</v8:content>
 				</v8:item>
 			</Copyright>

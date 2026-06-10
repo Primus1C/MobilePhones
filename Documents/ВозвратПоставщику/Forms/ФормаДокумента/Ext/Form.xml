@@ -70,13 +70,13 @@
 							<v8:content>Группа состояние</v8:content>
 						</v8:item>
 					</Title>
-					<Width>10</Width>
+					<Width>14</Width>
 					<Group>AlwaysHorizontal</Group>
 					<HorizontalAlign>Right</HorizontalAlign>
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<BackColor>style:ReportHeaderBackColor</BackColor>
+					<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
 					<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="184"/>
 					<ChildItems>
 						<PictureField name="КартинкаСостоянияДокумента" id="185">

@@ -82,7 +82,7 @@
 													<v8:content>Группа состояние</v8:content>
 												</v8:item>
 											</Title>
-											<Width>10</Width>
+											<Width>14</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 											<Group>AlwaysHorizontal</Group>
@@ -263,6 +263,9 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ТоварыСерияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТоварыПартия" id="50">
 					<DataPath>Объект.Товары.Партия</DataPath>
@@ -275,6 +278,12 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ТоварыЦенаСтарая" id="93">
+					<DataPath>Объект.Товары.ЦенаСтарая</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТоварыЦенаСтараяКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ТоварыЦенаСтараяРасширеннаяПодсказка" id="95"/>
 				</InputField>
 				<InputField name="ТоварыЦена" id="56">
 					<DataPath>Объект.Товары.Цена</DataPath>
