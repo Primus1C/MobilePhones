@@ -1059,7 +1059,7 @@
 									</Events>
 								</InputField>
 								<InputField name="ВалютаОплаты" id="242">
-									<DataPath>ВалютаОплаты</DataPath>
+									<DataPath>ВалютаОплаты_</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1373,6 +1373,27 @@
 										<Event name="OnChange">ПлатежиПриИзменении</Event>
 									</Events>
 								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОплатыАвто" id="399">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оплаты авто</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОплатыАвтоРасширеннаяПодсказка" id="400"/>
+							<ChildItems>
+								<InputField name="ВалютаОплатыАвто" id="401">
+									<DataPath>Объект.ВалютаОплаты</DataPath>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ВалютаОплатыАвтоКонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="ВалютаОплатыАвтоРасширеннаяПодсказка" id="403"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1717,7 +1738,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ВалютаОплаты" id="15">
+		<Attribute name="ВалютаОплаты_" id="15">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>

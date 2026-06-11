@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-10</Version>
+			<Version>2026-06-11</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -349,6 +349,7 @@
 			<CommonPicture>Tlg</CommonPicture>
 			<CommonPicture>ОбменВалют</CommonPicture>
 			<CommonPicture>КоллекцияЛокал</CommonPicture>
+			<CommonPicture>Excel</CommonPicture>
 			<SessionParameter>Настройка</SessionParameter>
 			<SessionParameter>Пользователь</SessionParameter>
 			<SessionParameter>Администратор</SessionParameter>
@@ -733,6 +734,7 @@
 			<Report>PriceCheck</Report>
 			<Report>ПартииВалют</Report>
 			<Report>ТоварВПути</Report>
+			<Report>Комиссия</Report>
 			<DataProcessor>Внимание</DataProcessor>
 			<DataProcessor>Предупреждение</DataProcessor>
 			<DataProcessor>Ошибка</DataProcessor>

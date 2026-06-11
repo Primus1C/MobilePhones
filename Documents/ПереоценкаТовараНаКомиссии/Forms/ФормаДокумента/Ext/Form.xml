@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -82,7 +83,7 @@
 													<v8:content>Группа состояние</v8:content>
 												</v8:item>
 											</Title>
-											<Width>14</Width>
+											<Width>16</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 											<Group>AlwaysHorizontal</Group>
@@ -110,7 +111,7 @@
 													<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="69"/>
 												</PictureField>
 												<LabelField name="СостояниеДокумента" id="70">
-													<DataPath>ИмяДокумента</DataPath>
+													<DataPath>СостояниеДокумента</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<TextColor>web:DarkBlue</TextColor>
 													<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="71"/>
@@ -207,6 +208,95 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<UsualGroup name="ГруппаНастройки" id="98">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Behavior>PopUp</Behavior>
+							<AssociatedTableElementId xsi:type="xs:string">НастройкиЗагрузки</AssociatedTableElementId>
+							<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация1" id="119">
+									<TextColor>style:ЦветНадписиИнфоМорской</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заполните номера колонок.
+Чтение данных будет производится со 2-ой строки Excel</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="121"/>
+								</LabelDecoration>
+								<Table name="НастройкиЗагрузки" id="100">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HeightInTableRows>3</HeightInTableRows>
+									<AutoMaxRowsCount>false</AutoMaxRowsCount>
+									<MaxRowsCount>3</MaxRowsCount>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>НастройкиЗагрузки</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НастройкиЗагрузкиКонтекстноеМеню" id="101"/>
+									<AutoCommandBar name="НастройкиЗагрузкиКоманднаяПанель" id="102"/>
+									<ExtendedTooltip name="НастройкиЗагрузкиРасширеннаяПодсказка" id="103"/>
+									<SearchStringAddition name="НастройкиЗагрузкиСтрокаПоиска" id="104">
+										<AdditionSource>
+											<Item>НастройкиЗагрузки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиЗагрузкиСтрокаПоискаКонтекстноеМеню" id="105"/>
+										<ExtendedTooltip name="НастройкиЗагрузкиСтрокаПоискаРасширеннаяПодсказка" id="106"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НастройкиЗагрузкиСостояниеПросмотра" id="107">
+										<AdditionSource>
+											<Item>НастройкиЗагрузки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиЗагрузкиСостояниеПросмотраКонтекстноеМеню" id="108"/>
+										<ExtendedTooltip name="НастройкиЗагрузкиСостояниеПросмотраРасширеннаяПодсказка" id="109"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НастройкиЗагрузкиУправлениеПоиском" id="110">
+										<AdditionSource>
+											<Item>НастройкиЗагрузки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкиЗагрузкиУправлениеПоискомКонтекстноеМеню" id="111"/>
+										<ExtendedTooltip name="НастройкиЗагрузкиУправлениеПоискомРасширеннаяПодсказка" id="112"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">НастройкиЗагрузкиПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">НастройкиЗагрузкиПередУдалением</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="НастройкиЗагрузкиИмяПоля" id="113">
+											<DataPath>НастройкиЗагрузки.ИмяПоля</DataPath>
+											<Enabled>false</Enabled>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиЗагрузкиИмяПоляКонтекстноеМеню" id="114"/>
+											<ExtendedTooltip name="НастройкиЗагрузкиИмяПоляРасширеннаяПодсказка" id="115"/>
+										</InputField>
+										<InputField name="НастройкиЗагрузкиНомерКолонки" id="116">
+											<DataPath>НастройкиЗагрузки.НомерКолонки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиЗагрузкиНомерКолонкиКонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="НастройкиЗагрузкиНомерКолонкиРасширеннаяПодсказка" id="118"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -219,7 +309,15 @@
 			<DataPath>Объект.Товары</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="29"/>
-			<AutoCommandBar name="ТоварыКоманднаяПанель" id="30"/>
+			<AutoCommandBar name="ТоварыКоманднаяПанель" id="30">
+				<ChildItems>
+					<Button name="ТоварыЗагрузитьИзЭкселя" id="96">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьИзЭкселя</CommandName>
+						<ExtendedTooltip name="ТоварыЗагрузитьИзЭкселяРасширеннаяПодсказка" id="97"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="31"/>
 			<SearchStringAddition name="ТоварыСтрокаПоиска" id="32">
 				<AdditionSource>
@@ -279,11 +377,11 @@
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="55"/>
 				</InputField>
-				<InputField name="ТоварыЦенаСтарая" id="93">
+				<InputField name="ТоварыЦенаСтарая" id="122">
 					<DataPath>Объект.Товары.ЦенаСтарая</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыЦенаСтараяКонтекстноеМеню" id="94"/>
-					<ExtendedTooltip name="ТоварыЦенаСтараяРасширеннаяПодсказка" id="95"/>
+					<ContextMenu name="ТоварыЦенаСтараяКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="ТоварыЦенаСтараяРасширеннаяПодсказка" id="124"/>
 				</InputField>
 				<InputField name="ТоварыЦена" id="56">
 					<DataPath>Объект.Товары.Цена</DataPath>
@@ -305,24 +403,7 @@
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
 			<Columns>
-				<AdditionalColumns table="Объект.Товары">
-					<Column name="ЦенаСтарая" id="1">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Цена старая</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>19</v8:Digits>
-								<v8:FractionDigits>2</v8:FractionDigits>
-								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-				</AdditionalColumns>
+				<AdditionalColumns table="Объект.Товары"/>
 			</Columns>
 		</Attribute>
 		<Attribute name="ИмяДокумента" id="2">
@@ -371,7 +452,88 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="НастройкиЗагрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>НастройкиЗагрузки</Field>
+			</Save>
+			<Columns>
+				<Column name="ИмяПоля" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерКолонки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер колонки в Excel</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоЧисло" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это число</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьИзЭкселя" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Excel</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьИзЭкселя</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>

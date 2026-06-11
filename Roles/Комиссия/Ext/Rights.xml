@@ -502,6 +502,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.Комиссия</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonCommand.РасчетыПоКомиссии</name>
 		<right>
 			<name>View</name>
