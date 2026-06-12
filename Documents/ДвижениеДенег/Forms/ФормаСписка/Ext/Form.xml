@@ -207,12 +207,18 @@
 						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа1" id="99">
+				<UsualGroup name="ГруппаКасса" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа касса</v8:content>
+						</v8:item>
+					</Title>
 					<Group>Horizontal</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="100"/>
+					<ExtendedTooltip name="ГруппаКассаРасширеннаяПодсказка" id="100"/>
 					<ChildItems>
 						<InputField name="ФильтрДСчет" id="96">
 							<DataPath>ФильтрДСчет</DataPath>

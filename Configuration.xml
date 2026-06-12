@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-11</Version>
+			<Version>2026-06-12</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -443,6 +443,17 @@
 			<CommonTemplate>component_li_completed</CommonTemplate>
 			<CommonTemplate>НачальныеНастройки</CommonTemplate>
 			<CommonTemplate>ЧтоНового</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовАлый</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовБежевый</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовЗеленый</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовЗима</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовЛегкий</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовМалиновый</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовСинеЗеленый</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовСиреневый</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовСтрогий</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовРыжий</CommonTemplate>
+			<CommonTemplate>ОформлениеОтчетовЧерноБелый</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<CommonModule>глСервер</CommonModule>
 			<CommonModule>глКлиент</CommonModule>

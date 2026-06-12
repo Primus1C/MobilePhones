@@ -328,11 +328,11 @@
 	0 КАК Наценка,
 	0 КАК СуммаВБазВалюте,
 	0 КАК НаценкаВБазВалюте,
-	NULL КАК КоличествоОборот,
-	NULL КАК СуммаОборот,
-	NULL КАК НаценкаОборот,
-	NULL КАК СуммаВБазВалютеОборот,
-	NULL КАК НаценкаВБазВалютеОборот,
+	0 КАК КоличествоОборот,
+	0 КАК СуммаОборот,
+	0 КАК НаценкаОборот,
+	0 КАК СуммаВБазВалютеОборот,
+	0 КАК НаценкаВБазВалютеОборот,
 	ТоварыНаКомиссии.Регистратор КАК Регистратор
 ИЗ
 	РегистрНакопления.ТоварыНаКомиссии.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , ) КАК ТоварыНаКомиссии
@@ -358,11 +358,11 @@
 	0,
 	0,
 	0,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	0,
+	0,
+	0,
+	0,
+	0,
 	ПродажиОбороты.КоличествоОборот,
 	ПродажиОбороты.СуммаОборот,
 	ПродажиОбороты.НаценкаОборот,
@@ -614,6 +614,12 @@
 					<dcsset:userSettingID>3f686532-ed05-4f04-908f-64c36513f8c3</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовСинеЗеленый</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
