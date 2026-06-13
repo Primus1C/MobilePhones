@@ -423,12 +423,7 @@
 		КОГДА &amp;СкрытьЦены
 			ТОГДА NULL
 		ИНАЧЕ 
-				//ВЫРАЗИТЬ(ВЫБОР
-				//	КОГДА ЕСТЬNULL(Рег.Партия.ВКД_ЦенаСЗатратами, 0) = 0
-				//		ТОГДА ЕСТЬNULL(Рег.Партия.ЦенаЗакупки, 0)
-				//	ИНАЧЕ ЕСТЬNULL(Рег.Партия.ВКД_ЦенаСЗатратами, 0)
-				//КОНЕЦ КАК ЧИСЛО(19, 2))
-				ЕСТЬNULL(Рег.Партия.ЦенаЗакупки, 0)
+			ЕСТЬNULL(Рег.Партия.ЦенаЗакупки, 0)
 	КОНЕЦ КАК ПартияЦенаЗакупки,
 	Рег.Партия.ДатаПартии КАК ПартияДатаПартии,
 	НАЧАЛОПЕРИОДА(Рег.Партия.ДатаПартии, МЕСЯЦ) КАК МесяцПрихода,
@@ -2377,13 +2372,15 @@
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ПартияСерия</dcsset:field>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Партия.ЦенаЗакупки</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:field>ПартияСерия</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
+				<dcsset:userSettingID>3e00eb43-8033-4089-997b-256b2c0fea5d</dcsset:userSettingID>
 			</dcsset:order>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">

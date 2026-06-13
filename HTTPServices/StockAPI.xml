@@ -61,6 +61,86 @@
 							<Handler>ordersPOST</Handler>
 						</Properties>
 					</Method>
+					<Method uuid="b0c1d2e3-f4a5-4678-b901-234567890abc">
+						<Properties>
+							<Name>ordersGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Orders GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ordersGET</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="c1d2e3f4-a5b6-4789-c012-345678901bcd">
+						<Properties>
+							<Name>ordersPATCH</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Orders PATCH</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PATCH</HTTPMethod>
+							<Handler>ordersPATCH</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="d2e3f4a5-b6c7-4890-d123-456789012cde">
+						<Properties>
+							<Name>ordersPUT</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Orders PUT</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>ordersPUT</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="e3f4a5b6-c7d8-4901-e234-567890123def">
+						<Properties>
+							<Name>ordersDELETE</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Orders DELETE</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>DELETE</HTTPMethod>
+							<Handler>ordersDELETE</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="d7e8f9a0-b1c2-4345-d678-901234567890">
+				<Properties>
+					<Name>ШаблонURL7</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/delivery-notes</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e8f9a0b1-c2d3-4456-e789-012345678901">
+						<Properties>
+							<Name>deliveryNotesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Delivery notes GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>deliveryNotesGET</Handler>
+						</Properties>
+					</Method>
 				</ChildObjects>
 			</URLTemplate>
 			<URLTemplate uuid="b1c2d3e4-f5a6-4789-abcd-ef0123456701">
@@ -68,35 +148,35 @@
 					<Name>ШаблонURL3</Name>
 					<Synonym/>
 					<Comment/>
-					<Template>/customers</Template>
+					<Template>/counterparties</Template>
 				</Properties>
 				<ChildObjects>
 					<Method uuid="c2d3e4f5-a6b7-4890-bcde-f01234567012">
 						<Properties>
-							<Name>customersGET</Name>
+							<Name>counterpartiesGET</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Customers GET</v8:content>
+									<v8:content>Counterparties GET</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<HTTPMethod>GET</HTTPMethod>
-							<Handler>customersGET</Handler>
+							<Handler>counterpartiesGET</Handler>
 						</Properties>
 					</Method>
 					<Method uuid="d3e4f5a6-b7c8-4901-cdef-012345670123">
 						<Properties>
-							<Name>customersPOST</Name>
+							<Name>counterpartiesPOST</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Customers POST</v8:content>
+									<v8:content>Counterparties POST</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<HTTPMethod>POST</HTTPMethod>
-							<Handler>customersPOST</Handler>
+							<Handler>counterpartiesPOST</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>
@@ -106,35 +186,35 @@
 					<Name>ШаблонURL6</Name>
 					<Synonym/>
 					<Comment/>
-					<Template>/customer-groups</Template>
+					<Template>/counterparty-groups</Template>
 				</Properties>
 				<ChildObjects>
 					<Method uuid="d9e0f1a2-b3c4-4567-d890-123456789012">
 						<Properties>
-							<Name>customerGroupsGET</Name>
+							<Name>counterpartyGroupsGET</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Customer groups GET</v8:content>
+									<v8:content>Counterparty groups GET</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<HTTPMethod>GET</HTTPMethod>
-							<Handler>customerGroupsGET</Handler>
+							<Handler>counterpartyGroupsGET</Handler>
 						</Properties>
 					</Method>
 					<Method uuid="e0f1a2b3-c4d5-4678-e901-234567890123">
 						<Properties>
-							<Name>customerGroupsPOST</Name>
+							<Name>counterpartyGroupsPOST</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Customer groups POST</v8:content>
+									<v8:content>Counterparty groups POST</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<HTTPMethod>POST</HTTPMethod>
-							<Handler>customerGroupsPOST</Handler>
+							<Handler>counterpartyGroupsPOST</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>

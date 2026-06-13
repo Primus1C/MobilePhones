@@ -717,6 +717,13 @@
 										</InputField>
 										<CheckBoxField name="РассчитыватьСреднийКурс" id="413">
 											<DataPath>Объект.РассчитыватьСреднийКурс</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расчет среднего курса производится только  при установленном "Окончательно"</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="РассчитыватьСреднийКурсКонтекстноеМеню" id="414"/>
 											<ExtendedTooltip name="РассчитыватьСреднийКурсРасширеннаяПодсказка" id="415"/>
