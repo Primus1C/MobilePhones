@@ -377,6 +377,7 @@
 			<SessionParameter>БезусловноеПроведениеДокументов</SessionParameter>
 			<SessionParameter>ДоступныНаименованияКонтрагентов</SessionParameter>
 			<SessionParameter>ГрупповоеПерепроведениеДокументов</SessionParameter>
+			<SessionParameter>ГруппаКонтрагентовВнешнихЗаказов</SessionParameter>
 			<Role>Администратор</Role>
 			<Role>РазрешитьВариантыОтчетов</Role>
 			<Role>РазрешитьНастройкуСписка</Role>

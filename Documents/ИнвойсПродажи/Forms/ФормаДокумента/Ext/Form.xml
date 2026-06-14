@@ -91,46 +91,61 @@
 					<ContextMenu name="ПроформаКонтекстноеМеню" id="80"/>
 					<ExtendedTooltip name="ПроформаРасширеннаяПодсказка" id="81"/>
 				</RadioButtonField>
-				<UsualGroup name="ГруппаСостояние" id="60">
+				<UsualGroup name="ГруппаСостояниеОтступ" id="127">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа состояние</v8:content>
+							<v8:content>Группа состояние отступ</v8:content>
 						</v8:item>
 					</Title>
-					<Width>10</Width>
-					<Group>AlwaysHorizontal</Group>
+					<HorizontalStretch>true</HorizontalStretch>
 					<HorizontalAlign>Right</HorizontalAlign>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
-					<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="61"/>
+					<ExtendedTooltip name="ГруппаСостояниеОтступРасширеннаяПодсказка" id="128"/>
 					<ChildItems>
-						<PictureField name="КартинкаСостоянияДокумента" id="62">
-							<DataPath>КартинкаСостоянияДокумента</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<Width>3</Width>
-							<Height>1</Height>
+						<UsualGroup name="ГруппаСостояние" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние</v8:content>
+								</v8:item>
+							</Title>
+							<Width>12</Width>
 							<HorizontalStretch>false</HorizontalStretch>
-							<VerticalStretch>false</VerticalStretch>
-							<ValuesPicture>
-								<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</ValuesPicture>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-							</Border>
-							<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="63"/>
-							<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="64"/>
-						</PictureField>
-						<LabelField name="СостояниеДокумента" id="65">
-							<DataPath>СостояниеДокумента</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<TextColor>web:DarkBlue</TextColor>
-							<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="66"/>
-							<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="67"/>
-						</LabelField>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
+							<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<PictureField name="КартинкаСостоянияДокумента" id="62">
+									<DataPath>КартинкаСостоянияДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>3</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="64"/>
+								</PictureField>
+								<LabelField name="СостояниеДокумента" id="65">
+									<DataPath>СостояниеДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>web:DarkBlue</TextColor>
+									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
