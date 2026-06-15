@@ -18,4 +18,10 @@
 	<Item name="StyleItem.ЦветФонаДополнительнойСтрокиТаблицы">
 		<Color>#148A88</Color>
 	</Item>
+	<Item name="StyleItem.ЦветФонаВыделениеСлабое">
+		<Color>#FFF8DA</Color>
+	</Item>
+	<Item name="StyleItem.ЦветФонаВыделениеСреднее">
+		<Color>#EED4C6</Color>
+	</Item>
 </Style>
