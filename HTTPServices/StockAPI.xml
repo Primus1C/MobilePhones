@@ -17,8 +17,13 @@
 		<ChildObjects>
 			<URLTemplate uuid="cc4865fa-44ac-4ef9-be0d-8e91ab721ea1">
 				<Properties>
-					<Name>ШаблонURL1</Name>
-					<Synonym/>
+					<Name>ШаблонURL_Остатки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL остатки</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Template>/balances</Template>
 				</Properties>
@@ -34,7 +39,7 @@
 							</Synonym>
 							<Comment/>
 							<HTTPMethod>GET</HTTPMethod>
-							<Handler>ШаблонURL1Остатки</Handler>
+							<Handler>balancesGET</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>
@@ -221,8 +226,13 @@
 			</URLTemplate>
 			<URLTemplate uuid="e4f5a6b7-c8d9-4012-ef01-234567890124">
 				<Properties>
-					<Name>ШаблонURL4</Name>
-					<Synonym/>
+					<Name>ШаблонURL_Склады</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL склады</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Template>/warehouses</Template>
 				</Properties>
@@ -245,8 +255,13 @@
 			</URLTemplate>
 			<URLTemplate uuid="a6b7c8d9-e0f1-4234-0123-456789012346">
 				<Properties>
-					<Name>ШаблонURL5</Name>
-					<Synonym/>
+					<Name>ШаблонURL_Валюты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL валюты</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Template>/currencies</Template>
 				</Properties>

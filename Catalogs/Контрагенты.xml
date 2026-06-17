@@ -876,7 +876,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВидыЦен</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

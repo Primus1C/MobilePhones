@@ -73,17 +73,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЦеныПродажи.Attribute.Валюта</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.Треки</name>
 		<right>
 			<name>Read</name>
@@ -3151,7 +3140,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УстановкаЦен.Attribute.Валюта</name>
+		<name>Document.УстановкаЦен.Attribute.Склад</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -3840,6 +3829,21 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ВидыЦен</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>

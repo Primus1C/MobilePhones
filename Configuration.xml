@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-15</Version>
+			<Version>2026-06-17</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -432,9 +432,10 @@
 			<Role>РасходныеНакладные</Role>
 			<Role>ПриходныеНакладные</Role>
 			<Role>ЗаменаСерий</Role>
-			<Role>ОтчетЗадачиПользователя</Role>
+			<Role>ОтчетКонтрольВводаДанных</Role>
 			<Role>ОтчетPriceCheck</Role>
 			<Role>Комиссия</Role>
+			<Role>api_client</Role>
 			<CommonTemplate>ОсновнойМакетСКД</CommonTemplate>
 			<CommonTemplate>МакетПоменьшеСКД</CommonTemplate>
 			<CommonTemplate>component_body</CommonTemplate>
@@ -613,6 +614,7 @@
 			<Catalog>ТоварныеГруппыПеревозчиков</Catalog>
 			<Catalog>ХранилищеДопИнформации</Catalog>
 			<Catalog>УчетныеЗаписиИнтеграции</Catalog>
+			<Catalog>ВидыЦен</Catalog>
 			<Document>ПриходнаяНакладная</Document>
 			<Document>РасходнаяНакладная</Document>
 			<Document>ДвижениеДенег</Document>
@@ -670,7 +672,6 @@
 			<Enum>НазначениеФайлов</Enum>
 			<Enum>ОграниченияПоСкладам</Enum>
 			<Enum>ВидыВыбораВалюты</Enum>
-			<Enum>ВидыЦен</Enum>
 			<Enum>ВидыОперацииИнвойс</Enum>
 			<Enum>ВариантДоступа</Enum>
 			<Enum>Перевозчики</Enum>
@@ -778,7 +779,6 @@
 			<InformationRegister>ЦеныЗакупки</InformationRegister>
 			<InformationRegister>БуферСканирования</InformationRegister>
 			<InformationRegister>ЦеныПродажи</InformationRegister>
-			<InformationRegister>ОбъектыКПередачеВТелеграм</InformationRegister>
 			<InformationRegister>Треки</InformationRegister>
 			<InformationRegister>Затраты</InformationRegister>
 			<InformationRegister>СведенияТоварныхГруппПеревозчиков</InformationRegister>
