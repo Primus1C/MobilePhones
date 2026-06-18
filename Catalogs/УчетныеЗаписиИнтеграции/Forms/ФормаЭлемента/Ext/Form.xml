@@ -41,11 +41,18 @@
 				</InputField>
 				<InputField name="КонтрагентВидЦеныВалюта" id="50">
 					<DataPath>Объект.Контрагент.ВидЦены.Валюта</DataPath>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>false</OpenButton>
 					<ContextMenu name="КонтрагентВидЦеныВалютаКонтекстноеМеню" id="51"/>
 					<ExtendedTooltip name="КонтрагентВидЦеныВалютаРасширеннаяПодсказка" id="52"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="ГруппаВнутреннихКлиентов" id="53">
+			<DataPath>Объект.ГруппаВнутреннихКлиентов</DataPath>
+			<ContextMenu name="ГруппаВнутреннихКлиентовКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="ГруппаВнутреннихКлиентовРасширеннаяПодсказка" id="55"/>
+		</InputField>
 		<UsualGroup name="ГруппаТокен" id="41">
 			<Title>
 				<v8:item>

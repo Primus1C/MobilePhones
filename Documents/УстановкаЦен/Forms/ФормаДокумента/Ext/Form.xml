@@ -111,10 +111,10 @@
 								<CommandName>Form.Command.Обновить</CommandName>
 								<ExtendedTooltip name="ТоварыОбновитьРасширеннаяПодсказка" id="101"/>
 							</Button>
-							<Button name="ТоварыПодбор" id="87">
+							<Button name="ТоварыЗаполнитьПоОстаткам" id="144">
 								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.Подбор</CommandName>
-								<ExtendedTooltip name="ТоварыПодборРасширеннаяПодсказка" id="88"/>
+								<CommandName>Form.Command.ЗаполнитьПоОстаткам</CommandName>
+								<ExtendedTooltip name="ТоварыЗаполнитьПоОстаткамРасширеннаяПодсказка" id="145"/>
 							</Button>
 							<Popup name="ТоварыЗаполнить" id="116">
 								<Title>
@@ -125,6 +125,11 @@
 								</Title>
 								<ExtendedTooltip name="ТоварыЗаполнитьРасширеннаяПодсказка" id="117"/>
 							</Popup>
+							<Button name="ТоварыПодбор" id="87">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Подбор</CommandName>
+								<ExtendedTooltip name="ТоварыПодборРасширеннаяПодсказка" id="88"/>
+							</Button>
 							<Button name="ТоварыУдалитьНезаполненные" id="89">
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.УдалитьНезаполненные</CommandName>
