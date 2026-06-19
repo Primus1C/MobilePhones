@@ -61,6 +61,63 @@
 							<ContextMenu name="КемСозданКонтекстноеМеню" id="82"/>
 							<ExtendedTooltip name="КемСозданРасширеннаяПодсказка" id="83"/>
 						</InputField>
+						<UsualGroup name="ГруппаСостояниеОтступ" id="146">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние отступ</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСостояниеОтступРасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСостояние" id="148">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа состояние</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ЦветФонаВыделениеСлабое</BackColor>
+									<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="149"/>
+									<ChildItems>
+										<PictureField name="КартинкаСостоянияДокумента" id="150">
+											<DataPath>КартинкаСостоянияДокумента</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>3</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияДокументов</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="КартинкаСостоянияДокументаКонтекстноеМеню" id="151"/>
+											<ExtendedTooltip name="КартинкаСостоянияДокументаРасширеннаяПодсказка" id="152"/>
+										</PictureField>
+										<LabelField name="СостояниеДокумента" id="153">
+											<DataPath>СостояниеДокумента</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<TextColor>web:DarkBlue</TextColor>
+											<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="154"/>
+											<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="155"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -91,77 +148,31 @@
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="60"/>
 			<AutoCommandBar name="ТоварыКоманднаяПанель" id="61">
 				<ChildItems>
-					<ButtonGroup name="ТоварыГруппаЗаполнение" id="77">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Товары группа заполнение</v8:content>
-							</v8:item>
-						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Товары группа заполнение</v8:content>
-							</v8:item>
-						</ToolTip>
-						<ExtendedTooltip name="ТоварыГруппаЗаполнениеРасширеннаяПодсказка" id="78"/>
-						<ChildItems>
-							<Button name="ТоварыОбновить" id="100">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.Обновить</CommandName>
-								<ExtendedTooltip name="ТоварыОбновитьРасширеннаяПодсказка" id="101"/>
-							</Button>
-							<Button name="ТоварыЗаполнитьПоОстаткам" id="144">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.ЗаполнитьПоОстаткам</CommandName>
-								<ExtendedTooltip name="ТоварыЗаполнитьПоОстаткамРасширеннаяПодсказка" id="145"/>
-							</Button>
-							<Popup name="ТоварыЗаполнить" id="116">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Заполнить</v8:content>
-									</v8:item>
-								</Title>
-								<ExtendedTooltip name="ТоварыЗаполнитьРасширеннаяПодсказка" id="117"/>
-							</Popup>
-							<Button name="ТоварыПодбор" id="87">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.Подбор</CommandName>
-								<ExtendedTooltip name="ТоварыПодборРасширеннаяПодсказка" id="88"/>
-							</Button>
-							<Button name="ТоварыУдалитьНезаполненные" id="89">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.УдалитьНезаполненные</CommandName>
-								<ExtendedTooltip name="ТоварыУдалитьНезаполненныеРасширеннаяПодсказка" id="90"/>
-							</Button>
-							<Button name="ТоварыПересчитать" id="135">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.Пересчитать</CommandName>
-								<ExtendedTooltip name="ТоварыПересчитатьРасширеннаяПодсказка" id="136"/>
-							</Button>
-							<Button name="ТоварыПересчитатьСНаценкой" id="142">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.ПересчитатьСНаценкой</CommandName>
-								<ExtendedTooltip name="ТоварыПересчитатьСНаценкойРасширеннаяПодсказка" id="143"/>
-							</Button>
-							<Button name="ТоварыПродаватьВсе" id="137">
-								<Type>CommandBarButton</Type>
-								<Check>true</Check>
-								<CommandName>Form.Command.ПродаватьВсе</CommandName>
-								<ExtendedTooltip name="ТоварыПродаватьВсеРасширеннаяПодсказка" id="138"/>
-							</Button>
-						</ChildItems>
-					</ButtonGroup>
-					<Popup name="ТоварыГруппаЗаполнениеПодменю" id="126">
+					<Popup name="ТоварыПодменюЗаполнить" id="126">
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Заполнить по...</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="ТоварыГруппаЗаполнениеПодменюРасширеннаяПодсказка" id="127"/>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Товары подменю заполнить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ТоварыПодменюЗаполнитьРасширеннаяПодсказка" id="127"/>
 						<ChildItems>
+							<Button name="ТоварыЗаполнитьПоОстаткам" id="144">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьПоОстаткам</CommandName>
+								<ExtendedTooltip name="ТоварыЗаполнитьПоОстаткамРасширеннаяПодсказка" id="145"/>
+							</Button>
+							<Button name="ТоварыПодбор" id="87">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Подбор</CommandName>
+								<ExtendedTooltip name="ТоварыПодборРасширеннаяПодсказка" id="88"/>
+							</Button>
 							<Popup name="ПодменюЗаполнитьПоТоварнойГруппе" id="128">
 								<Title>
 									<v8:item>
@@ -193,6 +204,33 @@
 							</Button>
 						</ChildItems>
 					</Popup>
+					<Button name="ТоварыОбновить" id="100">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<ExtendedTooltip name="ТоварыОбновитьРасширеннаяПодсказка" id="101"/>
+					</Button>
+					<Button name="ТоварыУдалитьНезаполненные" id="89">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьНезаполненные</CommandName>
+						<ExtendedTooltip name="ТоварыУдалитьНезаполненныеРасширеннаяПодсказка" id="90"/>
+					</Button>
+					<Button name="ТоварыПересчитать" id="135">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Пересчитать</CommandName>
+						<ExtendedTooltip name="ТоварыПересчитатьРасширеннаяПодсказка" id="136"/>
+					</Button>
+					<Button name="ТоварыПересчитатьСНаценкой" id="142">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПересчитатьСНаценкой</CommandName>
+						<ExtendedTooltip name="ТоварыПересчитатьСНаценкойРасширеннаяПодсказка" id="143"/>
+					</Button>
+					<Button name="ТоварыПродаватьВсе" id="137">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<Check>true</Check>
+						<CommandName>Form.Command.ПродаватьВсе</CommandName>
+						<ExtendedTooltip name="ТоварыПродаватьВсеРасширеннаяПодсказка" id="138"/>
+					</Button>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="62"/>
@@ -563,7 +601,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>флаг</v8:content>
+					<v8:content>спецификацию</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -581,11 +619,11 @@
 				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ТекущаяНоменклатура" id="9">
+		<Attribute name="НоменклатураТекущейСтроки" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текущая номенклатура</v8:content>
+					<v8:content>Номенклатура текущей строки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -658,6 +696,37 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="КартинкаСостоянияДокумента" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка состояния документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоГруппеТоваров" id="1">
@@ -699,7 +768,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить строки с пустыми ценами</v8:content>
+					<v8:content>Удалить строки без цен</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -709,7 +778,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.CancelSearch</xr:Ref>
+				<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УдалитьНезаполненные</Action>
@@ -767,7 +836,12 @@
 					<v8:content>Продавать все</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Выкл</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ПродаватьВсе</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ПересчитатьСНаценкой" id="7">
 			<Title>
@@ -802,7 +876,12 @@
 					<v8:content>Заполнить по остаткам</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionStandardSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ЗаполнитьПоОстаткам</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>
