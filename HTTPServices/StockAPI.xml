@@ -150,8 +150,13 @@
 			</URLTemplate>
 			<URLTemplate uuid="b1c2d3e4-f5a6-4789-abcd-ef0123456701">
 				<Properties>
-					<Name>ШаблонURL3</Name>
-					<Synonym/>
+					<Name>ШаблонURL_Клиенты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL клиенты</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Template>/counterparties</Template>
 				</Properties>
@@ -188,8 +193,13 @@
 			</URLTemplate>
 			<URLTemplate uuid="c8d9e0f1-a2b3-4456-c789-012345678901">
 				<Properties>
-					<Name>ШаблонURL6</Name>
-					<Synonym/>
+					<Name>ШаблонURL6_</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL6</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Template>/counterparty-groups</Template>
 				</Properties>

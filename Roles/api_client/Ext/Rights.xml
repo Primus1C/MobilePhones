@@ -847,7 +847,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL3.Method.counterpartiesGET</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Клиенты.Method.counterpartiesGET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -916,14 +916,14 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL3.Method.counterpartiesPOST</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Клиенты.Method.counterpartiesPOST</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6.Method.counterpartyGroupsGET</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_.Method.counterpartyGroupsGET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -963,7 +963,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6.Method.counterpartyGroupsPOST</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_.Method.counterpartyGroupsPOST</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
