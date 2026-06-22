@@ -161,11 +161,7 @@
 	ДокументИнвойсПродажи.Контрагент КАК Контрагент,
 	ДокументИнвойсПродажи.Валюта КАК Валюта,
 	ДокументИнвойсПродажи.Счет КАК Счет,
-	ВЫБОР
-		КОГДА ДокументИнвойсПродажи.Проформа = ЗНАЧЕНИЕ(перечисление.ВидыИнвойса.Проформа)
-			ТОГДА ИСТИНА
-		ИНАЧЕ ЛОЖЬ
-	КОНЕЦ КАК Проформа,
+	ДокументИнвойсПродажи.Проформа КАК Проформа,
 	ДокументИнвойсПродажи.Доставка КАК Доставка,
 	ДокументИнвойсПродажи.Сумма КАК Сумма,
 	ДокументИнвойсПродажи.Количество КАК Количество,
@@ -262,6 +258,22 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
 					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Получатель</dcssch:dataPath>
+					<dcssch:field>Получатель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СчетДополнительный</dcssch:dataPath>
+					<dcssch:field>СчетДополнительный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезервироватьТовар</dcssch:dataPath>
+					<dcssch:field>РезервироватьТовар</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Склад</dcssch:dataPath>
+					<dcssch:field>Склад</dcssch:field>
 				</Field>
 				<MainTable>Document.ИнвойсПродажи</MainTable>
 				<ListSettings>

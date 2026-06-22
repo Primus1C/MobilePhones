@@ -48,6 +48,11 @@
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 				</InputField>
+				<InputField name="НомерВходящий" id="129">
+					<DataPath>Объект.НомерВходящий</DataPath>
+					<ContextMenu name="НомерВходящийКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="НомерВходящийРасширеннаяПодсказка" id="131"/>
+				</InputField>
 				<RadioButtonField name="Проформа" id="79">
 					<DataPath>Объект.Проформа</DataPath>
 					<TitleLocation>None</TitleLocation>
@@ -87,9 +92,29 @@
 								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыИнвойса.EnumValue.Инвойс</Value>
 							</xr:Value>
 						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заказ покупателя</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Buyer's order</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыИнвойса.EnumValue.ЗаказПокупателя</Value>
+							</xr:Value>
+						</xr:Item>
 					</ChoiceList>
 					<ContextMenu name="ПроформаКонтекстноеМеню" id="80"/>
 					<ExtendedTooltip name="ПроформаРасширеннаяПодсказка" id="81"/>
+					<Events>
+						<Event name="OnChange">ПроформаПриИзменении</Event>
+					</Events>
 				</RadioButtonField>
 				<UsualGroup name="ГруппаСостояниеОтступ" id="127">
 					<Title>

@@ -62,7 +62,7 @@
 					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="27"/>
 				</InputField>
 				<InputField name="ПользовательКонтрагент" id="39">
-					<DataPath>Запись.Пользователь.Контрагент</DataPath>
+					<DataPath>1/0:80848e0c-a11e-4798-8d40-1c2802e37b9d/0:a41c2394-2144-48bd-a563-54cc2f5e9c25</DataPath>
 					<ChoiceButton>false</ChoiceButton>
 					<ContextMenu name="ПользовательКонтрагентКонтекстноеМеню" id="40"/>
 					<ExtendedTooltip name="ПользовательКонтрагентРасширеннаяПодсказка" id="41"/>

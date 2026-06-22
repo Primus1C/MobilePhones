@@ -159,10 +159,6 @@
 							<v8:content>Парт.учет</v8:content>
 						</v8:item>
 					</Title>
-					<HeaderPicture>
-						<xr:Ref>StdPicture.Constant</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</HeaderPicture>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ВестиПартионныйУчетКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="ВестиПартионныйУчетРасширеннаяПодсказка" id="49"/>

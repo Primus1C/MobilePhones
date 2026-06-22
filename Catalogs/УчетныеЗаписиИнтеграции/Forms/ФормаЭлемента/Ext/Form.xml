@@ -16,41 +16,8 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
-		<UsualGroup name="ГруппаКонтрагент" id="48">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа контрагент</v8:content>
-				</v8:item>
-			</Title>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаКонтрагентРасширеннаяПодсказка" id="49"/>
-			<ChildItems>
-				<InputField name="Контрагент" id="7">
-					<DataPath>Объект.Контрагент</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
-				</InputField>
-				<InputField name="КонтрагентВидЦены" id="45">
-					<DataPath>Объект.Контрагент.ВидЦены</DataPath>
-					<ChoiceButton>false</ChoiceButton>
-					<AutoMarkIncomplete>true</AutoMarkIncomplete>
-					<ContextMenu name="КонтрагентВидЦеныКонтекстноеМеню" id="46"/>
-					<ExtendedTooltip name="КонтрагентВидЦеныРасширеннаяПодсказка" id="47"/>
-				</InputField>
-				<InputField name="КонтрагентВидЦеныВалюта" id="50">
-					<DataPath>Объект.Контрагент.ВидЦены.Валюта</DataPath>
-					<ChoiceButton>false</ChoiceButton>
-					<OpenButton>false</OpenButton>
-					<ContextMenu name="КонтрагентВидЦеныВалютаКонтекстноеМеню" id="51"/>
-					<ExtendedTooltip name="КонтрагентВидЦеныВалютаРасширеннаяПодсказка" id="52"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
 		<InputField name="ГруппаВнутреннихКлиентов" id="53">
-			<DataPath>Объект.ГруппаВнутреннихКлиентов</DataPath>
+			<DataPath>Объект.ГруппаКонтрагентов</DataPath>
 			<ContextMenu name="ГруппаВнутреннихКлиентовКонтекстноеМеню" id="54"/>
 			<ExtendedTooltip name="ГруппаВнутреннихКлиентовРасширеннаяПодсказка" id="55"/>
 		</InputField>
