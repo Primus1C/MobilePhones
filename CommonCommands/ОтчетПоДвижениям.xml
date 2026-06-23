@@ -53,6 +53,7 @@
 				<v8:Type>cfg:DocumentRef._ПоступлениеДС</v8:Type>
 				<v8:Type>cfg:DocumentRef._СписаниеЗадолженности</v8:Type>
 				<v8:Type>cfg:DocumentRef.ДвижениеДенег</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвойсПродажи</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПереоценкаТовараНаКомиссии</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВКД_ДополнительныеЗатраты</v8:Type>
 			</CommandParameterType>

@@ -687,6 +687,7 @@
 			<Enum>ВидыОперацииЗаменаСерий</Enum>
 			<Enum>Важность</Enum>
 			<Enum>HTTPМетод</Enum>
+			<Enum>СтатусыИнвойсаПродажи</Enum>
 			<Report>КонсольЗапросов_82</Report>
 			<Report>ДвиженияДокумента</Report>
 			<Report>ОстаткиТовара</Report>
@@ -787,6 +788,7 @@
 			<InformationRegister>ДокументыКПроведению</InformationRegister>
 			<InformationRegister>Замены</InformationRegister>
 			<InformationRegister>ПротоколОбменов</InformationRegister>
+			<InformationRegister>СостоянияИнвойсовПродажи</InformationRegister>
 			<AccumulationRegister>ОстаткиТовара</AccumulationRegister>
 			<AccumulationRegister>НезакрытыеДокументы</AccumulationRegister>
 			<AccumulationRegister>Долги</AccumulationRegister>

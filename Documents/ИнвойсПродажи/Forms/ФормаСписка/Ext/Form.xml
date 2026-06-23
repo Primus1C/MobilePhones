@@ -95,6 +95,23 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<CheckBoxField name="РезервироватьТовар" id="43">
+					<DataPath>Список.РезервироватьТовар</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Резерв.</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РезервироватьТоварКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="РезервироватьТоварРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<LabelField name="НомерВходящий" id="40">
+					<DataPath>Список.НомерВходящий</DataPath>
+					<ContextMenu name="НомерВходящийКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="НомерВходящийРасширеннаяПодсказка" id="42"/>
+				</LabelField>
 				<CheckBoxField name="Проформа" id="31">
 					<DataPath>Список.Проформа</DataPath>
 					<Title>
@@ -137,6 +154,11 @@
 					<ContextMenu name="ВалютаКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
+				<LabelField name="Состояние" id="37">
+					<DataPath>Список.Состояние</DataPath>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="39"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -149,11 +171,12 @@
 			<UseAlways>
 				<Field>Список.Валюта</Field>
 				<Field>Список.Контрагент</Field>
+				<Field>Список.Состояние</Field>
 				<Field>Список.Ссылка</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ДокументИнвойсПродажи.Ссылка КАК Ссылка,
 	ДокументИнвойсПродажи.Номер КАК Номер,
@@ -166,9 +189,14 @@
 	ДокументИнвойсПродажи.Сумма КАК Сумма,
 	ДокументИнвойсПродажи.Количество КАК Количество,
 	ДокументИнвойсПродажи.Менеджер КАК Менеджер,
-	ДокументИнвойсПродажи.КемСоздан КАК КемСоздан
+	ДокументИнвойсПродажи.КемСоздан КАК КемСоздан,
+	СостоянияИнвойсовПродажи.Состояние КАК Состояние,
+	ДокументИнвойсПродажи.НомерВходящий КАК НомерВходящий,
+	ДокументИнвойсПродажи.РезервироватьТовар КАК РезервироватьТовар
 ИЗ
-	Документ.ИнвойсПродажи КАК ДокументИнвойсПродажи</QueryText>
+	Документ.ИнвойсПродажи КАК ДокументИнвойсПродажи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияИнвойсовПродажи КАК СостоянияИнвойсовПродажи
+		ПО (СостоянияИнвойсовПродажи.ИнвойсПродажи = ДокументИнвойсПродажи.Ссылка)</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Менеджер</dcssch:dataPath>
 					<dcssch:field>Менеджер</dcssch:field>
@@ -274,6 +302,14 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Склад</dcssch:dataPath>
 					<dcssch:field>Склад</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерВходящий</dcssch:dataPath>
+					<dcssch:field>НомерВходящий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Состояние</dcssch:dataPath>
+					<dcssch:field>Состояние</dcssch:field>
 				</Field>
 				<MainTable>Document.ИнвойсПродажи</MainTable>
 				<ListSettings>

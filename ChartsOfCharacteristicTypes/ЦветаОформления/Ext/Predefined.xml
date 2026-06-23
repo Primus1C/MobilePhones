@@ -218,6 +218,67 @@
 			</Item>
 		</ChildItems>
 	</Item>
+	<Item id="83e4df72-281b-4055-8a4e-c02b5fa64650">
+		<Name>СтатусыИнвойсовПродажи</Name>
+		<Code>00034</Code>
+		<Description>Статусы инвойсов продажи</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="78fd7962-c79f-483e-8d27-3ac58cb1f609">
+				<Name>Зарегистрирован</Name>
+				<Code>00035</Code>
+				<Description>Зарегистрирован</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e35fbd08-07c9-4519-bfb7-5897228f11c8">
+				<Name>Отгружен</Name>
+				<Code>00036</Code>
+				<Description>Отгружен</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a7783dd0-8331-4b84-aac7-d42eda2c0fa9">
+				<Name>Отменен</Name>
+				<Code>00037</Code>
+				<Description>Отменен</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="aee37808-bb0f-4284-9246-8ea8e3097b3c">
+				<Name>Собирается</Name>
+				<Code>00038</Code>
+				<Description>Собирается</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
 	<Item id="0d4eb805-c1b8-425e-871a-a720ee787a90">
 		<Name>СтатусыИнспекцииИнвойсов</Name>
 		<Code>00012</Code>

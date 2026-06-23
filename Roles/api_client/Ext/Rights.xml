@@ -201,6 +201,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonAttribute.КемСоздан</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Фирмы</name>
 		<right>
 			<name>Read</name>
@@ -219,6 +226,37 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ИнвойсПродажи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -261,6 +299,20 @@
 			<name>Read</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Города.Method.citiesGET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonAttribute.Окончательно</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -643,6 +695,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonAttribute.Примечание</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.ОграничитьДоступПоКонтрагентам</name>
 		<right>
 			<name>Get</name>
@@ -731,6 +790,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonAttribute.Создан</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.Пользователь</name>
 		<right>
 			<name>Get</name>
@@ -764,7 +830,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL2.Method.ordersPOST</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersPOST</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -782,7 +848,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL2.Method.ordersGET</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersGET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -840,7 +906,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL2.Method.ordersPATCH</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersPATCH</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -887,6 +953,21 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.СостоянияИнвойсовПродажи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.КодыПроизводителей</name>
 		<right>
 			<name>Read</name>
@@ -909,9 +990,16 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL2.Method.ordersPUT</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersPUT</name>
 		<right>
 			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonAttribute.КемСохранен</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -923,7 +1011,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_.Method.counterpartyGroupsGET</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_удалить.Method.counterpartyGroupsGET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -952,6 +1040,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonAttribute.Фирма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.УчетныеЗаписиИнтеграции</name>
 		<right>
 			<name>Read</name>
@@ -963,14 +1058,14 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_.Method.counterpartyGroupsPOST</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_удалить.Method.counterpartyGroupsPOST</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL2.Method.ordersDELETE</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_Заказы.Method.ordersDELETE</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -984,7 +1079,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL7.Method.deliveryNotesGET</name>
+		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL_РасхНакладная_Экспорт.Method.deliveryNotesGET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -1053,6 +1148,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonAttribute.ЕстьЗатраты</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.Сооб_ПериодОбновленияЧата</name>
 		<right>
 			<name>Get</name>
@@ -1060,6 +1162,13 @@
 		</right>
 		<right>
 			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonAttribute.Сохранен</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

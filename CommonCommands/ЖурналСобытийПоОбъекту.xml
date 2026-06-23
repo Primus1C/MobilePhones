@@ -62,6 +62,7 @@
 				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
 				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
 				<v8:Type>cfg:CatalogRef.Страны</v8:Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиИнтеграции</v8:Type>
 				<v8:Type>cfg:DocumentRef.ДвижениеДенег</v8:Type>
 				<v8:Type>cfg:DocumentRef.ИнвойсПродажи</v8:Type>
 				<v8:Type>cfg:CatalogRef.ДенежныеСчета</v8:Type>

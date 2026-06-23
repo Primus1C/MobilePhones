@@ -46,8 +46,13 @@
 			</URLTemplate>
 			<URLTemplate uuid="f8e7d6c5-b4a3-4291-8f7e-6d5c4b3a2910">
 				<Properties>
-					<Name>ШаблонURL2</Name>
-					<Synonym/>
+					<Name>ШаблонURL_Заказы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL заказы</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Template>/orders</Template>
 				</Properties>
@@ -124,30 +129,6 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
-			<URLTemplate uuid="d7e8f9a0-b1c2-4345-d678-901234567890">
-				<Properties>
-					<Name>ШаблонURL7</Name>
-					<Synonym/>
-					<Comment/>
-					<Template>/delivery-notes</Template>
-				</Properties>
-				<ChildObjects>
-					<Method uuid="e8f9a0b1-c2d3-4456-e789-012345678901">
-						<Properties>
-							<Name>deliveryNotesGET</Name>
-							<Synonym>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Delivery notes GET</v8:content>
-								</v8:item>
-							</Synonym>
-							<Comment/>
-							<HTTPMethod>GET</HTTPMethod>
-							<Handler>deliveryNotesGET</Handler>
-						</Properties>
-					</Method>
-				</ChildObjects>
-			</URLTemplate>
 			<URLTemplate uuid="b1c2d3e4-f5a6-4789-abcd-ef0123456701">
 				<Properties>
 					<Name>ШаблонURL_Клиенты</Name>
@@ -193,11 +174,11 @@
 			</URLTemplate>
 			<URLTemplate uuid="c8d9e0f1-a2b3-4456-c789-012345678901">
 				<Properties>
-					<Name>ШаблонURL6_</Name>
+					<Name>ШаблонURL6_удалить</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Шаблон URL6</v8:content>
+							<v8:content>Шаблон URL6 удалить</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -288,6 +269,64 @@
 							<Comment/>
 							<HTTPMethod>GET</HTTPMethod>
 							<Handler>currenciesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="7e956250-c5b0-49f9-b216-b63539ad7ea5">
+				<Properties>
+					<Name>ШаблонURL_Города</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL города</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/cities</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="2a76c6ff-2c35-4e47-a23d-d95cf680dcf5">
+						<Properties>
+							<Name>citiesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Cities GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>citiesGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="d7e8f9a0-b1c2-4345-d678-901234567890">
+				<Properties>
+					<Name>ШаблонURL_РасхНакладная_Экспорт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон URL расх накладная экспорт</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/delivery-notes</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e8f9a0b1-c2d3-4456-e789-012345678901">
+						<Properties>
+							<Name>deliveryNotesGET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Delivery notes GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>deliveryNotesGET</Handler>
 						</Properties>
 					</Method>
 				</ChildObjects>

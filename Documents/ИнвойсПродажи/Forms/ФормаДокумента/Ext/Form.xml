@@ -175,10 +175,16 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="Группа1" id="96">
+		<UsualGroup name="ГруппаФирма" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фирма</v8:content>
+				</v8:item>
+			</Title>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="97"/>
+			<ExtendedTooltip name="ГруппаФирмаРасширеннаяПодсказка" id="97"/>
 			<ChildItems>
 				<InputField name="Фирма" id="90">
 					<DataPath>Объект.Фирма</DataPath>
@@ -628,6 +634,14 @@
 			</Item>
 			<Item>
 				<Command>InformationRegister.ДокументыКПроведению.StandardCommand.OpenByValue.Документ</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.СостоянияИнвойсовПродажи.StandardCommand.OpenByValue.ИнвойсПродажи</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
