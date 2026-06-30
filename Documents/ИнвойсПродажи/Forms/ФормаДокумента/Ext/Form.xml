@@ -53,6 +53,12 @@
 					<ContextMenu name="НомерВходящийКонтекстноеМеню" id="130"/>
 					<ExtendedTooltip name="НомерВходящийРасширеннаяПодсказка" id="131"/>
 				</InputField>
+				<InputField name="УчетнаяЗапись" id="132">
+					<DataPath>Объект.УчетнаяЗапись</DataPath>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="134"/>
+				</InputField>
 				<RadioButtonField name="Проформа" id="79">
 					<DataPath>Объект.Проформа</DataPath>
 					<TitleLocation>None</TitleLocation>

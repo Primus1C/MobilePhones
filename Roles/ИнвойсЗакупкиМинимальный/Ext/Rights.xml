@@ -128,7 +128,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЦеныПродажи.Resource.Цена</name>
+		<name>InformationRegister.ЦеныПродажи.Resource.Цена0</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -1421,7 +1421,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЦеныПродажи.Resource.ЦенаОтКоличества</name>
+		<name>InformationRegister.ЦеныПродажи.Resource.Порог1</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -2894,7 +2894,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УстановкаЦен.TabularSection.Товары.Attribute.Цена</name>
+		<name>Document.УстановкаЦен.TabularSection.Товары.Attribute.Цена0</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -3721,17 +3721,6 @@
 	</object>
 	<object>
 		<name>Document.УстановкаЦен.TabularSection.Товары</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ЦеныПродажи.Resource.Количество</name>
 		<right>
 			<name>View</name>
 			<value>false</value>

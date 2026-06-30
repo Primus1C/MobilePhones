@@ -9,18 +9,37 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Код" id="1">
-			<DataPath>Объект.Code</DataPath>
+		<UsualGroup name="ГруппаКод" id="84">
 			<Title>
 				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Code</v8:content>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
 				</v8:item>
 			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-		</InputField>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодРасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Code</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="SKU" id="81">
+					<DataPath>Объект.SKU</DataPath>
+					<ContextMenu name="SKUКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="SKUРасширеннаяПодсказка" id="83"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="ВидНоменклатуры" id="33">
 			<DataPath>Объект.ВидНоменклатуры</DataPath>
 			<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="34"/>

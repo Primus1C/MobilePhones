@@ -1058,6 +1058,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ИнвойсПродажи.Command.УстановитьСтатус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.StockAPI.URLTemplate.ШаблонURL6_удалить.Method.counterpartyGroupsPOST</name>
 		<right>
 			<name>Use</name>

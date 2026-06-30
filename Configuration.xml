@@ -56,7 +56,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.Разработка</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2026-06-23</Version>
+			<Version>2026-06-29</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -473,6 +473,7 @@
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиент</CommonModule>
+			<CommonModule>ОбработчикиКомандКлиент</CommonModule>
 			<CommonModule>Сооб_Сервер</CommonModule>
 			<CommonModule>Сооб_Клиент</CommonModule>
 			<CommonModule>ПользователиКлиент</CommonModule>
@@ -515,6 +516,7 @@
 			<DefinedType>ОбъектСообщений</DefinedType>
 			<DefinedType>ДлинаРучногоШК</DefinedType>
 			<DefinedType>НомерТрека</DefinedType>
+			<DefinedType>ПорогЦен</DefinedType>
 			<CommonCommand>ЖурналСобытийПоОбъекту</CommonCommand>
 			<CommonCommand>Ссылки</CommonCommand>
 			<CommonCommand>ИскатьНомер</CommonCommand>

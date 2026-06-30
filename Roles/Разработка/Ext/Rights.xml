@@ -1203,6 +1203,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ИнвойсПродажи.Command.УстановитьСтатус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>SessionParameter.ВалютаУстановкиЦенПродажи</name>
 		<right>
 			<name>Get</name>

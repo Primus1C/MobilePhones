@@ -80,6 +80,16 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="Склад" id="28">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Примечание" id="25">
+					<DataPath>Список.Примечание</DataPath>
+					<ContextMenu name="ПримечаниеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="27"/>
+				</LabelField>
 				<LabelField name="КемСоздан" id="22">
 					<DataPath>Список.КемСоздан</DataPath>
 					<Title>
@@ -90,11 +100,6 @@
 					</Title>
 					<ContextMenu name="КемСозданКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="КемСозданРасширеннаяПодсказка" id="24"/>
-				</LabelField>
-				<LabelField name="Примечание" id="25">
-					<DataPath>Список.Примечание</DataPath>
-					<ContextMenu name="ПримечаниеКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
